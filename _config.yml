@@ -1,26 +1,33 @@
-# Dependencies
-markdown:         redcarpet
-highlighter:      pygments
+name: White Paper
+markdown: redcarpet
+pygments: true
+url: http://vinitkumar.me/white-paper
+paginate: 8
+description:     Jekyll theme for Programmers
+intro: White Paper is a Jekyll theme most suited to be used on tech blogs that like their content to shine.
+logo:             logo.png
+disqus_shortname:
+# url: http://gotchacode.com
+#Comment out url when working locally to resolve base urls correctly
+#url:
 
-# Permalinks
-permalink:        pretty
-relative_permalinks: true
+# Owner/author information
+owner:
+  name:           <your-name-here>
+  avatar:         <avatar-image-link>
+  email:          <your-email-address>
+  # Social networking links used in footer. Update and remove as you like.
+  twitter:
+  github:
+  stackexchange:
+  # For Google Authorship https://plus.google.com/authorship
+  google_plus:
 
-# Setup
-title:            BlackDoc
-tagline:          Black Theme for Jekyll
-description:      "A two-column black theme with a scrolling sidebar. Ideal for sites requiring a master-detail layout, e.g. documentation, cheatsheets, lyrics, notes..."
-url:              https://github.com/karloespiritu/blackdoc
-baseurl:          /
+# Analytics and webmaster tools stuff goes here
+google_analytics:
+google_verify:
+# https://ssl.bing.com/webmaster/configure/verify/ownership Option 2 content= goes here
+bing_verify:
 
-author:
-  name:           'Karlo Espiritu'
-  url:            https://twitter.com/karloespiritu
-
-paginate:         5
-
-# Custom vars
-version:          1.0.0
-
-github:
-  repo:           https://github.com/karloespiritu/blackdoc
+# Links to include in top navigation
+# For external links add external: true

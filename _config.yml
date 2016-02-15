@@ -1,14 +1,14 @@
 # Site wide configuration
 
-title: Zhouheng Media
+title: Zhouheng Media / 周亨倉庫
 locale: en_US
-description: Describe your website here.
+description: 一個分享 總結個人作品的站
 logo: site-logo.png
 search: true
-# url: http://localhost:4000
+url: http://localhost:4000
 # url: http://zhouheng.asia
-url: http://www.zhouheng.asia
-url: http://luzhouheng.github.io
+# url: http://www.zhouheng.asia
+# url: http://luzhouheng.github.io
 
 # Jekyll configuration
 

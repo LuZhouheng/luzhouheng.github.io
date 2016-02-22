@@ -2,6 +2,48 @@
 
   
     {
+      "title"			: " Arrayrgb",
+      "link"			: "http://localhost:4000/Random-ArrayRGB/",
+      "excerpt"		: "<!doctype html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>openFrameworks</title>
+    <style>
+      body {
+        font-family: helvetica, sans-serif;
+        margin: 0;
+        padding: none;
+      }
+
+"
+    }
+  
+
+  
+    ,{
+      "title"			: "Mousepressed Rgb ",
+      "link"			: "http://localhost:4000/MousePressed-RGB-Circles/",
+      "excerpt"		: "<!doctype html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>openFrameWorks</title>
+    <style>
+      body {
+        font-family: helvetica, sans-serif;
+        margin: 0;
+        padding: none;
+      }
+
+"
+    }
+  
+
+  
+    ,{
       "title"			: "New First",
       "link"			: "http://localhost:4000/new-first/",
       "excerpt"		: "
@@ -106,14 +148,6 @@ To add new posts, simply add a file in the <code class="highlighter-rouge">_post
 
   
 
-  
-
-  
-    ,{
-      "title"			: "Theme Setup",
-      "link"			: "http://localhost:4000/theme-setup/",
-      "excerpt"		: "Instructions on how to install and customize the Jekyll theme So Simple."
-    }
   
 
   

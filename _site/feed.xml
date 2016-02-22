@@ -1,16 +1,526 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
-<title type="text">Zhouheng Media</title>
+<title type="text">Zhouheng Media / 周亨倉庫</title>
 <generator uri="https://github.com/jekyll/jekyll">Jekyll</generator>
 <link rel="self" type="application/atom+xml" href="http://localhost:4000/feed.xml" />
 <link rel="alternate" type="text/html" href="http://localhost:4000" />
-<updated>2016-02-08T22:26:05+08:00</updated>
+<updated>2016-02-11T03:27:03+08:00</updated>
 <id>http://localhost:4000/</id>
 <author>
   <name>LuZhouheng</name>
   <uri>http://localhost:4000/</uri>
   <email>peressio@gmail.com</email>
 </author>
+
+
+<entry>
+  <title type="html"><![CDATA[ Arrayrgb]]></title>
+  <link rel="alternate" type="text/html" href="http://localhost:4000/Random-ArrayRGB/" />
+  <id>http://localhost:4000/Random-ArrayRGB</id>
+  <published>2016-02-11T00:00:00+08:00</published>
+  <updated>2016-02-11T00:00:00+08:00</updated>
+  <author>
+    <name>LuZhouheng</name>
+    <uri>http://localhost:4000</uri>
+    <email>peressio@gmail.com</email>
+  </author>
+  <content type="html">
+    &lt;!doctype html&gt;
+&lt;html lang=&quot;en-us&quot;&gt;
+  &lt;head&gt;
+    &lt;meta charset=&quot;utf-8&quot;&gt;
+    &lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=utf-8&quot;&gt;
+    &lt;title&gt;openFrameworks&lt;/title&gt;
+    &lt;style&gt;
+      body {
+        font-family: helvetica, sans-serif;
+        margin: 0;
+        padding: none;
+      }
+
+      .emscripten { padding-right: 0; margin-left: auto; margin-right: auto; display: block; }
+      div.emscripten { text-align: center; }      
+      div.emscripten_border { border: 1px solid black; }
+      /* the canvas *must not* have any border or padding, or mouse coords will be wrong */
+      canvas.emscripten { border: 0px none; }
+
+      #logo {
+        display: inline-block;
+        margin: 20px 0 20px 20px;
+      }
+
+      .spinner {
+        height: 30px;
+        width: 30px;
+        margin: 0;
+        margin-top: 20px;
+        margin-left: 20px;
+        display: inline-block;
+        vertical-align: top;
+
+        -webkit-animation: rotation .8s linear infinite;
+        -moz-animation: rotation .8s linear infinite;
+        -o-animation: rotation .8s linear infinite;
+        animation: rotation 0.8s linear infinite;
+
+        border-left: 5px solid #EE3987;
+        border-right: 5px solid #EE3987;
+        border-bottom: 5px solid #EE3987;
+        border-top: 5px solid #CCCCCC;
+        
+        border-radius: 100%;
+        background-color: #EEEEEE;
+      }
+
+      @-webkit-keyframes rotation {
+        from {-webkit-transform: rotate(0deg);}
+        to {-webkit-transform: rotate(360deg);}
+      }
+      @-moz-keyframes rotation {
+        from {-moz-transform: rotate(0deg);}
+        to {-moz-transform: rotate(360deg);}
+      }
+      @-o-keyframes rotation {
+        from {-o-transform: rotate(0deg);}
+        to {-o-transform: rotate(360deg);}
+      }
+      @keyframes rotation {
+        from {transform: rotate(0deg);}
+        to {transform: rotate(360deg);}
+      }
+
+      #status {
+        display: inline-block;
+        vertical-align: top;
+        margin-top: 30px;
+        margin-left: 20px;
+        font-weight: bold;
+        color: rgb(120, 120, 120);
+      }
+
+      #progress {
+        height: 20px;
+        width: 30px;
+      }
+
+      #controls {
+        display: inline-block;
+        float: right;
+        vertical-align: top;
+        margin-top: 30px;
+        margin-right: 20px;
+      }
+
+      #output {
+        width: 100%;
+        height: 200px;
+        margin: 0 auto;
+        margin-top: 10px;
+        display: block;
+        background-color: black;
+        color: white;
+        font-family: &#39;Lucida Console&#39;, Monaco, monospace;
+        outline: none;
+      }
+    &lt;/style&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;a id=&quot;logo&quot; href=&quot;http://emscripten.org&quot;&gt;
+        &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; standalone=&quot;no&quot;?&gt;
+        &lt;svg width=&quot;110px&quot; height=&quot;58px&quot; viewBox=&quot;0 0 110 58&quot; version=&quot;1.1&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; xmlns:xlink=&quot;http://www.w3.org/1999/xlink&quot;&gt;
+            &lt;title&gt;openFrameworks Logo&lt;/title&gt;
+            &lt;defs&gt;&lt;/defs&gt;
+            &lt;g id=&quot;Page-1&quot; stroke=&quot;none&quot; stroke-width=&quot;1&quot; fill=&quot;#000000&quot; fill-rule=&quot;evenodd&quot;&gt;
+                &lt;path id=&quot;Oval-1&quot; d=&quot;M58,29 C58,13 45,0 29,0 C13,0 0,13 0,29 C0,45 13,58 29,58 C45,58 58,45 58,29 Z&quot;&gt;&lt;/path&gt;
+                &lt;rect id=&quot;Rectangle-1&quot; x=&quot;59&quot; y=&quot;0&quot; width=&quot;25&quot; height=&quot;58&quot;&gt;&lt;/rect&gt;
+                &lt;rect id=&quot;Rectangle-2&quot; x=&quot;85&quot; y=&quot;26&quot; width=&quot;15&quot; height=&quot;15&quot;&gt;&lt;/rect&gt;
+                &lt;path id=&quot;Path-2&quot; d=&quot;M85,0 L110,0 L85,25 L85,0 Z&quot;&gt;&lt;/path&gt;
+            &lt;/g&gt;
+        &lt;/svg&gt;
+    &lt;/a&gt;
+
+    &lt;div class=&quot;spinner&quot; id=&#39;spinner&#39;&gt;&lt;/div&gt;
+    &lt;div class=&quot;emscripten&quot; id=&quot;status&quot;&gt;Downloading...&lt;/div&gt;
+
+&lt;span id=&#39;controls&#39;&gt;
+  &lt;span&gt;&lt;input type=&quot;checkbox&quot; id=&quot;resize&quot;&gt;Resize canvas&lt;/span&gt;
+  &lt;span&gt;&lt;input type=&quot;checkbox&quot; id=&quot;pointerLock&quot; checked&gt;Lock/hide mouse pointer &amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/span&gt;
+  &lt;span&gt;&lt;input type=&quot;button&quot; value=&quot;Fullscreen&quot; onclick=&quot;Module.requestFullScreen(document.getElementById(&#39;pointerLock&#39;).checked, 
+                                                                            document.getElementById(&#39;resize&#39;).checked)&quot;&gt;
+  &lt;/span&gt;
+&lt;/span&gt;
+
+    &lt;div class=&quot;emscripten&quot;&gt;
+      &lt;progress value=&quot;0&quot; max=&quot;100&quot; id=&quot;progress&quot; hidden=1&gt;&lt;/progress&gt;
+    &lt;/div&gt;
+
+    
+    &lt;div class=&quot;emscripten_border&quot;&gt;
+      &lt;canvas class=&quot;emscripten&quot; id=&quot;canvas&quot; oncontextmenu=&quot;event.preventDefault()&quot;&gt;&lt;/canvas&gt;
+    &lt;/div&gt;
+    &lt;textarea id=&quot;output&quot; rows=&quot;8&quot;&gt;&lt;/textarea&gt;
+
+    &lt;script type=&#39;text/javascript&#39;&gt;
+      var statusElement = document.getElementById(&#39;status&#39;);
+      var progressElement = document.getElementById(&#39;progress&#39;);
+      var spinnerElement = document.getElementById(&#39;spinner&#39;);
+
+      var Module = {
+        preRun: [],
+        postRun: [],
+        print: (function() {
+          var element = document.getElementById(&#39;output&#39;);
+          if (element) element.value = &#39;&#39;; // clear browser cache
+          return function(text) {
+            if (arguments.length &gt; 1) text = Array.prototype.slice.call(arguments).join(&#39; &#39;);
+            // These replacements are necessary if you render to raw HTML
+            //text = text.replace(/&amp;/g, &quot;&amp;amp;&quot;);
+            //text = text.replace(/&lt;/g, &quot;&amp;lt;&quot;);
+            //text = text.replace(/&gt;/g, &quot;&amp;gt;&quot;);
+            //text = text.replace(&#39;\n&#39;, &#39;&lt;br&gt;&#39;, &#39;g&#39;);
+            console.log(text);
+            if (element) {
+              element.value += text + &quot;\n&quot;;
+              element.scrollTop = element.scrollHeight; // focus on bottom
+            }
+          };
+        })(),
+        printErr: function(text) {
+          if (arguments.length &gt; 1) text = Array.prototype.slice.call(arguments).join(&#39; &#39;);
+          if (0) { // XXX disabled for safety typeof dump == &#39;function&#39;) {
+            dump(text + &#39;\n&#39;); // fast, straight to the real console
+          } else {
+            console.error(text);
+          }
+        },
+        canvas: (function() {
+          var canvas = document.getElementById(&#39;canvas&#39;);
+
+          // As a default initial behavior, pop up an alert when webgl context is lost. To make your
+          // application robust, you may want to override this behavior before shipping!
+          // See http://www.khronos.org/registry/webgl/specs/latest/1.0/#5.15.2
+          canvas.addEventListener(&quot;webglcontextlost&quot;, function(e) { alert(&#39;WebGL context lost. You will need to reload the page.&#39;); e.preventDefault(); }, false);
+
+          return canvas;
+        })(),
+        setStatus: function(text) {
+          if (!Module.setStatus.last) Module.setStatus.last = { time: Date.now(), text: &#39;&#39; };
+          if (text === Module.setStatus.text) return;
+          var m = text.match(/([^(]+)\((\d+(\.\d+)?)\/(\d+)\)/);
+          var now = Date.now();
+          if (m &amp;&amp; now - Date.now() &lt; 30) return; // if this is a progress update, skip it if too soon
+          if (m) {
+            text = m[1];
+            progressElement.value = parseInt(m[2])*100;
+            progressElement.max = parseInt(m[4])*100;
+            progressElement.hidden = false;
+            spinnerElement.hidden = false;
+          } else {
+            progressElement.value = null;
+            progressElement.max = null;
+            progressElement.hidden = true;
+            if (!text) spinnerElement.style.display = &#39;none&#39;;
+          }
+          statusElement.innerHTML = text;
+        },
+        totalDependencies: 0,
+        monitorRunDependencies: function(left) {
+          this.totalDependencies = Math.max(this.totalDependencies, left);
+          Module.setStatus(left ? &#39;Preparing... (&#39; + (this.totalDependencies-left) + &#39;/&#39; + this.totalDependencies + &#39;)&#39; : &#39;All downloads complete.&#39;);
+        }
+      };
+      Module.setStatus(&#39;Downloading...&#39;);
+      window.onerror = function(event) {
+        // TODO: do not warn on ok events like simulating an infinite loop or exitStatus
+        Module.setStatus(&#39;Exception thrown, see JavaScript console&#39;);
+        spinnerElement.style.display = &#39;none&#39;;
+        Module.setStatus = function(text) {
+          if (text) Module.printErr(&#39;[post-exception status] &#39; + text);
+        };
+      };
+    &lt;/script&gt;
+    &lt;script&gt;
+
+        (function() {
+          var memoryInitializer = &#39;Random_ArrayRGB.html.mem&#39;;
+          if (typeof Module[&#39;locateFile&#39;] === &#39;function&#39;) {
+            memoryInitializer = Module[&#39;locateFile&#39;](memoryInitializer);
+          } else if (Module[&#39;memoryInitializerPrefixURL&#39;]) {
+            memoryInitializer = Module[&#39;memoryInitializerPrefixURL&#39;] + memoryInitializer;
+          }
+          var xhr = Module[&#39;memoryInitializerRequest&#39;] = new XMLHttpRequest();
+          xhr.open(&#39;GET&#39;, memoryInitializer, true);
+          xhr.responseType = &#39;arraybuffer&#39;;
+          xhr.send(null);
+        })();
+
+        var script = document.createElement(&#39;script&#39;);
+        script.src = &quot;Random_ArrayRGB.js&quot;;
+        document.body.appendChild(script);
+
+&lt;/script&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+
+
+    &lt;p&gt;&lt;a href=&quot;http://localhost:4000/Random-ArrayRGB/&quot;&gt; Arrayrgb&lt;/a&gt; was originally published by LuZhouheng at &lt;a href=&quot;http://localhost:4000&quot;&gt;Zhouheng Media / 周亨倉庫&lt;/a&gt; on February 11, 2016.&lt;/p&gt;
+  </content>
+</entry>
+
+
+<entry>
+  <title type="html"><![CDATA[Mousepressed Rgb ]]></title>
+  <link rel="alternate" type="text/html" href="http://localhost:4000/MousePressed-RGB-Circles/" />
+  <id>http://localhost:4000/MousePressed-RGB-Circles</id>
+  <published>2016-02-11T00:00:00+08:00</published>
+  <updated>2016-02-11T00:00:00+08:00</updated>
+  <author>
+    <name>LuZhouheng</name>
+    <uri>http://localhost:4000</uri>
+    <email>peressio@gmail.com</email>
+  </author>
+  <content type="html">
+    &lt;!doctype html&gt;
+&lt;html lang=&quot;en-us&quot;&gt;
+  &lt;head&gt;
+    &lt;meta charset=&quot;utf-8&quot;&gt;
+    &lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=utf-8&quot;&gt;
+    &lt;title&gt;openFrameWorks&lt;/title&gt;
+    &lt;style&gt;
+      body {
+        font-family: helvetica, sans-serif;
+        margin: 0;
+        padding: none;
+      }
+
+      .emscripten { padding-right: 0; margin-left: auto; margin-right: auto; display: block; }
+      div.emscripten { text-align: center; }      
+      div.emscripten_border { border: 1px solid black; }
+      /* the canvas *must not* have any border or padding, or mouse coords will be wrong */
+      canvas.emscripten { border: 0px none; }
+
+      #logo {
+        display: inline-block;
+        margin: 20px 0 20px 20px;
+      }
+
+      .spinner {
+        height: 30px;
+        width: 30px;
+        margin: 0;
+        margin-top: 20px;
+        margin-left: 20px;
+        display: inline-block;
+        vertical-align: top;
+
+        -webkit-animation: rotation .8s linear infinite;
+        -moz-animation: rotation .8s linear infinite;
+        -o-animation: rotation .8s linear infinite;
+        animation: rotation 0.8s linear infinite;
+
+        border-left: 5px solid #EE3987;
+        border-right: 5px solid #EE3987;
+        border-bottom: 5px solid #EE3987;
+        border-top: 5px solid #CCCCCC;
+        
+        border-radius: 100%;
+        background-color: #EEEEEE;
+      }
+
+      @-webkit-keyframes rotation {
+        from {-webkit-transform: rotate(0deg);}
+        to {-webkit-transform: rotate(360deg);}
+      }
+      @-moz-keyframes rotation {
+        from {-moz-transform: rotate(0deg);}
+        to {-moz-transform: rotate(360deg);}
+      }
+      @-o-keyframes rotation {
+        from {-o-transform: rotate(0deg);}
+        to {-o-transform: rotate(360deg);}
+      }
+      @keyframes rotation {
+        from {transform: rotate(0deg);}
+        to {transform: rotate(360deg);}
+      }
+
+      #status {
+        display: inline-block;
+        vertical-align: top;
+        margin-top: 30px;
+        margin-left: 20px;
+        font-weight: bold;
+        color: rgb(120, 120, 120);
+      }
+
+      #progress {
+        height: 20px;
+        width: 30px;
+      }
+
+      #controls {
+        display: inline-block;
+        float: right;
+        vertical-align: top;
+        margin-top: 30px;
+        margin-right: 20px;
+      }
+
+      #output {
+        width: 100%;
+        height: 200px;
+        margin: 0 auto;
+        margin-top: 10px;
+        display: block;
+        background-color: black;
+        color: white;
+        font-family: &#39;Lucida Console&#39;, Monaco, monospace;
+        outline: none;
+      }
+    &lt;/style&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;a id=&quot;logo&quot; href=&quot;http://emscripten.org&quot;&gt;
+        &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; standalone=&quot;no&quot;?&gt;
+        &lt;svg width=&quot;110px&quot; height=&quot;58px&quot; viewBox=&quot;0 0 110 58&quot; version=&quot;1.1&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; xmlns:xlink=&quot;http://www.w3.org/1999/xlink&quot;&gt;
+            &lt;title&gt;openFrameworks Logo&lt;/title&gt;
+            &lt;defs&gt;&lt;/defs&gt;
+            &lt;g id=&quot;Page-1&quot; stroke=&quot;none&quot; stroke-width=&quot;1&quot; fill=&quot;#000000&quot; fill-rule=&quot;evenodd&quot;&gt;
+                &lt;path id=&quot;Oval-1&quot; d=&quot;M58,29 C58,13 45,0 29,0 C13,0 0,13 0,29 C0,45 13,58 29,58 C45,58 58,45 58,29 Z&quot;&gt;&lt;/path&gt;
+                &lt;rect id=&quot;Rectangle-1&quot; x=&quot;59&quot; y=&quot;0&quot; width=&quot;25&quot; height=&quot;58&quot;&gt;&lt;/rect&gt;
+                &lt;rect id=&quot;Rectangle-2&quot; x=&quot;85&quot; y=&quot;26&quot; width=&quot;15&quot; height=&quot;15&quot;&gt;&lt;/rect&gt;
+                &lt;path id=&quot;Path-2&quot; d=&quot;M85,0 L110,0 L85,25 L85,0 Z&quot;&gt;&lt;/path&gt;
+            &lt;/g&gt;
+        &lt;/svg&gt;
+    &lt;/a&gt;
+
+    &lt;div class=&quot;spinner&quot; id=&#39;spinner&#39;&gt;&lt;/div&gt;
+    &lt;div class=&quot;emscripten&quot; id=&quot;status&quot;&gt;Downloading...&lt;/div&gt;
+
+&lt;span id=&#39;controls&#39;&gt;
+  &lt;span&gt;&lt;input type=&quot;checkbox&quot; id=&quot;resize&quot;&gt;Resize canvas&lt;/span&gt;
+  &lt;span&gt;&lt;input type=&quot;checkbox&quot; id=&quot;pointerLock&quot; checked&gt;Lock/hide mouse pointer &amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/span&gt;
+  &lt;span&gt;&lt;input type=&quot;button&quot; value=&quot;Fullscreen&quot; onclick=&quot;Module.requestFullScreen(document.getElementById(&#39;pointerLock&#39;).checked, 
+                                                                            document.getElementById(&#39;resize&#39;).checked)&quot;&gt;
+  &lt;/span&gt;
+&lt;/span&gt;
+
+    &lt;div class=&quot;emscripten&quot;&gt;
+      &lt;progress value=&quot;0&quot; max=&quot;100&quot; id=&quot;progress&quot; hidden=1&gt;&lt;/progress&gt;
+    &lt;/div&gt;
+
+    
+    &lt;div class=&quot;emscripten_border&quot;&gt;
+      &lt;canvas class=&quot;emscripten&quot; id=&quot;canvas&quot; oncontextmenu=&quot;event.preventDefault()&quot;&gt;&lt;/canvas&gt;
+    &lt;/div&gt;
+    &lt;textarea id=&quot;output&quot; rows=&quot;8&quot;&gt;&lt;/textarea&gt;
+
+    &lt;script type=&#39;text/javascript&#39;&gt;
+      var statusElement = document.getElementById(&#39;status&#39;);
+      var progressElement = document.getElementById(&#39;progress&#39;);
+      var spinnerElement = document.getElementById(&#39;spinner&#39;);
+
+      var Module = {
+        preRun: [],
+        postRun: [],
+        print: (function() {
+          var element = document.getElementById(&#39;output&#39;);
+          if (element) element.value = &#39;&#39;; // clear browser cache
+          return function(text) {
+            if (arguments.length &gt; 1) text = Array.prototype.slice.call(arguments).join(&#39; &#39;);
+            // These replacements are necessary if you render to raw HTML
+            //text = text.replace(/&amp;/g, &quot;&amp;amp;&quot;);
+            //text = text.replace(/&lt;/g, &quot;&amp;lt;&quot;);
+            //text = text.replace(/&gt;/g, &quot;&amp;gt;&quot;);
+            //text = text.replace(&#39;\n&#39;, &#39;&lt;br&gt;&#39;, &#39;g&#39;);
+            console.log(text);
+            if (element) {
+              element.value += text + &quot;\n&quot;;
+              element.scrollTop = element.scrollHeight; // focus on bottom
+            }
+          };
+        })(),
+        printErr: function(text) {
+          if (arguments.length &gt; 1) text = Array.prototype.slice.call(arguments).join(&#39; &#39;);
+          if (0) { // XXX disabled for safety typeof dump == &#39;function&#39;) {
+            dump(text + &#39;\n&#39;); // fast, straight to the real console
+          } else {
+            console.error(text);
+          }
+        },
+        canvas: (function() {
+          var canvas = document.getElementById(&#39;canvas&#39;);
+
+          // As a default initial behavior, pop up an alert when webgl context is lost. To make your
+          // application robust, you may want to override this behavior before shipping!
+          // See http://www.khronos.org/registry/webgl/specs/latest/1.0/#5.15.2
+          canvas.addEventListener(&quot;webglcontextlost&quot;, function(e) { alert(&#39;WebGL context lost. You will need to reload the page.&#39;); e.preventDefault(); }, false);
+
+          return canvas;
+        })(),
+        setStatus: function(text) {
+          if (!Module.setStatus.last) Module.setStatus.last = { time: Date.now(), text: &#39;&#39; };
+          if (text === Module.setStatus.text) return;
+          var m = text.match(/([^(]+)\((\d+(\.\d+)?)\/(\d+)\)/);
+          var now = Date.now();
+          if (m &amp;&amp; now - Date.now() &lt; 30) return; // if this is a progress update, skip it if too soon
+          if (m) {
+            text = m[1];
+            progressElement.value = parseInt(m[2])*100;
+            progressElement.max = parseInt(m[4])*100;
+            progressElement.hidden = false;
+            spinnerElement.hidden = false;
+          } else {
+            progressElement.value = null;
+            progressElement.max = null;
+            progressElement.hidden = true;
+            if (!text) spinnerElement.style.display = &#39;none&#39;;
+          }
+          statusElement.innerHTML = text;
+        },
+        totalDependencies: 0,
+        monitorRunDependencies: function(left) {
+          this.totalDependencies = Math.max(this.totalDependencies, left);
+          Module.setStatus(left ? &#39;Preparing... (&#39; + (this.totalDependencies-left) + &#39;/&#39; + this.totalDependencies + &#39;)&#39; : &#39;All downloads complete.&#39;);
+        }
+      };
+      Module.setStatus(&#39;Downloading...&#39;);
+      window.onerror = function(event) {
+        // TODO: do not warn on ok events like simulating an infinite loop or exitStatus
+        Module.setStatus(&#39;Exception thrown, see JavaScript console&#39;);
+        spinnerElement.style.display = &#39;none&#39;;
+        Module.setStatus = function(text) {
+          if (text) Module.printErr(&#39;[post-exception status] &#39; + text);
+        };
+      };
+    &lt;/script&gt;
+    &lt;script&gt;
+
+        (function() {
+          var memoryInitializer = &#39;MousePressed_RGB-Circles.html.mem&#39;;
+          if (typeof Module[&#39;locateFile&#39;] === &#39;function&#39;) {
+            memoryInitializer = Module[&#39;locateFile&#39;](memoryInitializer);
+          } else if (Module[&#39;memoryInitializerPrefixURL&#39;]) {
+            memoryInitializer = Module[&#39;memoryInitializerPrefixURL&#39;] + memoryInitializer;
+          }
+          var xhr = Module[&#39;memoryInitializerRequest&#39;] = new XMLHttpRequest();
+          xhr.open(&#39;GET&#39;, memoryInitializer, true);
+          xhr.responseType = &#39;arraybuffer&#39;;
+          xhr.send(null);
+        })();
+
+        var script = document.createElement(&#39;script&#39;);
+        script.src = &quot;MousePressed_RGB-Circles.js&quot;;
+        document.body.appendChild(script);
+
+&lt;/script&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+
+
+    &lt;p&gt;&lt;a href=&quot;http://localhost:4000/MousePressed-RGB-Circles/&quot;&gt;Mousepressed Rgb &lt;/a&gt; was originally published by LuZhouheng at &lt;a href=&quot;http://localhost:4000&quot;&gt;Zhouheng Media / 周亨倉庫&lt;/a&gt; on February 11, 2016.&lt;/p&gt;
+  </content>
+</entry>
 
 
 <entry>
@@ -27,7 +537,7 @@
   <content type="html">
     
 
-    &lt;p&gt;&lt;a href=&quot;http://localhost:4000/new-first/&quot;&gt;New First&lt;/a&gt; was originally published by LuZhouheng at &lt;a href=&quot;http://localhost:4000&quot;&gt;Zhouheng Media&lt;/a&gt; on February 08, 2016.&lt;/p&gt;
+    &lt;p&gt;&lt;a href=&quot;http://localhost:4000/new-first/&quot;&gt;New First&lt;/a&gt; was originally published by LuZhouheng at &lt;a href=&quot;http://localhost:4000&quot;&gt;Zhouheng Media / 周亨倉庫&lt;/a&gt; on February 08, 2016.&lt;/p&gt;
   </content>
 </entry>
 
@@ -65,7 +575,7 @@ mathjax: true
 
 &lt;p&gt;The only thing to look out for is the escaping of the backslash when using markdown, so the delimiters become &lt;code class=&quot;highlighter-rouge&quot;&gt;\\[ ... \\]&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;\\( ... \\)&lt;/code&gt; for inline and block maths respectively.&lt;/p&gt;
 
-    &lt;p&gt;&lt;a href=&quot;http://localhost:4000/blog/mathjax-example/&quot;&gt;MathJax Example&lt;/a&gt; was originally published by LuZhouheng at &lt;a href=&quot;http://localhost:4000&quot;&gt;Zhouheng Media&lt;/a&gt; on August 10, 2015.&lt;/p&gt;
+    &lt;p&gt;&lt;a href=&quot;http://localhost:4000/blog/mathjax-example/&quot;&gt;MathJax Example&lt;/a&gt; was originally published by LuZhouheng at &lt;a href=&quot;http://localhost:4000&quot;&gt;Zhouheng Media / 周亨倉庫&lt;/a&gt; on August 10, 2015.&lt;/p&gt;
   </content>
 </entry>
 
@@ -100,7 +610,7 @@ To add new posts, simply add a file in the &lt;code class=&quot;highlighter-roug
 &lt;p&gt;Check out the &lt;a href=&quot;http://jekyllrb.com&quot;&gt;Jekyll docs&lt;/a&gt; for more info on how to get the most out of Jekyll. File all bugs/feature requests at &lt;a href=&quot;https://github.com/jekyll/jekyll&quot;&gt;Jekyll’s GitHub repo&lt;/a&gt;.&lt;/p&gt;
 
 
-    &lt;p&gt;&lt;a href=&quot;http://localhost:4000/blog/hello-world/&quot;&gt;Hello World&lt;/a&gt; was originally published by LuZhouheng at &lt;a href=&quot;http://localhost:4000&quot;&gt;Zhouheng Media&lt;/a&gt; on August 09, 2014.&lt;/p&gt;
+    &lt;p&gt;&lt;a href=&quot;http://localhost:4000/blog/hello-world/&quot;&gt;Hello World&lt;/a&gt; was originally published by LuZhouheng at &lt;a href=&quot;http://localhost:4000&quot;&gt;Zhouheng Media / 周亨倉庫&lt;/a&gt; on August 09, 2014.&lt;/p&gt;
   </content>
 </entry>
 
@@ -148,7 +658,7 @@ To add new posts, simply add a file in the &lt;code class=&quot;highlighter-roug
 
 &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-yaml&quot; data-lang=&quot;yaml&quot;&gt;&lt;span class=&quot;s&quot;&gt;author&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;billy_rick&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
-    &lt;p&gt;&lt;a href=&quot;http://localhost:4000/articles/author-override/&quot;&gt;Override Author Byline Test Post&lt;/a&gt; was originally published by LuZhouheng at &lt;a href=&quot;http://localhost:4000&quot;&gt;Zhouheng Media&lt;/a&gt; on June 19, 2014.&lt;/p&gt;
+    &lt;p&gt;&lt;a href=&quot;http://localhost:4000/articles/author-override/&quot;&gt;Override Author Byline Test Post&lt;/a&gt; was originally published by LuZhouheng at &lt;a href=&quot;http://localhost:4000&quot;&gt;Zhouheng Media / 周亨倉庫&lt;/a&gt; on June 19, 2014.&lt;/p&gt;
   </content>
 </entry>
 
@@ -265,7 +775,7 @@ To add new posts, simply add a file in the &lt;code class=&quot;highlighter-roug
   &lt;/ol&gt;
 &lt;/div&gt;
 
-    &lt;p&gt;&lt;a href=&quot;http://localhost:4000/articles/code-highlighting-post/&quot;&gt;Syntax Highlighting Post&lt;/a&gt; was originally published by LuZhouheng at &lt;a href=&quot;http://localhost:4000&quot;&gt;Zhouheng Media&lt;/a&gt; on August 16, 2013.&lt;/p&gt;
+    &lt;p&gt;&lt;a href=&quot;http://localhost:4000/articles/code-highlighting-post/&quot;&gt;Syntax Highlighting Post&lt;/a&gt; was originally published by LuZhouheng at &lt;a href=&quot;http://localhost:4000&quot;&gt;Zhouheng Media / 周亨倉庫&lt;/a&gt; on August 16, 2013.&lt;/p&gt;
   </content>
 </entry>
 
@@ -284,7 +794,7 @@ To add new posts, simply add a file in the &lt;code class=&quot;highlighter-roug
   <content type="html">
     &lt;p&gt;So Simple Theme now supports &lt;strong&gt;link posts&lt;/strong&gt;, made famous by John Gruber. To activate just add &lt;code class=&quot;highlighter-rouge&quot;&gt;link: http://url-you-want-linked&lt;/code&gt; to the post’s YAML front matter and you’re done.&lt;/p&gt;
 
-    &lt;p&gt;&lt;a href=&quot;http://localhost:4000/articles/sample-link-post/&quot;&gt;Sample Link Post&lt;/a&gt; was originally published by LuZhouheng at &lt;a href=&quot;http://localhost:4000&quot;&gt;Zhouheng Media&lt;/a&gt; on August 12, 2013.&lt;/p&gt;
+    &lt;p&gt;&lt;a href=&quot;http://localhost:4000/articles/sample-link-post/&quot;&gt;Sample Link Post&lt;/a&gt; was originally published by LuZhouheng at &lt;a href=&quot;http://localhost:4000&quot;&gt;Zhouheng Media / 周亨倉庫&lt;/a&gt; on August 12, 2013.&lt;/p&gt;
   </content>
 </entry>
 
@@ -313,7 +823,7 @@ To add new posts, simply add a file in the &lt;code class=&quot;highlighter-roug
 
 &lt;iframe src=&quot;//player.vimeo.com/video/98146708?title=0&amp;amp;byline=0&quot; width=&quot;500&quot; height=&quot;281&quot; frameborder=&quot;0&quot;&gt; &lt;/iframe&gt;
 
-    &lt;p&gt;&lt;a href=&quot;http://localhost:4000/articles/video-post/&quot;&gt;A Post with a Video&lt;/a&gt; was originally published by LuZhouheng at &lt;a href=&quot;http://localhost:4000&quot;&gt;Zhouheng Media&lt;/a&gt; on June 25, 2013.&lt;/p&gt;
+    &lt;p&gt;&lt;a href=&quot;http://localhost:4000/articles/video-post/&quot;&gt;A Post with a Video&lt;/a&gt; was originally published by LuZhouheng at &lt;a href=&quot;http://localhost:4000&quot;&gt;Zhouheng Media / 周亨倉庫&lt;/a&gt; on June 25, 2013.&lt;/p&gt;
   </content>
 </entry>
 
@@ -372,7 +882,7 @@ To add new posts, simply add a file in the &lt;code class=&quot;highlighter-roug
 
 &lt;p&gt;Aliquip enim artisan dolor post-ironic. Pug tote bag Marfa, deserunt pour-over Portland wolf eu odio intelligentsia american apparel ugh ea. Sunt viral et, 3 wolf moon gastropub pug id. Id fashion axe est typewriter, mlkshk Portland art party aute brunch. Sint pork belly Cosby sweater, deep v mumblecore kitsch american apparel. Try-hard direct trade tumblr sint skateboard. Adipisicing bitters excepteur biodiesel, pickled gastropub aute veniam.&lt;/p&gt;
 
-    &lt;p&gt;&lt;a href=&quot;http://localhost:4000/articles/readability-feature-post/&quot;&gt;Post with Large Feature Image and Text&lt;/a&gt; was originally published by LuZhouheng at &lt;a href=&quot;http://localhost:4000&quot;&gt;Zhouheng Media&lt;/a&gt; on May 23, 2013.&lt;/p&gt;
+    &lt;p&gt;&lt;a href=&quot;http://localhost:4000/articles/readability-feature-post/&quot;&gt;Post with Large Feature Image and Text&lt;/a&gt; was originally published by LuZhouheng at &lt;a href=&quot;http://localhost:4000&quot;&gt;Zhouheng Media / 周亨倉庫&lt;/a&gt; on May 23, 2013.&lt;/p&gt;
   </content>
 </entry>
 
@@ -443,7 +953,7 @@ To add new posts, simply add a file in the &lt;code class=&quot;highlighter-roug
 	&lt;figcaption&gt;Three images.&lt;/figcaption&gt;
 &lt;/figure&gt;
 
-    &lt;p&gt;&lt;a href=&quot;http://localhost:4000/articles/sample-post-images/&quot;&gt;A Post with Images&lt;/a&gt; was originally published by LuZhouheng at &lt;a href=&quot;http://localhost:4000&quot;&gt;Zhouheng Media&lt;/a&gt; on May 22, 2013.&lt;/p&gt;
+    &lt;p&gt;&lt;a href=&quot;http://localhost:4000/articles/sample-post-images/&quot;&gt;A Post with Images&lt;/a&gt; was originally published by LuZhouheng at &lt;a href=&quot;http://localhost:4000&quot;&gt;Zhouheng Media / 周亨倉庫&lt;/a&gt; on May 22, 2013.&lt;/p&gt;
   </content>
 </entry>
 
@@ -501,7 +1011,7 @@ To add new posts, simply add a file in the &lt;code class=&quot;highlighter-roug
 
 &lt;p&gt;Aliquip enim artisan dolor post-ironic. Pug tote bag Marfa, deserunt pour-over Portland wolf eu odio intelligentsia american apparel ugh ea. Sunt viral et, 3 wolf moon gastropub pug id. Id fashion axe est typewriter, mlkshk Portland art party aute brunch. Sint pork belly Cosby sweater, deep v mumblecore kitsch american apparel. Try-hard direct trade tumblr sint skateboard. Adipisicing bitters excepteur biodiesel, pickled gastropub aute veniam.&lt;/p&gt;
 
-    &lt;p&gt;&lt;a href=&quot;http://localhost:4000/articles/readability-post/&quot;&gt;Testing Readability with a Bunch of Text&lt;/a&gt; was originally published by LuZhouheng at &lt;a href=&quot;http://localhost:4000&quot;&gt;Zhouheng Media&lt;/a&gt; on May 22, 2012.&lt;/p&gt;
+    &lt;p&gt;&lt;a href=&quot;http://localhost:4000/articles/readability-post/&quot;&gt;Testing Readability with a Bunch of Text&lt;/a&gt; was originally published by LuZhouheng at &lt;a href=&quot;http://localhost:4000&quot;&gt;Zhouheng Media / 周亨倉庫&lt;/a&gt; on May 22, 2012.&lt;/p&gt;
   </content>
 </entry>
 
@@ -639,7 +1149,7 @@ To add new posts, simply add a file in the &lt;code class=&quot;highlighter-roug
 
 &lt;div&gt;&lt;a href=&quot;http://mademistakes.com&quot; class=&quot;btn&quot;&gt;This is a button&lt;/a&gt;&lt;/div&gt;
 
-    &lt;p&gt;&lt;a href=&quot;http://localhost:4000/articles/sample-post/&quot;&gt;Sample Post&lt;/a&gt; was originally published by LuZhouheng at &lt;a href=&quot;http://localhost:4000&quot;&gt;Zhouheng Media&lt;/a&gt; on March 10, 2011.&lt;/p&gt;
+    &lt;p&gt;&lt;a href=&quot;http://localhost:4000/articles/sample-post/&quot;&gt;Sample Post&lt;/a&gt; was originally published by LuZhouheng at &lt;a href=&quot;http://localhost:4000&quot;&gt;Zhouheng Media / 周亨倉庫&lt;/a&gt; on March 10, 2011.&lt;/p&gt;
   </content>
 </entry>
 

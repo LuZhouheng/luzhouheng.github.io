@@ -20,7 +20,7 @@ function setup() {
 }
 
 function draw() {
-  background(255);
+  background(255,255,255,0);
 
   for (var i = 0; i < lines.length; i++) {
     // update
@@ -45,10 +45,10 @@ function Shape(x, y) {
   this.r = 200;
   this.scale = 1.0;
 
-  var r = map(this.y, 0, height, 10, 255);
-  var g = map(this.x, 0, width, 10, 255);
+  var r = map(this.y, 0, height, 50, 100);
+  var g = map(this.x, 0, width, 50, 100);
   var b = random(50, 100);
-  this.col = color(r, g, b, 10);
+  this.col = color(r, g, b, 5);
 
   this.state = false;
   this.grow = 0;

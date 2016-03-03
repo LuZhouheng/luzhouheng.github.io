@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<style>
+			body {
+				background-color: #000;
+				margin: 0;
+				overflow: hidden;
+			}
+
+		</style>
+	</head>
+	<body>
+		
+		<script src="http://brangerbriz.net/labs/threejs_playGnd/js/three.min.js"></script>
+		<script src="http://brangerbriz.net/labs/threejs_playGnd/js/Detector.js"></script>
+
+		<script>
+		
+			if ( ! Detector.webgl ) Detector.addGetWebGLMessage();
+			
+			var camera, scene, renderer;
+			var geometry, material, mesh;
+			var cnt = 0;
+			var meshes = [];
+
+			function setup() {
+
+				var W = window.innerWidth, H = window.innerHeight;
+				renderer = new THREE.WebGLRenderer();
+				renderer.setSize( W, H );
+				document.body.appendChild( renderer.domElement );
+
+				camera = new THREE.PerspectiveCamera( 40, W/H, 1, 10000 );
+				camera.position.z = 700;
+				camera.position.y = Math.sin( Date.now() * 0.0002 ) * 350;
+
+				scene = new THREE.Scene();
+
+				
+				for ( var i = 0; i < 800; i ++ ) {
+					
+					var points = [
+						new THREE.Vector3( -12.556202011182904, -6.6237210761755705, 11.476452415809035 ),
+						new THREE.Vector3( -26.308831991627812, -36.702050315216184, -65.70204044692218 ),
+						new THREE.Vector3( 30.030598351731896, 53.670027665793896, -48.4273636713624 ),
+						new THREE.Vector3( -91.64749449118972, 86.79489707574248, -39.410504000261426 ),
+						new THREE.Vector3( -9.040775801986456, 24.351109005510807, -25.116276880726218 ),
+						new THREE.Vector3( 45.43574578128755, 91.02062359452248, -22.751434659585357 ),
+						new THREE.Vector3( 95.66223728470504, 46.15802983753383, 15.478686103597283 ),
+						new THREE.Vector3( 40.25877616368234, 69.51988283544779, -17.296824790537357 ),
+						new THREE.Vector3( -44.74278939887881, 80.29115716926754, -75.00841468572617 ),
+						new THREE.Vector3( -89.60328730754554, 74.49235524982214, 47.89038090966642 ),
+						new THREE.Vector3( 97.9008749127388, -44.629028998315334, -52.1704429294914 ),
+						new THREE.Vector3( -50.608135061338544, 24.322520522400737, -82.82752600498497 ),
+						new THREE.Vector3( 25.44669136404991, -54.02610534802079, -38.45692528411746 ),
+						new THREE.Vector3( -82.40420743823051, -40.75323059223592, 76.98600050061941 ),
+						new THREE.Vector3( -39.261171920225024, 60.10815342888236, -73.79144192673266 ),
+					];
+					
+					geometry = new THREE.ConvexGeometry( points );
+					material = new THREE.MeshNormalMaterial({shading: THREE.FlatShading });
+					mesh = new THREE.Mesh(geometry, material);
+					scene.add(mesh);
+						
+					mesh.scale.x = mesh.scale.y = mesh.scale.z = 0.2;
+					
+					mesh.position.x = Math.random() * 1500 - 750;
+					mesh.position.y = Math.random() * 1500 - 750;
+					mesh.position.z = Math.random() * 1500 - 750;
+
+					mesh.rotation.x = Math.random() * 2 * Math.PI;
+					mesh.rotation.y = Math.random() * 2 * Math.PI;
+					
+					scene.add(mesh);
+					
+					meshes[ cnt ] = mesh;
+					cnt += 1;
+				}
+								
+				
+
+			}
+			
+			
+
+			function draw() {
+
+				requestAnimationFrame( draw );
+				
+								
+				for ( i = 0; i < cnt; i ++ ) {
+						mesh = meshes[ i ];
+						mesh.rotation.z = Date.now() * 0.0005;
+				}
+								
+				camera.position.y = Math.sin( Date.now() * 0.0002 ) * 300;
+				
+				renderer.render( scene, camera );
+				
+			}
+
+			setup();
+			draw();
+
+		</script>
+	</body>
+</html>

@@ -1,5 +1,5 @@
-title:            Zhouheng Media｜周亨仓库
-description:      Describe your website here.
+title:            周亨仓库
+description:      分享个人作品与记录个人成长
 # put your disqus here
 disqus_shortname: 
 reading_time:     true # if true, shows the estimated reading time for a post
@@ -15,18 +15,18 @@ logo:             images/logo.png # logo visible in the topbar
 #   To create sub categories. add a submenu item
 # See the example
 menu:
-  - title: 'Home'
+  - title: '主页'
     url: '/'
-  - title: 'Fork'
-    url: 'http://github.com/aron-bordin/neo-hpstr-jekyll-theme'
-  - title: 'Install'
+  - title: 'GitHub'
+    url: 'http://github.com/luzhouheng'
+  - title: '作品'
     url: '/theme-setup/'
-  - title: 'Tags'
+  - title: '博客'
     url: '/tags'
-  - title: 'Categories'
+  - title: '分类'
     url: '/categories'
     type: 'categories'
-  - title: 'Favorites'
+  - title: '喜好'
     url: '#'
     submenu:
       - title: 'Code Highlighter'

@@ -1,10 +1,10 @@
 # Jekyll configuration
 
-name: Blog Name
-description: Software Developer
+name: Zhouheng Asia ｜ 周亨仓库
+description: Media Artist ｜ Coder ｜ Student
 
 # Url is currently only used only for the RSS feed in feed.xml
-url: http://streetturtle.github.io
+url: http://www.zhouheng.asia
 #url: http://localhost:4000
 
 # For a project page here should be a project name. Otherwise (for user's/organizaion's page leave it empty)
@@ -42,4 +42,4 @@ kramdown:
   input: GFM # Enable GitHub Flavored Markdown (fenced code blocks)
   hard_wrap: true
 
-exclude: ['README.md', 'LICENSE']
+# exclude: ['README.md', 'LICENSE']

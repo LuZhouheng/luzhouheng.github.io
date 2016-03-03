@@ -9,7 +9,8 @@ module.exports = function(grunt) {
       all: [
         'Gruntfile.js',
         'assets/js/*.js',
-        'assets/js/plugins/*.js',
+        '!assets/js/plugins/*.js',
+        '!assets/js/vendor/*.js',
         '!assets/js/scripts.min.js'
       ]
     },
@@ -52,14 +53,21 @@ module.exports = function(grunt) {
         files: [
           '<%= jshint.all %>'
         ],
-        tasks: ['uglify']
+        tasks: ['jshint','uglify']
       }
     },
     clean: {
       dist: [
         'assets/js/scripts.min.js'
       ]
+    },
+
+    githooks: {
+      all: {
+        'pre-commit': 'clean jshint uglify imagemin svgmin'
+      }
     }
+
   });
 
   // Load tasks
@@ -69,6 +77,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-imagemin');
   grunt.loadNpmTasks('grunt-svgmin');
+  grunt.loadNpmTasks('grunt-githooks');
 
   // Register tasks
   grunt.registerTask('default', [

@@ -1,33 +1,28 @@
 /*! Plugin options and other jQuery stuff */
 
-// Responsive Nav
-var navigation = responsiveNav("#site-nav", { // Selector: The ID of the wrapper
-  animate: true, // Boolean: Use CSS3 transitions, true or false
-  transition: 200, // Integer: Speed of the transition, in milliseconds
-  label: "<i class='fa fa-bars'></i> Menu", // String: Label for the navigation toggle
-  insert: "before", // String: Insert the toggle before or after the navigation
-  customToggle: "", // Selector: Specify the ID of a custom toggle
-  openPos: "relative", // String: Position of the opened nav, relative or static
-  jsClass: "js", // String: 'JS enabled' class which is added to <html> el
-  init: function(){}, // Function: Init callback
-  open: function(){}, // Function: Open callback
-  close: function(){} // Function: Close callback
-});
-
-$('html').click(function() {
-  //Hide the menus if visible
-  if ($(navigation.wrapper).hasClass('opened')) {
-  	navigation.toggle();
-  }
-});
-
-$('#site-nav').click(function(event){
-    event.stopPropagation();
+// dl-menu options
+$(function() {
+  $( '#dl-menu' ).dlmenu({
+    animationClasses : { classin : 'dl-animate-in', classout : 'dl-animate-out' }
+  });
 });
 
 // FitVids options
 $(function() {
-	$("article").fitVids();
+  $("article").fitVids();
+});
+
+$(".close-menu").click(function () {
+  $(".menu").toggleClass("disabled");
+  $(".links").toggleClass("enabled");
+});
+
+$(".about").click(function () {
+  $("#about").css('display','block');
+});
+
+$(".close-about").click(function () {
+  $("#about").css('display','');
 });
 
 // Add lightbox class to all image links
@@ -47,8 +42,56 @@ $(document).ready(function() {
       tError: '<a href="%url%">Image #%curr%</a> could not be loaded.',
     },
     removalDelay: 300, // Delay in milliseconds before popup is removed
-    // Class that is added to body when popup is open. 
+    // Class that is added to body when popup is open.
     // make it unique to apply your CSS animations just to this exact popup
     mainClass: 'mfp-fade'
   });
 });
+
+// header
+$(document).ready(function(e) {
+  $(window).scroll(function(){
+    var header = $('.header-menu');
+    var scroll = $(window).scrollTop();
+    if(scroll > 300){
+      header.attr('class', 'header-menu header-menu-overflow');
+    } else {
+      header.attr('class', 'header-menu header-menu-top');
+    }
+  });
+});
+
+//mobile menu
+$(document).ready(function(){
+  $("#menu").attr('style', '');
+  $("#menu").mmenu({
+    "extensions": [
+      "border-full",
+      "effect-zoom-menu",
+      "effect-zoom-panels",
+      "pageshadow",
+      "theme-dark"
+    ],
+    "counters": true,
+    "navbars": [
+      {
+        "position": "bottom",
+        "content": [
+          "<a class='fa fa-search' href='/search'></a>",
+          "<a class='fa fa-envelope' href='#/'></a>",
+          "<a class='fa fa-twitter' href='#/'></a>",
+          "<a class='fa fa-facebook' href='#/'></a>"
+        ]
+      }
+    ]
+  });
+});
+
+var sharing = function(){
+    $(document).ready(function(){
+      $("body").floatingSocialShare({
+        buttons: ["facebook","twitter","google-plus", "linkedin", "pinterest"],
+        text: "Share with "
+      });
+    });
+};//sharing

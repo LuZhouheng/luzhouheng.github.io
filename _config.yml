@@ -13,7 +13,7 @@ logo:             images/logo.png # logo visible in the topbar
 #   To create sub categories. add a submenu item
 # See the example
 menu:
-  - title: '主页<br><small>main</small>'
+  - title: '主页<br><small>Home</small>'
     url: '/'
   - title: '托管<br><small>GitHub</small>'
     url: 'http://github.com/luzhouheng'
@@ -35,9 +35,9 @@ menu:
 # Owner/author information
 owner:
   name:           卢周亨｜luzhouheng
-  site:           http://www.zhouheng.com
+  site:           http://www.zhouheng.asia
   avatar:         images/avatar.jpg
-  bio:            "A Media Artist｜Coder"
+  bio:            "中国美术学院开放媒体系学生｜职业抄代码"
   email:          peressio@gmail.com
   # Twitter nick for use in Twitter cards and follow button.
   twitter: luzhouheng # if no twitter in this config, the twitter follow button will be removed
@@ -52,12 +52,18 @@ twitter:
 social:
   - title: "github"
     url: "https://github.com/luzhouheng"
-  - title: "linkedin"
-    url: "https://br.linkedin.com/in/luzhouheng"
-  - title: "youtube"
-    url: "https://www.youtube.com/channel/UCfnSek-9HPWOx5e2pH7VFgg"
+  - title: "vimeo"
+    url: "https://vimeo.com/luzhouheng"
+  - title: "twitter"
+    url: "https://twitter.com/luzhouheng"
+  - title: "facebook"
+    url: "https://facebook.com/luzhouheng"
+  - title: "tumblr"
+    url: "https://artlinkzen.tumblr.com"
+  - title: "zhihu"
+    url: "https://www.zhihu.com/people/lu-zhou-heng"
 # Background image to be tiled on all pages
-background:
+background: 
 
 # Analytics and webmaster tools stuff goes here
 google_analytics: UA-74684160-1

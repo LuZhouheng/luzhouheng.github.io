@@ -1,5 +1,5 @@
 title:            周亨仓库
-description:      分享与分享
+description:      个人博客，分享学习成果，记录个人生活
 # put your disqus here
 disqus_shortname: 
 reading_time:     false # if true, shows the estimated reading time for a post
@@ -37,7 +37,7 @@ owner:
   name:           卢周亨<br><small>luzhouheng</small>
   site:           http://www.zhouheng.asia
   avatar:         images/avatar.jpg
-  bio:            "中国美术学院开放媒体系学生｜职业抄代码"
+  bio:            "中国美术学院开放媒体系学生｜媒体艺术｜声音艺术｜职业抄代码<br>Student of Open Media Lab | Media Art | Sound Art | Coder"
   email:          peressio@gmail.com
   # Twitter nick for use in Twitter cards and follow button.
   twitter: luzhouheng # if no twitter in this config, the twitter follow button will be removed
@@ -46,7 +46,7 @@ owner:
 
 # Twitter account associated with the site if different from owner/author twitter account.
 # Used in Twitter cards.
-twitter: 
+twitter: luzhouheng
 
 # Social networking links used in author block underneath posts. Update and remove as you like.
 social:

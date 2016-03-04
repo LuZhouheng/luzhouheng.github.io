@@ -91,7 +91,7 @@ paginate: 8
 
 # if true, shows the floatting share buttons
 float_share: false
-share: true
+
 
 kramdown:
   auto_ids: true

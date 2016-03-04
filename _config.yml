@@ -1,13 +1,11 @@
 title:            周亨仓库
-description:      分享个人作品与记录个人成长
+description:      分享与分享
 # put your disqus here
 disqus_shortname: 
-reading_time:     true # if true, shows the estimated reading time for a post
+reading_time:     false # if true, shows the estimated reading time for a post
 words_per_minute: 200
 logo:             images/logo.png # logo visible in the topbar
-# Your site's domain goes here (eg: //mmistakes.github.io, http://mademistakes.com, etc)
 # When testing locally leave blank or use http://localhost:4000
-# url: http://aronbordin.com/neo-hpstr-jekyll-theme
 
 # draw your top menu here
 # each item must have a title and a url.
@@ -15,18 +13,18 @@ logo:             images/logo.png # logo visible in the topbar
 #   To create sub categories. add a submenu item
 # See the example
 menu:
-  - title: '主页'
+  - title: '主页<br><small>main</small>'
     url: '/'
-  - title: 'GitHub'
+  - title: '托管<br><small>GitHub</small>'
     url: 'http://github.com/luzhouheng'
-  - title: '作品'
-    url: '/projects/'
-  - title: '博客'
-    url: '/blogs'
-  - title: '分类'
+  - title: '博客<br><small>Blog</small>'
+    url: '/blogs/'
+  - title: '标签<br><small>Tag</small>'
+    url: '/tags'
+  - title: '分类<br><small>Categories</small>'
     url: '/categories'
     type: 'categories'
-  - title: '喜好'
+  - title: '网络艺术<br><small>Web Art</small>'
     url: '#'
     submenu:
       - title: 'Code Highlighter'
@@ -62,13 +60,13 @@ social:
 background:
 
 # Analytics and webmaster tools stuff goes here
-google_analytics:
+google_analytics: UA-74684160-1
 google_verify:
 # https://ssl.bing.com/webmaster/configure/verify/ownership Option 2 content= goes here
 bing_verify:
 
 # http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
-timezone:    America/New_York
+timezone:    China/BEI_JING
 locale:      zh-CN
 future:      true
 highlighter: rouge
@@ -83,10 +81,11 @@ sass:
 permalink:   /:categories/:title/
 
 # Amount of post to show on home page
-paginate: 10
+paginate: 8
 
 # if true, shows the floatting share buttons
-float_share: true
+float_share: false
+share: true
 
 kramdown:
   auto_ids: true

@@ -2,6 +2,10 @@ title:            周亨仓库
 description:      个人博客，分享学习成果，记录个人生活
 # put your disqus here
 disqus_shortname: 
+# put your duoshuo here
+duoshuo:
+  short_name: zhouheng
+
 reading_time:     false # if true, shows the estimated reading time for a post
 words_per_minute: 200
 logo:             images/logo.png # logo visible in the topbar
@@ -15,12 +19,12 @@ logo:             images/logo.png # logo visible in the topbar
 menu:
   - title: '主页<br><small>Home</small>'
     url: '/'
-  - title: '托管<br><small>GitHub</small>'
-    url: 'http://github.com/luzhouheng'
-  - title: '博客<br><small>Blog</small>'
-    url: '/blogs/'
   - title: '标签<br><small>Tag</small>'
     url: '/tags'
+  - title: '托管<br><small>GitHub</small>'
+    url: 'http://github.com/luzhouheng'
+  - title: '关于我<br><small>About</small>'
+    url: '/about/'
   - title: '分类<br><small>Categories</small>'
     url: '/categories'
     type: 'categories'

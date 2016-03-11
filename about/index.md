@@ -1,38 +1,14 @@
 ---
-layout: page
-title: About
-share: true
+layout: post
+title: About <br/><small>Hi,I'm Zhouheng</small>
+description: "关于卢周亨的介绍"
+modified: 2016-03-10
+tags: [self]
+categories: [intro]
 ---
+>  做做媒体艺术，写写代码，好好生活。
+>  喜欢折腾，热爱琢磨，就是不喜欢舒舒服服的。
 
-# Neo-HPSTR Jekyll Theme
+Hi，我是**卢周亨**， 中国美术学院开放媒体系学生，目前正在学做媒体艺术，学做声音艺术，职业抄代码。
 
-Neo-HPSTR Jekyll is a responsive and modern blog template.
-
-# Live Demo
-
-You can see it running [here](http://blog.rhesoft.com/) and [here](http://aronbordin.com/neo-hpstr-jekyll-theme/).
-
-
-## What Neo-HPSTR brings to the table:
-
-* Modern design.
-* Responsive templates for post, page, and post index `_layouts`. Looks great on mobile, tablet, and desktop devices.
-* Gracefully degrades in older browsers. Compatible with Internet Explorer 8+ and all modern browsers.  
-* Sweet topbar animated menu with support for drop-downs.
-* Optional [Disqus](http://disqus.com) comments and social sharing links.
-* [Open Graph](https://developers.facebook.com/docs/opengraph/) and [Twitter Cards](https://dev.twitter.com/docs/cards) support for a better social sharing experience.
-* Simple [custom 404 page](http://mmistakes.github.io/hpstr-jekyll-theme/404.html) to get you started.
-* Stylesheets for Pygments and Coderay [syntax highlighting](http://mmistakes.github.io/hpstr-jekyll-theme/code-highlighting-post/) to make your code examples look snazzy
-* Author panel, with social links
-* Read more tag support(similar with Wordpress ).
-
-![Preview](http://aronbordin.com/images/neo-hpstr-jekyll-theme-preview.png)
-
-
----
-
-## Getting Started
-
-Neo-HPSTR takes advantage of Sass and data files to make customizing easier. These features require Jekyll 2.x and will not work with older versions of Jekyll.
-
-To learn how to install and use this theme check out the [Setup Guid](http://aronbordin.com/neo-hpstr-jekyll-theme//theme-setup/) for more information.
+一些作品和伪开源艺术项目即将公开。欢迎吐槽

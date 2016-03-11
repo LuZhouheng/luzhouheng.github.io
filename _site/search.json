@@ -76,14 +76,6 @@
       "title"    : "Sample Post",
       "category" : "",
       "tags"     : "sample post",
-      "url"      : "/intro/three/",
-      "date"     : "2011-03-10 00:00:00 +0000"
-    } ,
-  
-    {
-      "title"    : "Sample Post",
-      "category" : "",
-      "tags"     : "sample post",
       "url"      : "/intro/sample-post/",
       "date"     : "2011-03-10 00:00:00 +0000"
     } 

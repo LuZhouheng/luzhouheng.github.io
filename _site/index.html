@@ -1,659 +1,598 @@
-<!doctype html>
-<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
-<!--[if (IE 7)&!(IEMobile)]><html class="no-js lt-ie9 lt-ie8" lang="en"><![endif]-->
-<!--[if (IE 8)&!(IEMobile)]><html class="no-js lt-ie9" lang="en"><![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en"><!--<![endif]-->
+<!DOCTYPE html>
+<html lang="en">
+
 <head>
-<meta charset="utf-8">
-<title>周亨仓库｜Zhouheng Media &#8211; 周亨仓库</title>
-<meta name="description" content="A Media Artist｜Coder">
-<meta name="keywords" content="Media Artist, LuZhouheng, Blog, Web Art, Online Art">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="google-site-verification" content="xBT4GhYoi5qRD5tr338pgPM5OWHHIDR6mNg1a3euekI" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="个人博客，分享学习成果，记录个人生活">
+    <meta name="keyword"  content="卢周亨, luzhouheng, zhouheng, 媒体艺术, 声音艺术, @卢 周亨, 卢周亨的博客, Zhouheng Blog, 博客, 个人网站, 互联网, 网络艺术, Web Art, 设计">
+    <link rel="shortcut icon" href="img/favicon.ico">
 
-<!-- Twitter Cards -->
-<meta name="twitter:card" content="summary">
-<meta name="twitter:site" content="@luzhouheng">
-<meta name="twitter:creator" content="@luzhouheng">
+    <title>周亨仓库 | Zhouheng Media</title>
 
-<!-- Open Graph -->
-<meta property="og:locale" content="zh-CN">
-<meta property="og:type" content="article">
-<meta property="og:title" content="周亨仓库｜Zhouheng Media">
-<meta property="og:description" content="A Media Artist｜Coder">
-<meta property="og:url" content="/">
-<meta property="og:site_name" content="周亨仓库">
-<meta property="og:image" content="/images/images/logo.png">
+    <link rel="canonical" href="http://blog.zhouheng.asia/">
 
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
 
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/hux-blog.min.css">
 
+    <!-- Pygments Github CSS -->
+    <link rel="stylesheet" href="/css/syntax.css">
 
-
-<link rel="canonical" href="/">
-<link href="/feed.xml" type="application/atom+xml" rel="alternate" title="周亨仓库 Feed">
-
-<!-- http://t.co/dKP3o1e -->
-<meta name="HandheldFriendly" content="True">
-<meta name="MobileOptimized" content="320">
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
-
-<!-- For all browsers -->
-<link rel="stylesheet" href="/assets/css/main.css">
-<link rel="stylesheet" href="/assets/css/jquery.mmenu.all.css">
-<link rel="stylesheet" href="/assets/css/jquery.floating-social-share.min.css">
-<!-- Webfonts -->
-<link href="//fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic" rel="stylesheet" type="text/css">
-
-<meta http-equiv="cleartype" content="on">
-
-<!-- Load Modernizr -->
-<script type="text/javascript" src="/assets/js/vendor/modernizr-2.6.2.custom.min.js"></script>
-
-<!-- Icons -->
-<!-- 16x16 -->
-<link rel="shortcut icon" href="/favicon.ico">
-<!-- 32x32 -->
-<link rel="shortcut icon" href="/favicon.png">
-<!-- 57x57 (precomposed) for iPhone 3GS, pre-2011 iPod Touch and older Android devices -->
-<link rel="apple-touch-icon-precomposed" href="/images/apple-touch-icon-precomposed.png">
-<!-- 72x72 (precomposed) for 1st generation iPad, iPad 2 and iPad mini -->
-<link rel="apple-touch-icon-precomposed" sizes="72x72" href="/images/apple-touch-icon-72x72-precomposed.png">
-<!-- 114x114 (precomposed) for iPhone 4, 4S, 5 and post-2011 iPod Touch -->
-<link rel="apple-touch-icon-precomposed" sizes="114x114" href="/images/apple-touch-icon-114x114-precomposed.png">
-<!-- 144x144 (precomposed) for iPad 3rd and 4th generation -->
-<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/images/apple-touch-icon-144x144-precomposed.png">
+    <!-- Custom Fonts -->
+    <!-- <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css"> -->
+    <!-- Hux change font-awesome CDN to qiniu -->
+    <link href="http://cdn.staticfile.org/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 
 
+    <!-- Hux Delete, sad but pending in China
+    <link href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/
+    css'>
+    -->
 
 
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- ga & ba script hoook -->
+    <script></script>
 </head>
 
-<body id="post-index">
 
-<!--[if lt IE 9]><div class="upgrade"><strong><a href="http://whatbrowser.org/">Your browser is quite old!</strong> Why not upgrade to a different browser to better enjoy this site?</a></div><![endif]-->
+<!-- hack iOS CSS :active style -->
+<body ontouchstart="">
 
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">周亨仓库<br/><small>Zhouheng Media</small></a>
+        </div>
 
-
-<div class="header-menu header-menu-top">
-    <ul class="header-item-container">
-      <li class="header-item-title header-toggle "><a href="#menu"><h2><i class="fa fa-bars"></i></h2></a></li>
-      <li class="header-item-title">
-        <a href="/">
-          
-            <img class="logo" src="/images/logo.png" alt="周亨仓库">
-          
-          <a href="/" class="title"> 周亨仓库</a>
-        </a>
-      </li>
-      
-        
-        
-
-        
-          <li class="header-item "><a href="#"><h3>网络艺术<br><small>Web Art</small></h3></a>
-            <ul class="header-submenu">
-              
-                <li class="sub-item"><a href="/intro/code-highlighting-post/">Code Highlighter</a></li>
-              
-                <li class="sub-item"><a href="/intro/sample-post/">Sample Post</a></li>
-              
-            </ul>
-          </li>
-        
-      
-        
-        
-
-        
-          <li class="header-item "><a href="/categories"><h3>分类<br><small>Categories</small></h3></a>
-            <ul class="header-submenu">
-              
-                
-                  <li class="sub-item"><a href="/categories/#image">image</a></li>
-              
-                
-                  <li class="sub-item"><a href="/categories/#intro">intro</a></li>
-              
-                
-                  <li class="sub-item"><a href="/categories/#sample">sample</a></li>
-              
-            </ul>
-          </li>
-        
-      
-        
-        
-
-        
-            
-                <li class="header-item "><a href="/about/"><h3>关于我<br><small>About</small></h3></a></li>
-            
-        
-      
-        
-        
-
-        
-            
-                <li class="header-item "><a href="http://github.com/luzhouheng" target="_blank"><h3>托管<br><small>GitHub</small></h3></a></li>
-            
-        
-      
-        
-        
-
-        
-            
-                <li class="header-item "><a href="/tags"><h3>标签<br><small>Tag</small></h3></a></li>
-            
-        
-      
-        
-        
-
-        
-            
-                <li class="header-item "><a href="/"><h3>主页<br><small>Home</small></h3></a></li>
-            
-        
-      
-      <li class="header-item"><a href="/search"><h3><i class="fa fa-search"></i></h3></a></li>
-    </ul>
-  </div>
-<div class="entry-header">
-  <div class="header-title">
-    <div class="header-title-wrap">
-      <h1>周亨仓库｜Zhouheng Media</h1>
-      
-        <h2><span class="entry-date"><time>&nbsp;</time></span></h2>
-      
-
-      
-          <p class="entry-reading-time">
-            &nbsp;
-          </p><!-- /.entry-reading-time -->
-      
-    </div><!-- /.header-title-wrap -->
-  </div><!-- /.header-title -->
-</div><!-- /.entry-header -->
-
-
-<nav id="menu" style="display: none">
-  <ul>
-    
-      
-        <li><a href="/"><h3>主页<br><small>Home</small></h3></a></li>
-      
-    
-      
-        <li><a href="/tags"><h3>标签<br><small>Tag</small></h3></a></li>
-      
-    
-      
-        <li><a href="http://github.com/luzhouheng"><h3>托管<br><small>GitHub</small></h3></a></li>
-      
-    
-      
-        <li><a href="/about/"><h3>关于我<br><small>About</small></h3></a></li>
-      
-    
-      
-        <li><a href="/categories"><h3>分类<br><small>Categories</small></h3></a>
-          <ul>
-            
-              
-                <li><a href="/categories/#image">image</a></li>
-            
-              
-                <li><a href="/categories/#intro">intro</a></li>
-            
-              
-                <li><a href="/categories/#sample">sample</a></li>
-            
-          </ul>
-        </li>
-      
-    
-      
-        <li><a href="#"><h3>网络艺术<br><small>Web Art</small></h3></a>
-          <ul>
-            
-              <li><a href="/intro/code-highlighting-post/">Code Highlighter</a></li>
-            
-              <li><a href="/intro/sample-post/">Sample Post</a></li>
-            
-          </ul>
-        </li>
-      
-    
-  </ul>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <!-- Known Issue, found by Hux:
+            <nav>'s height woule be hold on by its content.
+            so, when navbar scale out, the <nav> will cover tags.
+            also mask any touch event of tags, unfortunately.
+        -->
+        <div id="huxblog_navbar">
+            <div class="navbar-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="/">Home</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/about/">About</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/tags/">Tags</a>
+                    </li>
+                    
+                </ul>
+            </div>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
 </nav>
+<script>
+    // Drop Bootstarp low-performance Navbar
+    // Use customize navbar with high-quality material design animation
+    // in high-perf jank-free CSS3 implementation
+    var $body   = document.body;
+    var $toggle = document.querySelector('.navbar-toggle');
+    var $navbar = document.querySelector('#huxblog_navbar');
+    var $collapse = document.querySelector('.navbar-collapse');
+
+    $toggle.addEventListener('click', handleMagic)
+    function handleMagic(e){
+        if ($navbar.className.indexOf('in') > 0) {
+        // CLOSE
+            $navbar.className = " ";
+            // wait until animation end.
+            setTimeout(function(){
+                // prevent frequently toggle
+                if($navbar.className.indexOf('in') < 0) {
+                    $collapse.style.height = "0px"
+                }
+            },400)
+        }else{
+        // OPEN
+            $collapse.style.height = "auto"
+            $navbar.className += " in";
+        }
+    }
+</script>
 
 
-  <a href="https://twitter.com/luzhouheng" class="btn btn-info button-twitter" data-show-count="false" data-size="large"><i class="fa fa-twitter"></i> <span> | Follow @luzhouheng</span></a>
+    <!-- Page Header -->
+<header class="intro-header" style="background-image: url('/img/home-bg.jpg')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 ">
+                <div class="site-heading">
+                    <h1>周亨仓库<br/><small>Zhouheng Media</small></h1>
+                    <!--<hr class="small">-->
+                    <span class="subheading">Boilerplate of Hux Blog</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Main Content -->
+<div class="container">
+	<div class="row">
+        
+
+<!-- USE SIDEBAR -->
+    <!-- Post Container -->
+    		<div class="
+                col-lg-8 col-lg-offset-1
+                col-md-8 col-md-offset-1
+                col-sm-12
+                col-xs-12
+                post-container
+            ">
+    			
+<div class="post-preview">
+    <a href="/2015/09/22/js-version/">
+        <h2 class="post-title">
+            Example Post
+        </h2>
+        
+        <h3 class="post-subtitle">
+            ES5, ES6, ES2016, ES.Next: What's going on with JavaScript versioning?
+        </h3>
+        
+        <div class="post-content-preview">
+            JavaScript 有着很奇怪的命名史。
+
+1995 年，它作为网景浏览器（Netscape Navigator）的一部分首次发布，网景给这个新语言命名为 LiveScript。一年后，为了搭上当时媒体热炒 Java 的顺风车，临时改名为了 JavaScript （当然，Java 和 JavaScript 的关系，就和雷锋和雷锋塔一样 —— 并没有什么关系）
 
 
-
-<div id="main" role="main">
-  
-<article class="hentry">
-  <header>
-    
-      <div class="entry-image-index">
-        <a href="/feature-image/" title="Sample Post with Feature Image"><img src="/images/feature.jpg" alt="Sample Post with Feature Image"></a>
-        <div class="image-credit">Image source: <a target="_blank" href="http://www.dargadgetz.com/ios-8-abstract-wallpaper-pack-for-iphone-5s-5c-and-ipod-touch-retina/">dargadgetz</a></div><!-- /.image-credit -->
-
-      </div><!-- /.entry-image -->
-    
-    <div class="entry-meta">
-      <span class="entry-date date published updated"><time datetime="2013-10-28T00:00:00+00:00"><a href="/feature-image/">October 28, 2013</a></time></span><span class="author vcard"><span class="fn"><a href="/about/" title="About 卢周亨<br><small>luzhouheng</small>">卢周亨<br><small>luzhouheng</small></a></span></span>
-      
-    </div><!-- /.entry-meta -->
-    
-      <h1 class="entry-title"><a href="/feature-image/" rel="bookmark" title="Sample Post with Feature Image" itemprop="url">Sample Post with Feature Image</a></h1>
-    
-  </header>
-  <div class="entry-content">
-    
-      <p>This post demonstrate how to use feature images on your posts.</p>
-
-<p>Just add:</p>
-
-<figure class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="s">image</span><span class="pi">:</span>
-  <span class="s">feature</span><span class="pi">:</span> <span class="s">filename.png</span></code></pre></figure>
-
-<p>where <strong>filename.png</strong> is an image inside <code class="highlighter-rouge">images</code> folder. This image will be displayed on the top of your post.</p>
-
-<p>Warning! The image height is not limited. The image width will be adjusted to fit on the post container, make sure to not use images with a high height.</p>
-
-    
-  </div><!-- /.entry-content -->
-</article><!-- /.hentry -->
-
-<article class="hentry">
-  <header>
-    
-    <div class="entry-meta">
-      <span class="entry-date date published updated"><time datetime="2013-10-28T00:00:00+00:00"><a href="/dark-post/">October 28, 2013</a></time></span><span class="author vcard"><span class="fn"><a href="/about/" title="About 卢周亨<br><small>luzhouheng</small>">卢周亨<br><small>luzhouheng</small></a></span></span>
-      
-    </div><!-- /.entry-meta -->
-    
-      <h1 class="entry-title"><a href="/dark-post/" rel="bookmark" title="Dark Post" itemprop="url">Dark Post</a></h1>
-    
-  </header>
-  <div class="entry-content">
-    
-      <p>This is a sample post to show the dark post theme. To use this dark theme, just add:</p>
-
-<figure class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="s">layout</span><span class="pi">:</span> <span class="s">dark-post</span></code></pre></figure>
-
-<p>on your post. This theme adds a dark background with a white panel to show your content.</p>
-
-    
-  </div><!-- /.entry-content -->
-</article><!-- /.hentry -->
-
-<article class="hentry">
-  <header>
-    
-    <div class="entry-meta">
-      <span class="entry-date date published updated"><time datetime="2013-10-26T00:00:00+00:00"><a href="/image/background-image/">October 26, 2013</a></time></span><span class="author vcard"><span class="fn"><a href="/about/" title="About 卢周亨<br><small>luzhouheng</small>">卢周亨<br><small>luzhouheng</small></a></span></span>
-      
-    </div><!-- /.entry-meta -->
-    
-      <h1 class="entry-title"><a href="/image/background-image/" rel="bookmark" title="Post with a Background Image" itemprop="url">Post with a Background Image</a></h1>
-    
-  </header>
-  <div class="entry-content">
-    
-      <p>Here be a sample post with a custom background image. To utilize this “feature” just add the following YAML to a post’s front matter.</p>
-
-<figure class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="s">image</span><span class="pi">:</span>
-  <span class="s">background</span><span class="pi">:</span> <span class="s">filename.png</span></code></pre></figure>
-
-<p>This little bit of YAML makes the assumption that your background image asset is in the <code class="highlighter-rouge">/images</code> folder. If you place it somewhere else or are hotlinking from the web, just include the full http(s):// URL. Either way you should have a background image that is tiled.</p>
-
-<p>If you want to set a background image for the entire site just add <code class="highlighter-rouge">background: filename.png</code> to your <code class="highlighter-rouge">_config.yml</code> and BOOM — background images on every page!</p>
-
-<div xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/" about="http://subtlepatterns.com" class="notice">Background images from <span property="dct:title">Subtle Patterns</span> (<a rel="cc:attributionURL" property="cc:attributionName" href="http://subtlepatterns.com">Subtle Patterns</a>) / <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0</a></div>
-
-    
-  </div><!-- /.entry-content -->
-</article><!-- /.hentry -->
-
-<article class="hentry">
-  <header>
-    
-    <div class="entry-meta">
-      <span class="entry-date date published updated"><time datetime="2013-08-16T00:00:00+00:00"><a href="/intro/code-highlighting-post/">August 16, 2013</a></time></span><span class="author vcard"><span class="fn"><a href="/about/" title="About 卢周亨<br><small>luzhouheng</small>">卢周亨<br><small>luzhouheng</small></a></span></span>
-      
-    </div><!-- /.entry-meta -->
-    
-      <h1 class="entry-title"><a href="/intro/code-highlighting-post/" rel="bookmark" title="Syntax Highlighting Post" itemprop="url">Syntax Highlighting Post</a></h1>
-    
-  </header>
-  <div class="entry-content">
-    
-      <p>Syntax highlighting is a feature that displays source code, in different colors and fonts according to the category of terms. This feature facilitates writing in a structured language such as a programming language or a markup language as both structures and syntax errors are visually distinct. Highlighting does not affect the meaning of the text itself; it is intended only for human readers.<sup id="fnref:1"><a href="#fn:1" class="footnote">1</a></sup></p>
-
-<h3 id="rouge-code-blocks">Rouge Code Blocks</h3>
-
-<p>To modify styling and highlight colors edit <code class="highlighter-rouge">/_sass/_rouge.scss</code>.</p>
-
-<figure class="highlight"><pre><code class="language-css" data-lang="css"><span class="nf">#container</span> <span class="p">{</span>
-    <span class="nl">float</span><span class="p">:</span> <span class="nb">left</span><span class="p">;</span>
-    <span class="nl">margin</span><span class="p">:</span> <span class="m">0</span> <span class="m">-240px</span> <span class="m">0</span> <span class="m">0</span><span class="p">;</span>
-    <span class="nl">width</span><span class="p">:</span> <span class="m">100%</span><span class="p">;</span>
-<span class="p">}</span></code></pre></figure>
-
-<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;nav</span> <span class="na">class=</span><span class="s">"pagination"</span> <span class="na">role=</span><span class="s">"navigation"</span><span class="nt">&gt;</span>
-    {% if page.previous %}
-        <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"{{ site.url }}{{ page.previous.url }}"</span> <span class="na">class=</span><span class="s">"btn"</span> <span class="na">title=</span><span class="s">"{{ page.previous.title }}"</span><span class="nt">&gt;</span>Previous article<span class="nt">&lt;/a&gt;</span>
-    {% endif %}
-    {% if page.next %}
-        <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"{{ site.url }}{{ page.next.url }}"</span> <span class="na">class=</span><span class="s">"btn"</span> <span class="na">title=</span><span class="s">"{{ page.next.title }}"</span><span class="nt">&gt;</span>Next article<span class="nt">&lt;/a&gt;</span>
-    {% endif %}
-<span class="nt">&lt;/nav&gt;</span><span class="c">&lt;!-- /.pagination --&gt;</span></code></pre></figure>
-
-<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="k">module</span> <span class="nn">Jekyll</span>
-  <span class="k">class</span> <span class="nc">TagIndex</span> <span class="o">&lt;</span> <span class="no">Page</span>
-    <span class="k">def</span> <span class="nf">initialize</span><span class="p">(</span><span class="n">site</span><span class="p">,</span> <span class="n">base</span><span class="p">,</span> <span class="n">dir</span><span class="p">,</span> <span class="n">tag</span><span class="p">)</span>
-      <span class="vi">@site</span> <span class="o">=</span> <span class="n">site</span>
-      <span class="vi">@base</span> <span class="o">=</span> <span class="n">base</span>
-      <span class="vi">@dir</span> <span class="o">=</span> <span class="n">dir</span>
-      <span class="vi">@name</span> <span class="o">=</span> <span class="s1">'index.html'</span>
-      <span class="nb">self</span><span class="p">.</span><span class="nf">process</span><span class="p">(</span><span class="vi">@name</span><span class="p">)</span>
-      <span class="nb">self</span><span class="p">.</span><span class="nf">read_yaml</span><span class="p">(</span><span class="no">File</span><span class="p">.</span><span class="nf">join</span><span class="p">(</span><span class="n">base</span><span class="p">,</span> <span class="s1">'_layouts'</span><span class="p">),</span> <span class="s1">'tag_index.html'</span><span class="p">)</span>
-      <span class="nb">self</span><span class="p">.</span><span class="nf">data</span><span class="p">[</span><span class="s1">'tag'</span><span class="p">]</span> <span class="o">=</span> <span class="n">tag</span>
-      <span class="n">tag_title_prefix</span> <span class="o">=</span> <span class="n">site</span><span class="p">.</span><span class="nf">config</span><span class="p">[</span><span class="s1">'tag_title_prefix'</span><span class="p">]</span> <span class="o">||</span> <span class="s1">'Tagged: '</span>
-      <span class="n">tag_title_suffix</span> <span class="o">=</span> <span class="n">site</span><span class="p">.</span><span class="nf">config</span><span class="p">[</span><span class="s1">'tag_title_suffix'</span><span class="p">]</span> <span class="o">||</span> <span class="s1">'&amp;#8211;'</span>
-      <span class="nb">self</span><span class="p">.</span><span class="nf">data</span><span class="p">[</span><span class="s1">'title'</span><span class="p">]</span> <span class="o">=</span> <span class="s2">"</span><span class="si">#{</span><span class="n">tag_title_prefix</span><span class="si">}#{</span><span class="n">tag</span><span class="si">}</span><span class="s2">"</span>
-      <span class="nb">self</span><span class="p">.</span><span class="nf">data</span><span class="p">[</span><span class="s1">'description'</span><span class="p">]</span> <span class="o">=</span> <span class="s2">"An archive of posts tagged </span><span class="si">#{</span><span class="n">tag</span><span class="si">}</span><span class="s2">."</span>
-    <span class="k">end</span>
-  <span class="k">end</span>
-<span class="k">end</span></code></pre></figure>
-
-<h3 id="standard-code-block">Standard Code Block</h3>
-
-<div class="highlighter-rouge"><pre class="highlight"><code>&lt;nav class="pagination" role="navigation"&gt;
-    {% if page.previous %}
-        &lt;a href="{{ site.url }}{{ page.previous.url }}" class="btn" title="{{ page.previous.title }}"&gt;Previous article&lt;/a&gt;
-    {% endif %}
-    {% if page.next %}
-        &lt;a href="{{ site.url }}{{ page.next.url }}" class="btn" title="{{ page.next.title }}"&gt;Next article&lt;/a&gt;
-    {% endif %}
-&lt;/nav&gt;&lt;!-- /.pagination --&gt;
-</code></pre>
+歪果仁的笑话怎么一点都不好...
+        </div>
+    </a>
+    <p class="post-meta">
+        Posted by Hux on September 22, 2015
+    </p>
 </div>
+<hr>
 
-<div class="footnotes">
-  <ol>
-    <li id="fn:1">
-      <p><a href="http://en.wikipedia.org/wiki/Syntax_highlighting">http://en.wikipedia.org/wiki/Syntax_highlighting</a> <a href="#fnref:1" class="reversefootnote">&#8617;</a></p>
-    </li>
-  </ol>
+<div class="post-preview">
+    <a href="/2015/07/09/js-module-7day/">
+        <h2 class="post-title">
+            Example Post using Keynote Layout
+        </h2>
+        
+        <h3 class="post-subtitle">
+            Keynote: JavaScript Modularization Journey
+        </h3>
+        
+        <div class="post-content-preview">
+            
+  下滑这里查看更多内容
+
+
+7月9日，我在公司内部进行了名为「JavaScript 模块化七日谈」分享，并将该 Slides 分享到了微博上。出乎意料地，这篇微博先后被 @JS小组 @尤小右 @寸志 等近 200 人转发，阅读达到 10w，获得了还不错的评价。
+
+于是，我决定将它重新发到我的博客上，并为它专门制作了适用于 Keynote 展示文稿的新布局。它能自动根据屏幕大小/旋转以一定...
+        </div>
+    </a>
+    <p class="post-meta">
+        Posted by Hux on July 9, 2015
+    </p>
 </div>
+<hr>
 
+<div class="post-preview">
+    <a href="/2015/05/25/js-module-loader/">
+        <h2 class="post-title">
+            Example Post with Code Highlight
+        </h2>
+        
+        <h3 class="post-subtitle">
+            CommonJS，RequireJS，SeaJS 归纳笔记
+        </h3>
+        
+        <div class="post-content-preview">
+            Foreword
+
+
+  Here comes Module!
+
+
+随着网站逐渐变成「互联网应用程序」，嵌入网页的 JavaScript 代码越来越庞大，越来越复杂。网页越来越像桌面程序，需要一个团队分工协作、进度管理、单元测试……我们不得不使用软件工程的方法，来管理网页的业务逻辑。
+
+于是，JavaScript 的模块化成为迫切需求。在 ES6 Module 来临之前，JavaScript...
+        </div>
+    </a>
+    <p class="post-meta">
+        Posted by Hux on May 25, 2015
+    </p>
+</div>
+<hr>
+
+<div class="post-preview">
+    <a href="/2015/04/14/unix-linux-note/">
+        <h2 class="post-title">
+            Example Post
+        </h2>
+        
+        <h3 class="post-subtitle">
+            不适合人类阅读，非常水的自我笔记
+        </h3>
+        
+        <div class="post-content-preview">
+            
+  This document is not completed and will be updated anytime.
+
+
+Catagory
+
+
+  Unix
     
-  </div><!-- /.entry-content -->
-</article><!-- /.hentry -->
-
-<article class="hentry">
-  <header>
+      Bell Labs
+      Xenix
+      BSD
+      FreeBSD &amp; Apple
+      NeXTStep
+      Darwin
+      POSIX
     
-    <div class="entry-meta">
-      <span class="entry-date date published updated"><time datetime="2013-08-12T00:00:00+00:00"><a href="/intro/sample-link-post/">August 12, 2013</a></time></span><span class="author vcard"><span class="fn"><a href="/about/" title="About 卢周亨<br><small>luzhouheng</small>">卢周亨<br><small>luzhouheng</small></a></span></span>
-      
-    </div><!-- /.entry-meta -->
-    
-      <h1 class="entry-title"><a href="/intro/sample-link-post/" class="permalink" rel="bookmark" title="Sample Link Post"><i class="fa fa-bookmark"></i></a> <a href="http://mademistakes.com">Sample Link Post</a></h1>
-    
-  </header>
-  <div class="entry-content">
-    
-      <p>This theme supports <strong>link posts</strong>, made famous by John Gruber. To use, just add <code class="highlighter-rouge">link: http://url-you-want-linked</code> to the post’s YAML front matter and you’re done.</p>
+...
+        </div>
+    </a>
+    <p class="post-meta">
+        Posted by Hux on April 14, 2015
+    </p>
+</div>
+<hr>
 
-    
-  </div><!-- /.entry-content -->
-</article><!-- /.hentry -->
-
-<article class="hentry">
-  <header>
-    
-    <div class="entry-meta">
-      <span class="entry-date date published updated"><time datetime="2013-06-25T00:00:00+00:00"><a href="/intro/video-post/">June 25, 2013</a></time></span><span class="author vcard"><span class="fn"><a href="/about/" title="About 卢周亨<br><small>luzhouheng</small>">卢周亨<br><small>luzhouheng</small></a></span></span>
-      
-    </div><!-- /.entry-meta -->
-    
-      <h1 class="entry-title"><a href="/intro/video-post/" rel="bookmark" title="A Post with a Video" itemprop="url">A Post with a Video</a></h1>
-    
-  </header>
-  <div class="entry-content">
-    
-      <iframe width="560" height="315" src="//www.youtube.com/embed/SU3kYxJmWuQ" frameborder="0" allowfullscreen></iframe>
-
-<p>Video embeds are responsive and scale with the width of the main content block with the help of <a href="http://fitvidsjs.com/">FitVids</a>.</p>
-
-<p>Adding YouTube video embeds causes errors when building your Jekyll site. To fix wrap the html within <code class="highlighter-rouge"><span class="p">{</span><span class="err">::nomarkdown</span><span class="p">}</span></code> tags. Example below:</p>
-
-<figure class="highlight"><pre><code class="language-html" data-lang="html">{::nomarkdown}
-<span class="nt">&lt;iframe</span> <span class="na">width=</span><span class="s">"560"</span> <span class="na">height=</span><span class="s">"315"</span> <span class="na">src=</span><span class="s">"//www.youtube.com/embed/SU3kYxJmWuQ"</span> <span class="na">frameborder=</span><span class="s">"0"</span> <span class="na">allowfullscreen</span><span class="nt">&gt;&lt;/iframe&gt;</span>
-{:/nomarkdown}</code></pre></figure>
+<div class="post-preview">
+    <a href="/2015/01/29/hello-2015/">
+        <h2 class="post-title">
+            Welcome to Hux Blog
+        </h2>
+        
+        <h3 class="post-subtitle">
+             "Hello World, Hello Blog"
+        </h3>
+        
+        <div class="post-content-preview">
+            
+  “Yeah It’s on. ”
 
 
-    
-  </div><!-- /.entry-content -->
-</article><!-- /.hentry -->
+前言
 
-<article class="hentry">
-  <header>
-    
-    <div class="entry-meta">
-      <span class="entry-date date published updated"><time datetime="2013-05-23T00:00:00+00:00"><a href="/intro/readability-feature-post/">May 23, 2013</a></time></span><span class="author vcard"><span class="fn"><a href="/about/" title="About 卢周亨<br><small>luzhouheng</small>">卢周亨<br><small>luzhouheng</small></a></span></span>
-      
-    </div><!-- /.entry-meta -->
-    
-      <h1 class="entry-title"><a href="/intro/readability-feature-post/" rel="bookmark" title="Post with Large Feature Image and Text" itemprop="url">Post with Large Feature Image and Text</a></h1>
-    
-  </header>
-  <div class="entry-content">
-    
-    <p>This is a sample post with a large feature image up top and tons of text. Odio ad blue bottle vinyl, 90’s narwhal commodo bitters pour-over nostrud. Ugh est hashtag in, fingerstache adipisicing laboris esse Pinterest shabby chic Portland. Shoreditch bicycle rights anim, flexitarian laboris put a bird on it vinyl cupidatat narwhal. Hashtag artisan skateboard, flannel Bushwick nesciunt salvia aute fixie do plaid post-ironic dolor McSweeney’s. Cliche pour-over chambray nulla four loko skateboard sapiente hashtag.</p>
+Hux 的 Blog 就这么开通了。
 
-<p>Vero laborum commodo occupy. Semiotics voluptate mumblecore pug. Cosby sweater ullamco quinoa ennui assumenda, sapiente occupy delectus lo-fi. Ea fashion axe Marfa cillum aliquip. Retro Bushwick keytar cliche. Before they sold out sustainable gastropub Marfa readymade, ethical Williamsburg skateboard brunch qui consectetur gentrify semiotics. Mustache cillum irony, fingerstache magna pour-over keffiyeh tousled selfies.</p>
+跳过废话，直接看技术实现 
 
-<h2 id="cupidatat-90s-lo-fi-authentic-try-hard">Cupidatat 90’s lo-fi authentic try-hard</h2>
+2015 年，Hux 总算有个地方可以好好写点东西了。
 
-<p>In pug Portland incididunt mlkshk put a bird on it vinyl quinoa. Terry Richardson shabby chic +1, scenester Tonx excepteur tempor fugiat voluptate fingerstache aliquip nisi next level. Farm-to-table hashtag Truffaut, Odd Future ex meggings gentrify single-origin coffee try-hard 90’s.</p>
+作为一个程序员， Blog 这种轮子要是挂在大众博客程序上就太没意思了。一是觉得大部分 Blog 服务都太丑，二是觉得不能随便定制不好玩。之前因为太懒没有折腾，结果就一直连个写 Blog 的地儿都没有。
+
+在玩了一...
+        </div>
+    </a>
+    <p class="post-meta">
+        Posted by Hux on January 29, 2015
+    </p>
+</div>
+<hr>
 
 
-    
-  </div><!-- /.entry-content -->
-</article><!-- /.hentry -->
-
-<article class="hentry">
-  <header>
-    
-    <div class="entry-meta">
-      <span class="entry-date date published updated"><time datetime="2013-05-22T00:00:00+00:00"><a href="/sample/intro/sample-post-images/">May 22, 2013</a></time></span><span class="author vcard"><span class="fn"><a href="/about/" title="About 卢周亨<br><small>luzhouheng</small>">卢周亨<br><small>luzhouheng</small></a></span></span>
-      
-    </div><!-- /.entry-meta -->
-    
-      <h1 class="entry-title"><a href="/sample/intro/sample-post-images/" rel="bookmark" title="A Post with Images" itemprop="url">A Post with Images</a></h1>
-    
-  </header>
-  <div class="entry-content">
-    
-      <p>Here are some examples of what a post with images might look like. If you want to display two or three images next to each other responsively use <code class="highlighter-rouge">figure</code> with the appropriate <code class="highlighter-rouge">class</code>. Each instance of <code class="highlighter-rouge">figure</code> is auto-numbered and displayed in the caption.</p>
-
-<h2 id="figures-for-images-or-video">Figures (for images or video)</h2>
-
-<h3 id="one-up">One Up</h3>
-
-<figure>
-	<a href="http://farm9.staticflickr.com/8426/7758832526_cc8f681e48_b.jpg"><img src="http://farm9.staticflickr.com/8426/7758832526_cc8f681e48_c.jpg" alt="" /></a>
-	<figcaption><a href="http://www.flickr.com/photos/80901381@N04/7758832526/" title="Morning Fog Emerging From Trees by A Guy Taking Pictures, on Flickr">Morning Fog Emerging From Trees by A Guy Taking Pictures, on Flickr</a>.</figcaption>
-</figure>
-
-<h3 id="one-center">One Center</h3>
-
-<figure class="half center">
-	<a href="http://farm9.staticflickr.com/8426/7758832526_cc8f681e48_b.jpg"><img src="http://farm9.staticflickr.com/8426/7758832526_cc8f681e48_c.jpg" alt="" /></a>
-	<figcaption><a href="http://www.flickr.com/photos/80901381@N04/7758832526/" title="Morning Fog Emerging From Trees by A Guy Taking Pictures, on Flickr">Morning Fog Emerging From Trees by A Guy Taking Pictures, on Flickr</a>.</figcaption>
-</figure>
-
-<h3 id="two-up">Two Up</h3>
-
-<p>Apply the <code class="highlighter-rouge">half</code> class like so to display two images side by side that share the same caption.</p>
-
-<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;figure</span> <span class="na">class=</span><span class="s">"half"</span><span class="nt">&gt;</span>
-	<span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"/images/image-filename-1.jpg"</span> <span class="na">alt=</span><span class="s">""</span><span class="nt">&gt;</span>
-	<span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"/images/image-filename-2.jpg"</span> <span class="na">alt=</span><span class="s">""</span><span class="nt">&gt;</span>
-	<span class="nt">&lt;figcaption&gt;</span>Caption describing these two images.<span class="nt">&lt;/figcaption&gt;</span>
-<span class="nt">&lt;/figure&gt;</span></code></pre></figure>
-
-<p>And you’ll get something that looks like this:</p>
-
-<figure class="half">
-	<a href="http://placehold.it/1200x600.jpg"><img src="http://placehold.it/600x300.jpg" alt="" /></a>
-	<a href="http://placehold.it/1200x600.jpg"><img src="http://placehold.it/600x300.jpg" alt="" /></a>
-	<img src="http://placehold.it/600x300.jpg" alt="" />
-	<img src="http://placehold.it/600x300.jpg" alt="" />
-	<figcaption>Two images.</figcaption>
-</figure>
-
-<h3 id="three-up">Three Up</h3>
-
-<p>Apply the <code class="highlighter-rouge">third</code> class like so to display three images side by side that share the same caption.</p>
-
-<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;figure</span> <span class="na">class=</span><span class="s">"third"</span><span class="nt">&gt;</span>
-	<span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"http://placehold.it/1200x600.jpg"</span><span class="nt">&gt;&lt;img</span> <span class="na">src=</span><span class="s">"http://placehold.it/600x300.jpg"</span> <span class="na">alt=</span><span class="s">""</span><span class="nt">&gt;&lt;/a&gt;</span>
-	<span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"http://placehold.it/1200x600.jpg"</span><span class="nt">&gt;&lt;img</span> <span class="na">src=</span><span class="s">"http://placehold.it/600x300.jpg"</span> <span class="na">alt=</span><span class="s">""</span><span class="nt">&gt;&lt;/a&gt;</span>
-	<span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"http://placehold.it/1200x600.jpg"</span><span class="nt">&gt;&lt;img</span> <span class="na">src=</span><span class="s">"http://placehold.it/600x300.jpg"</span> <span class="na">alt=</span><span class="s">""</span><span class="nt">&gt;&lt;/a&gt;</span>
-	<span class="nt">&lt;figcaption&gt;</span>Caption describing these three images.<span class="nt">&lt;/figcaption&gt;</span>
-<span class="nt">&lt;/figure&gt;</span></code></pre></figure>
-
-<p>And you’ll get something that looks like this:</p>
-
-<figure class="third">
-	<a href="http://placehold.it/1200x600.jpg"><img src="http://placehold.it/600x300.jpg" alt="" /></a>
-	<a href="http://placehold.it/1200x600.jpg"><img src="http://placehold.it/600x300.jpg" alt="" /></a>
-	<a href="http://placehold.it/1200x600.jpg"><img src="http://placehold.it/600x300.jpg" alt="" /></a>
-	<a href="http://placehold.it/1200x600.jpg"><img src="http://placehold.it/600x300.jpg" alt="" /></a>
-	<a href="http://placehold.it/1200x600.jpg"><img src="http://placehold.it/600x300.jpg" alt="" /></a>
-	<a href="http://placehold.it/1200x600.jpg"><img src="http://placehold.it/600x300.jpg" alt="" /></a>
-	<figcaption>Three images.</figcaption>
-</figure>
-
-<h3 id="alternative-way">Alternative way</h3>
-
-<p>Another way to achieve the same result is to include <code class="highlighter-rouge">gallery</code> Liquid template. In this case you
-don’t have to write any HTML tags – just copy a small block of code, adjust the parameters (see below)
-and fill the block with any number of links to images. You can mix relative and external links.</p>
-
-<p>Here is the block you might want to use:</p>
-
-<figure class="highlight"><pre><code class="language-jinja" data-lang="jinja">{% capture images %}
-	/images/abstract-10.jpg
-	/images/abstract-11.jpg
-	http://upload.wikimedia.org/wikipedia/en/2/24/Lenna.png
-{% endcapture %}
-{% include gallery images=images caption="Test images" cols=3 %}</code></pre></figure>
-
-<p>Parameters:</p>
-
-<ul>
-  <li><code class="highlighter-rouge">caption</code>: Sets the caption under the gallery (see <code class="highlighter-rouge">figcaption</code> HTML tag above);</li>
-  <li><code class="highlighter-rouge">cols</code>: Sets the number of columns of the gallery.
-Available values: [1..3].</li>
-</ul>
-
-<p>It will look something like this:</p>
-
-<figure class="third">
-    
-    <a href="/images/abstract-10.jpg"><img src="/images/abstract-10.jpg" alt="" /></a>
-    
-    <a href="/images/abstract-11.jpg"><img src="/images/abstract-11.jpg" alt="" /></a>
-    
-    <a href="http://upload.wikimedia.org/wikipedia/en/2/24/Lenna.png"><img src="http://upload.wikimedia.org/wikipedia/en/2/24/Lenna.png" alt="" /></a>
-    
-    <figcaption>Test images</figcaption>
-</figure>
+<!-- Pager -->
 
 
-    
-  </div><!-- /.entry-content -->
-</article><!-- /.hentry -->
+    		</div>
+    <!-- Sidebar Container -->
+            <div class="
+                col-lg-3 col-lg-offset-0
+                col-md-3 col-md-offset-0
+                col-sm-12
+                col-xs-12
+                sidebar-container
+            ">
+                <!-- Featured Tags -->
+                
+                <section>
+                    <hr class="hidden-sm hidden-xs">
+                    <h5><a href="">FEATURED TAGS</a></h5>
+                    <div class="tags">
+                        
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                                <a href="/tags/#前端开发" title="前端开发" rel="3">
+                                    前端开发
+                                </a>
+                            
+                        
+                            
+                                <a href="/tags/#JavaScript" title="JavaScript" rel="3">
+                                    JavaScript
+                                </a>
+                            
+                        
+                            
+                        
+                    </div>
+                </section>
+                
 
-
-
-<div class="pagination">
-  <ul class="inline-list">
-    
-    
-
-    
-    
-      <li><strong class="current-page">1</strong></li>
-    
-
-    
-    
-
-    
-    
-    
-
-    
-
-    
-    
-
-    
-      <li><a href="/page2/">2</a></li>
-    
-
-    
-    
-      <li><a href="/page2/" class="btn">Next</a></li>
-    
-  </ul>
+                <!-- Short About -->
+                <section class="visible-md visible-lg">
+                    <hr><h5><a href="">ABOUT ME</a></h5>
+                    <div class="short-about">
+                        
+                            <img src="/img/avatar.jpg" />
+                        
+                        
+                            <p>中国美术学院开放媒体系学生｜媒体艺术｜声音艺术｜职业抄代码<br>Student of Open Media Lab | Media Art | Sound Art | Coder</p>
+                        
+                        <!-- SNS Link -->
+                        <ul class="list-inline">
+                            
+                            <li>
+                                <a href="/feed.xml">
+                                    <span class="fa-stack fa-lg">
+                                        <i class="fa fa-circle fa-stack-2x"></i>
+                                        <i class="fa fa-rss fa-stack-1x fa-inverse"></i>
+                                    </span>
+                                </a>
+                            </li>
+                            
+                            
+                            <li>
+                                <a href="https://twitter.com/luzhouheng">
+                                    <span class="fa-stack fa-lg">
+                                        <i class="fa fa-circle fa-stack-2x"></i>
+                                        <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                                    </span>
+                                </a>
+                            </li>
+                            
+                            
+                            <li>
+                                <a target="_blank" href="https://www.zhihu.com/people/luzhouheng">
+                                    <span class="fa-stack fa-lg">
+                                        <i class="fa fa-circle fa-stack-2x"></i>
+                                        <i class="fa  fa-stack-1x fa-inverse">知</i>
+                                    </span>
+                                </a>
+                            </li>
+                            
+                            
+                            
+                            <li>
+                                <a target="_blank" href="https://www.facebook.com/luzhouheng">
+                                    <span class="fa-stack fa-lg">
+                                        <i class="fa fa-circle fa-stack-2x"></i>
+                                        <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+                                    </span>
+                                </a>
+                            </li>
+                            
+                            
+                            <li>
+                                <a target="_blank" href="https://github.com/luzhouheng">
+                                    <span class="fa-stack fa-lg">
+                                        <i class="fa fa-circle fa-stack-2x"></i>
+                                        <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                                    </span>
+                                </a>
+                            </li>
+                            
+                        </ul>
+                    </div>
+                </section>
+                <!-- Friends Blog -->
+                
+                <hr>
+                <h5>FRIENDS</h5>
+                <ul class="list-inline">
+                    
+                        <li><a href="#">Example</a></li>
+                    
+                        <li><a href="#">Foo</a></li>
+                    
+                        <li><a href="#">Bar</a></li>
+                    
+                        <li><a href="#">Example Friends</a></li>
+                    
+                        <li><a href="#">It helps SEO</a></li>
+                    
+                </ul>
+                
+    		</div>
+        
+	</div>
 </div>
 
 
-</div><!-- /#main -->
+    <!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                    
+                    <li>
+                        <a href="/feed.xml">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-rss fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li>
+                        <a href="https://twitter.com/luzhouheng">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
 
-<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-<script type="text/javascript">window.jQuery || document.write('<script type="text/javascript" src="/assets/js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
-<script type="text/javascript" src="/assets/js/scripts.min.js"></script>
-<script type="text/javascript" async defer id="github-bjs" src="https://buttons.github.io/buttons.js"></script>
-<script type="text/javascript">!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+                    <!-- add Weibo, Zhihu by Hux, add target = "_blank" to <a> by Hux -->
+                    
+                    <li>
+                        <a target="_blank" href="https://www.zhihu.com/people/luzhouheng">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa  fa-stack-1x fa-inverse">知</i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
 
 
+                    
+                    <li>
+                        <a target="_blank" href="https://www.facebook.com/luzhouheng">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li>
+                        <a target="_blank" href="https://github.com/luzhouheng">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                </ul>
+                <p class="copyright text-muted">
+                    Copyright &copy; 周亨仓库<br/><small>Zhouheng Media</small> 2016
+                    <br>
+                    Theme by <a href="http://huangxuan.me">Hux</a> |
+                    <iframe
+                        style="margin-left: 2px; margin-bottom:-5px;"
+                        frameborder="0" scrolling="0" width="91px" height="20px"
+                        src="https://ghbtns.com/github-btn.html?user=huxpro&repo=huxpro.github.io&type=star&count=true" >
+                    </iframe>
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
 
-<!-- Asynchronous Google Analytics snippet -->
-<script type="text/javascript">
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+<!-- jQuery -->
+<script src="/js/jquery.min.js "></script>
+
+<!-- Bootstrap Core JavaScript -->
+<script src="/js/bootstrap.min.js "></script>
+
+<!-- Custom Theme JavaScript -->
+<script src="/js/hux-blog.min.js "></script>
+
+
+<!-- async load function -->
+<script>
+    function async(u, c) {
+      var d = document, t = 'script',
+          o = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      o.src = u;
+      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+      s.parentNode.insertBefore(o, s);
+    }
+</script>
+
+<!-- Highlight.js -->
+<script>
+    async("http://cdn.bootcss.com/highlight.js/8.6/highlight.min.js", function(){
+        hljs.initHighlightingOnLoad();
+    })
+    // only load tagcloud.js in tag.html
+    if($('#tag_cloud').length !== 0){
+        async("/js/jquery.tagcloud.js",function(){
+            $.fn.tagcloud.defaults = {
+                //size: {start: 1, end: 1, unit: 'em'},
+                color: {start: '#bbbbee', end: '#0085a1'},
+            };
+            $('#tag_cloud a').tagcloud();
+        })
+    }
+</script>
+<link href="http://cdn.bootcss.com/highlight.js/8.6/styles/github.min.css" rel="stylesheet">
+
+<!--fastClick.js -->
+<script>
+    async("http://cdn.bootcss.com/fastclick/1.0.6/fastclick.min.js", function(){
+        var $nav = document.querySelector("nav");
+        if($nav) FastClick.attach($nav);
+    })
+</script>
+
+
+<!-- Google Analytics -->
+
+<script>
+    // dynamic User by Hux
+    var _gaId = 'UA-74684160-1';
+    var _gaDomain = 'blog.zhouheng.asia';
+
+    // Originial
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
     (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
     m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-  ga('create', 'UA-74684160-1', 'auto');
-  ga('require', 'linkid', 'linkid.js');
-  ga('send', 'pageview');
+    ga('create', _gaId, _gaDomain);
+    ga('send', 'pageview');
 </script>
 
 
 
+<!-- Baidu Tongji -->
 
 
 
 
-<div class="footer-wrapper">
-  <footer role="contentinfo">
-    <span>&copy; 2016 卢周亨<br><small>luzhouheng</small>. Powered by <a href="http://jekyllrb.com" rel="nofollow">Jekyll</a></span>
-
-  </footer>
-</div><!-- /.footer-wrapper -->
+<!-- Image to hack wechat -->
+<img src="/img/icon_wechat.png" width="0" height="0" />
+<!-- Migrate from head to bottom, no longer block render and still work -->
 
 </body>
+
 </html>

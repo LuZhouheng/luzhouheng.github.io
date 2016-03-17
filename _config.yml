@@ -1,130 +1,99 @@
-title:            周亨仓库
-description:      个人博客，分享学习成果，记录个人生活
-# put your disqus here
-disqus_shortname: 
-# put your duoshuo here
-duoshuo:
-  short_name: zhouheng
+# Site settings
+title: 周亨仓库<br/><small>Zhouheng Media</small>
+SEOTitle: 周亨仓库 | Zhouheng Media
+header-img: img/home-bg.jpg
+email: peressio@gmail.com
+description: "个人博客，分享学习成果，记录个人生活"
+keyword: "卢周亨, luzhouheng, zhouheng, 媒体艺术, 声音艺术, @卢
+周亨, 卢周亨的博客, Zhouheng Blog, 博客, 个人网站, 互联网, 网络艺术, Web Art, 设计"
+url: "http://blog.zhouheng.asia"              # your host, for absolute URL
+baseurl: ""                             # for example, '/blog' if your blog hosted on 'host/blog'
 
-reading_time:     false # if true, shows the estimated reading time for a post
-words_per_minute: 200
-logo:             images/logo.png # logo visible in the topbar
-# When testing locally leave blank or use http://localhost:4000
 
-# draw your top menu here
-# each item must have a title and a url.
-#   To list post categories. use type: 'categories'
-#   To create sub categories. add a submenu item
-# See the example
-menu:
-  - title: '主页<br><small>Home</small>'
-    url: '/'
-  - title: '标签<br><small>Tag</small>'
-    url: '/tags'
-  - title: '托管<br><small>GitHub</small>'
-    url: 'http://github.com/luzhouheng'
-  - title: '关于我<br><small>About</small>'
-    url: '/about/'
-  - title: '分类<br><small>Categories</small>'
-    url: '/categories'
-    type: 'categories'
-  - title: '网络艺术<br><small>Web Art</small>'
-    url: '#'
-    submenu:
-      - title: 'Code Highlighter'
-        url: '/intro/code-highlighting-post/'
-      - title: 'Sample Post'
-        url: '/intro/sample-post/'
 
-# Owner/author information
-owner:
-  name:           卢周亨<br><small>luzhouheng</small>
-  site:           http://www.zhouheng.asia
-  avatar:         images/avatar.jpg
-  bio:            "中国美术学院开放媒体系学生｜媒体艺术｜声音艺术｜职业抄代码<br>Student of Open Media Lab | Media Art | Sound Art | Coder"
-  email:          peressio@gmail.com
-  # Twitter nick for use in Twitter cards and follow button.
-  twitter: luzhouheng # if no twitter in this config, the twitter follow button will be removed
-  # GitHub nick for use in follow button in author block.
-  github: luzhouheng
+# SNS settings
+RSS: true
+# weibo_username:     
+zhihu_username:     luzhouheng
+github_username:    luzhouheng
+twitter_username:   luzhouheng
+facebook_username:  luzhouheng
 
-# Twitter account associated with the site if different from owner/author twitter account.
-# Used in Twitter cards.
-twitter: luzhouheng
 
-# Social networking links used in author block underneath posts. Update and remove as you like.
-social:
-  - title: "github"
-    url: "https://github.com/luzhouheng"
-  - title: "vimeo"
-    url: "https://vimeo.com/luzhouheng"
-  - title: "twitter"
-    url: "https://twitter.com/luzhouheng"
-  - title: "facebook"
-    url: "https://facebook.com/luzhouheng"
-  - title: "tumblr"
-    url: "https://artlinkzen.tumblr.com"
-  - title: "zhihu"
-    url: "https://www.zhihu.com/people/lu-zhou-heng"
 
-# Image Path for Qiniu
-IMG_PATH: http://7xrims.com1.z0.glb.clouddn.com
-
-# Background image to be tiled on all pages
-background: 
-
-# Analytics and webmaster tools stuff goes here
-google_analytics: UA-74684160-1
-google_verify:
-# https://ssl.bing.com/webmaster/configure/verify/ownership Option 2 content= goes here
-bing_verify:
-
-# http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
-timezone:    China/BEI_JING
-locale:      zh-CN
-future:      true
+# Build settings
 highlighter: rouge
-markdown:    kramdown
-gems:
-  - jekyll-sitemap
-sass:
-  sass_dir: _sass
-  style: compressed
-
-# https://github.com/mojombo/jekyll/wiki/Permalinks
-permalink:   /:categories/:title/
-
-# Amount of post to show on home page
-paginate: 8
-
-# if true, shows the floatting share buttons
-float_share: false
+permalink: pretty
+paginate: 10
+exclude: ["less","node_modules","Gruntfile.js","package.json","README.md"]
+anchorjs: true                          # if you want to customize anchor. check out line:181 of `post.html`
 
 
-kramdown:
-  auto_ids: true
-  footnote_nr: 1
-  entity_output: as_char
-  toc_levels: 1..6
-  enable_coderay: true
 
-  coderay:
-    coderay_line_numbers: nil
-    coderay_line_numbers_start: 1
-    coderay_tab_width: 4
-    coderay_bold_every: 10
-    coderay_css: class
-
-# Octopress
-# Default extensions
-post_ext: md
-page_ext: md
-# Found in _templates/
-post_layout: post
-page_layout: page
-# Format titles with titlecase?
-titlecase: true
-
-include: [".htaccess"]
-exclude: ["lib", "config.rb", "Capfile", "config", "Gemfile", "Gemfile.lock", "README.md", "LICENSE", "qrsync", "log", "Rakefile", "Rakefile.rb", "tmp", "less", "*.sublime-project", "*.sublime-workspace", "test", "spec", "Gruntfile.js", "package.json", "node_modules"]
+# Gems
+# from PR#40, to support local preview for Jekyll 3.0
 gems: [jekyll-paginate]
+
+
+# Markdown settings
+# replace redcarpet to kramdown,
+# although redcarpet can auto highlight code, the lack of header-id make the catalog impossible, so I switch to kramdown
+# document: http://jekyllrb.com/docs/configuration/#kramdown
+markdown: kramdown
+kramdown:
+  input: GFM                            # use Github Flavored Markdown !important
+
+
+
+# Disqus settings
+#disqus_username: _your_disqus_short_name_
+
+# Duoshuo settings
+duoshuo_username: zhouheng
+# Share component is depend on Comment so we can NOT use share only.
+duoshuo_share: true                     # set to false if you want to use Comment without Sharing
+
+
+
+
+# Analytics settings
+# Baidu Analytics
+ba_track_id: 
+# Google Analytics
+ga_track_id: 'UA-74684160-1'            # Format: UA-xxxxxx-xx
+ga_domain: blog.zhouheng.asia
+
+
+
+# Sidebar settings
+sidebar: true                           # whether or not using Sidebar.
+sidebar-about-description: "中国美术学院开放媒体系学生｜媒体艺术｜声音艺术｜职业抄代码<br>Student of Open Media Lab | Media Art | Sound Art | Coder"
+sidebar-avatar: /img/avatar.jpg      # use absolute URL, seeing it's used in both `/` and `/about/`
+
+
+
+# Featured Tags
+featured-tags: true                     # whether or not using Feature-Tags
+featured-condition-size: 1              # A tag will be featured if the size of it is more than this condition value
+
+
+
+# Friends
+friends: [
+    {
+        title: "Example",
+        href: "#"
+    },{
+        title: "Foo",
+        href: "#"
+    },{
+        title: "Bar",
+        href: "#"
+    },{
+        title: "Example Friends",
+        href: "#"
+    },{
+        title: "It helps SEO",
+        href: "#"
+    }
+]

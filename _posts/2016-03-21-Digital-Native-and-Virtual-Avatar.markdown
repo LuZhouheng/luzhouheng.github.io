@@ -60,7 +60,7 @@ tags:
 	
 	* 首先我上到淘宝官网，在上面浏览。
 
-	![TaobaoShoppingScreenShot](http:/7xrims.com1.z0.glb.clouddn.com/TaobaoShopingScreenShot.gif)
+	![TaobaoShoppingScreenShot](http://7xrims.com1.z0.glb.clouddn.com/TaobaoShopingScreenShot.gif)
 	
 	* 在浏览的过程中，不停的寻找兴趣点，截图，我得到了许多图像。
 

@@ -4,7 +4,7 @@ title:      "Digital Native 与 Virtual Avatar"
 subtitle:   "关于数字王国的原住民与虚拟肖像"
 date:       2016-03-21
 author:     "卢周亨"
-header-img: "img/post-bg-js-version.jpg"
+header-img: "img/post-bg-media-version.jpg"
 tags:
     - 媒体艺术
     - Processing 
@@ -35,7 +35,7 @@ tags:
 
 基于这次事件，我也产生了一个想法。
 
-##「关于线上的意识与线下自我」
+## 「关于线上的意识与线下自我」
 
 ### 简介
 

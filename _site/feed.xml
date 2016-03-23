@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>周亨仓库&lt;br/&gt;&lt;small&gt;Zhouheng Media&lt;/small&gt;</title>
+    <title>周亨仓库</title>
     <description>个人博客，分享学习成果，记录个人生活</description>
     <link>http://blog.zhouheng.asia/</link>
     <atom:link href="http://blog.zhouheng.asia/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Tue, 22 Mar 2016 22:41:28 +0800</pubDate>
-    <lastBuildDate>Tue, 22 Mar 2016 22:41:28 +0800</lastBuildDate>
+    <pubDate>Wed, 23 Mar 2016 09:02:24 +0800</pubDate>
+    <lastBuildDate>Wed, 23 Mar 2016 09:02:24 +0800</lastBuildDate>
     <generator>Jekyll v3.1.2</generator>
     
       <item>
@@ -35,13 +35,13 @@
 
 &lt;p&gt;基于这次事件，我也产生了一个想法。&lt;/p&gt;
 
-&lt;p&gt;##「关于线上的意识与线下自我」&lt;/p&gt;
+&lt;h2 id=&quot;section-1&quot;&gt;「关于线上的意识与线下自我」&lt;/h2&gt;
 
-&lt;h3 id=&quot;section-1&quot;&gt;简介&lt;/h3&gt;
+&lt;h3 id=&quot;section-2&quot;&gt;简介&lt;/h3&gt;
 
 &lt;p&gt;基于对 digital native 的思考，做了这个实验，名叫「关于线上的意识与线下自我」&lt;/p&gt;
 
-&lt;h3 id=&quot;section-2&quot;&gt;具体实施步骤&lt;/h3&gt;
+&lt;h3 id=&quot;section-3&quot;&gt;具体实施步骤&lt;/h3&gt;
 
 &lt;ol&gt;
   &lt;li&gt;
@@ -64,7 +64,7 @@
   &lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;h3 id=&quot;section-3&quot;&gt;关于各类非形象化的虚拟对象的实践&lt;/h3&gt;
+&lt;h3 id=&quot;section-4&quot;&gt;关于各类非形象化的虚拟对象的实践&lt;/h3&gt;
 &lt;ul&gt;
   &lt;li&gt;
     &lt;p&gt;&lt;strong&gt;第一个&lt;/strong&gt;实践对象就是淘宝，淘宝商城作为一个机器庞大的主体，我们可以在移动端也试试如果将其 Avatar 化，这次我选择使用 RMBP 的 Safari 浏览器进行试验。&lt;/p&gt;
@@ -73,7 +73,7 @@
       &lt;li&gt;首先我上到淘宝官网，在上面浏览。&lt;/li&gt;
     &lt;/ul&gt;
 
-    &lt;p&gt;&lt;img src=&quot;http:/7xrims.com1.z0.glb.clouddn.com/TaobaoShopingScreenShot.gif&quot; alt=&quot;TaobaoShoppingScreenShot&quot; /&gt;&lt;/p&gt;
+    &lt;p&gt;&lt;img src=&quot;http://7xrims.com1.z0.glb.clouddn.com/TaobaoShopingScreenShot.gif&quot; alt=&quot;TaobaoShoppingScreenShot&quot; /&gt;&lt;/p&gt;
 
     &lt;ul&gt;
       &lt;li&gt;在浏览的过程中，不停的寻找兴趣点，截图，我得到了许多图像。&lt;/li&gt;
@@ -108,7 +108,7 @@
   &lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h3 id=&quot;section-4&quot;&gt;更多的可行方式，欢迎你的加入&lt;/h3&gt;
+&lt;h3 id=&quot;section-5&quot;&gt;更多的可行方式，欢迎你的加入&lt;/h3&gt;
 
 &lt;p&gt;我在 GitHub 上开了一个 Repository ，在上面放了我自己写的或修改的几个小程序，你可以直接使用，也欢迎你来加入这个活动。贡献你的想法与程序。&lt;/p&gt;
 

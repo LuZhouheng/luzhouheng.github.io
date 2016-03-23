@@ -4,7 +4,7 @@ title:      "周亨仓库开通 ｜Hello 2016"
 subtitle:   " \"Hello World, Hello Blog\""
 date:       2016-03-11 12:00:00
 author:     "LuZhouheng"
-header-img: "img/post-bg-2015.jpg"
+header-img: "img/post-bg-2016.jpg"
 tags:
     - 生活
 ---

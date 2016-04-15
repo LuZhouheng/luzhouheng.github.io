@@ -15,7 +15,7 @@ tags:
 
 ### [Watch Slides →](http://blog.zhouheng.asia/ZhouhengResume)
 
-<img src="../img/ZhouhengResumeQRCode.png" width="500" height="500"/>
+<img src="http://7xrims.com1.z0.glb.clouddn.com/zhouhengResumeQRCode.png" width="500" height="500"/>
 
 <small class="img-hint">你也可以通过扫描二维码在手机上观看</small>
 

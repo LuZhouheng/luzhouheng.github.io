@@ -5,13 +5,27 @@
     <description>个人博客，分享学习成果，记录个人生活</description>
     <link>http://blog.zhouheng.asia/</link>
     <atom:link href="http://blog.zhouheng.asia/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Fri, 15 Apr 2016 14:59:58 +0800</pubDate>
-    <lastBuildDate>Fri, 15 Apr 2016 14:59:58 +0800</lastBuildDate>
+    <pubDate>Fri, 15 Apr 2016 20:58:53 +0800</pubDate>
+    <lastBuildDate>Fri, 15 Apr 2016 20:58:53 +0800</lastBuildDate>
     <generator>Jekyll v3.1.2</generator>
     
       <item>
-        <title>个人作品集及创作方案</title>
-        <description>
+        <title>周亨个人简历及创作方案</title>
+        <description>&lt;blockquote&gt;
+  &lt;p&gt;下滑这里查看更多内容&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h3 id=&quot;watch-slides-httpblogzhouhengasiazhouhengresume&quot;&gt;&lt;a href=&quot;http://blog.zhouheng.asia/ZhouhengResume&quot;&gt;Watch Slides →&lt;/a&gt;&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://7xrims.com1.z0.glb.clouddn.com/zhouhengResumeQRCode.png&quot; width=&quot;500&quot; height=&quot;500&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;small class=&quot;img-hint&quot;&gt;你也可以通过扫描二维码在手机上观看&lt;/small&gt;&lt;/p&gt;
+
+&lt;p&gt;这个 Web Slides 开源在&lt;a href=&quot;https://github.com/luzhouheng/ZhouhengResume&quot;&gt;我的 Github 上&lt;/a&gt;，欢迎你帮助我完善这个展示文稿，你可以给我提 issue，可以 fork &amp;amp; pull request。如果它能帮助到你了，希望你还能不吝啬 star 一下这个项目&lt;/p&gt;
+
+&lt;h3 id=&quot;thanks&quot;&gt;Thanks&lt;/h3&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://lab.hakim.se/reveal-js&quot;&gt;Reveal.js&lt;/a&gt;&lt;/p&gt;
 </description>
         <pubDate>Fri, 15 Apr 2016 00:00:00 +0800</pubDate>
         <link>http://blog.zhouheng.asia/2016/04/15/ZhouhengResume/</link>
@@ -19,7 +33,7 @@
         
         <category>Resume</category>
         
-        <category>Persentation</category>
+        <category>Presentation</category>
         
         <category>Web PPT</category>
         

@@ -5,9 +5,26 @@
     <description>个人博客，分享学习成果，记录个人生活</description>
     <link>http://blog.zhouheng.asia/</link>
     <atom:link href="http://blog.zhouheng.asia/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Wed, 13 Apr 2016 15:53:14 +0800</pubDate>
-    <lastBuildDate>Wed, 13 Apr 2016 15:53:14 +0800</lastBuildDate>
+    <pubDate>Fri, 15 Apr 2016 14:59:58 +0800</pubDate>
+    <lastBuildDate>Fri, 15 Apr 2016 14:59:58 +0800</lastBuildDate>
     <generator>Jekyll v3.1.2</generator>
+    
+      <item>
+        <title>个人作品集及创作方案</title>
+        <description>
+</description>
+        <pubDate>Fri, 15 Apr 2016 00:00:00 +0800</pubDate>
+        <link>http://blog.zhouheng.asia/2016/04/15/ZhouhengResume/</link>
+        <guid isPermaLink="true">http://blog.zhouheng.asia/2016/04/15/ZhouhengResume/</guid>
+        
+        <category>Resume</category>
+        
+        <category>Persentation</category>
+        
+        <category>Web PPT</category>
+        
+        
+      </item>
     
       <item>
         <title>Digital Native 与 Virtual Avatar</title>

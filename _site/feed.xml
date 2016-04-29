@@ -5,8 +5,8 @@
     <description>个人博客，分享学习成果，记录个人生活</description>
     <link>http://blog.zhouheng.asia/</link>
     <atom:link href="http://blog.zhouheng.asia/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Sat, 30 Apr 2016 07:40:15 +0800</pubDate>
-    <lastBuildDate>Sat, 30 Apr 2016 07:40:15 +0800</lastBuildDate>
+    <pubDate>Sat, 30 Apr 2016 07:52:55 +0800</pubDate>
+    <lastBuildDate>Sat, 30 Apr 2016 07:52:55 +0800</lastBuildDate>
     <generator>Jekyll v3.1.2</generator>
     
       <item>
@@ -19,16 +19,15 @@
 
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;gt;&amp;gt;&amp;gt; from chainer import cuda
 &amp;gt;&amp;gt;&amp;gt; cuda.init()
-Traceback (most recent call last):
-  File &quot;&amp;lt;stdin&amp;gt;&quot;, line 1, in &amp;lt;module&amp;gt;
-  File &quot;/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/chainer/cuda.py&quot;, line 69, in init
-    check_cuda_available()
-  File &quot;/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/chainer/cuda.py&quot;, line 82, in check_cuda_available
-    raise RuntimeError(msg)
-RuntimeError: CUDA environment is not correctly set up
-(see https://github.com/pfnet/chainer#installation).dlopen(/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/cupy/core/core.so, 2): Library not loaded: @rpath/libcublas.7.5.dylib
-  Referenced from: /Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/cupy/core/core.so
-  Reason: image not found
+	Traceback (most recent call last):
+	File &quot;&amp;lt;stdin&amp;gt;&quot;, line 1, in &amp;lt;module&amp;gt;
+	File &quot;/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/chainer/cuda.py&quot;, line 69, in init
+	check_cuda_available()
+	File &quot;/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/chainer/cuda.py&quot;, line 82, in check_cuda_available
+	raise RuntimeError(msg)
+	RuntimeError: CUDA environment is not correctly set up (see https://github.com/pfnet/chainer#installation).dlopen(/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/cupy/core/core.so, 2): Library not loaded: @rpath/libcublas.7.5.dylib
+	Referenced from: /Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/cupy/core/core.so
+	Reason: image not found
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 
@@ -102,39 +101,39 @@ export DYLD_LIBRARY_PATH=$DYLD_LIBRARY_PATH:/Developer/NVIDIA/CUDA-7.5/lib
 &lt;p&gt;这里以 cuDNN &lt;strong&gt;v3&lt;/strong&gt; 示范。&lt;/p&gt;
 
 &lt;ol&gt;
-  &lt;li&gt;
-    &lt;p&gt;如果没安装的话，安装 Mac Os Command Line Tools。&lt;/p&gt;
-
-    &lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;
- $ xcode-select --install
-&lt;/code&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;检查一下 CUDA 的版本和路径 (如果还没安装 CUDA，请参照上文安装)。&lt;/p&gt;
-
-    &lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;
- $ /usr/local/cuda/bin/nvcc --version
- # Cuda compilation tools, release 7.0, 	V7.0.27
- $ export DYLD_LIBRARY_PATH=/usr/local/cuda/lib
-&lt;/code&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;下载安装 cuDNN (如果安装了就忽略这一步)&lt;/p&gt;
-
-    &lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;
- $ wget http://developer.download.nvidia.com/assets/cuda/secure/cuDNN/v3/cudnn-7.0-osx-x64-v3.0-prod.tgz?autho=1461944459_fdf5f49c8d930ce22d43776c7ecc6aa1&amp;amp;file=cudnn-7.0-osx-x64-v3.0-prod.tgz
- $ tar xvzf cudnn-3.0-osx-x64-v3.0-prod.tgz
- $ rm cudnn-3.0-osx-x64-v3.0-prod.tgz
- $ cd cuda
- $ sudo cp cudnn.h /Developer/NVIDIA/CUDA-7.5/include/
- $ sudo cp libcudnn* /usr/local/cuda/lib/
-&lt;/code&gt;&lt;/p&gt;
-  &lt;/li&gt;
+  &lt;li&gt;如果没安装的话，安装 Mac Os Command Line Tools。&lt;/li&gt;
 &lt;/ol&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ xcode-select --install
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;检查一下 CUDA 的版本和路径 (如果还没安装 CUDA，请参照上文安装)。&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ /usr/local/cuda/bin/nvcc --version
+# Cuda compilation tools, release 7.0, 	V7.0.27
+$ export DYLD_LIBRARY_PATH=/usr/local/cuda/lib
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;下载安装 cuDNN (如果安装了就忽略这一步)&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ wget http://developer.download.nvidia.com/assets/cuda/secure/cuDNN/v3/cudnn-7.0-osx-x64-v3.0-prod.tgz?autho=1461944459_fdf5f49c8d930ce22d43776c7ecc6aa1&amp;amp;file=cudnn-7.0-osx-x64-v3.0-prod.tgz
+$ tar xvzf cudnn-3.0-osx-x64-v3.0-prod.tgz
+$ rm cudnn-3.0-osx-x64-v3.0-prod.tgz
+$ cd cuda
+$ sudo cp cudnn.h /Developer/NVIDIA/CUDA-7.5/include/
+$ sudo cp libcudnn* /usr/local/cuda/lib/
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 
 &lt;h2 id=&quot;chainer&quot;&gt;重装 Chainer&lt;/h2&gt;
 
-&lt;p&gt;如果你现在检车你的 Chainer with CUDA 可能会不可用，并且提醒你需要重新安装 Chainer。&lt;/p&gt;
+&lt;p&gt;如果你现在检查你的 Chainer with CUDA 可能会不可用，并且提醒你需要重新安装 Chainer。&lt;/p&gt;
 
 &lt;p&gt;以下是安装与卸载的所有需要用到的命令行&lt;/p&gt;
 
@@ -175,8 +174,8 @@ $ pip install --user -upgrade chainer-cuda-deps
 &lt;/div&gt;
 </description>
         <pubDate>Sat, 30 Apr 2016 00:00:00 +0800</pubDate>
-        <link>http://blog.zhouheng.asia/2016/04/30/RuntimeError-CUDA-Environment-Is-Not-Correctly-Set-Up/</link>
-        <guid isPermaLink="true">http://blog.zhouheng.asia/2016/04/30/RuntimeError-CUDA-Environment-Is-Not-Correctly-Set-Up/</guid>
+        <link>http://blog.zhouheng.asia/2016/04/30/Chainer-with-CUDA/</link>
+        <guid isPermaLink="true">http://blog.zhouheng.asia/2016/04/30/Chainer-with-CUDA/</guid>
         
         <category>Deep Learning</category>
         

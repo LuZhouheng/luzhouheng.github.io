@@ -12,7 +12,7 @@
 
     <title>RuntimeError: CUDA environment is not correctly set up - 周亨仓库</title>
 
-    <link rel="canonical" href="http://blog.zhouheng.asia/2016/04/30/RuntimeError-CUDA-Environment-Is-Not-Correctly-Set-Up/">
+    <link rel="canonical" href="http://blog.zhouheng.asia/2016/04/30/Chainer-with-CUDA/">
 
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="/css/bootstrap.min.css">
@@ -187,16 +187,15 @@
 
 <div class="highlighter-rouge"><pre class="highlight"><code>&gt;&gt;&gt; from chainer import cuda
 &gt;&gt;&gt; cuda.init()
-Traceback (most recent call last):
-  File "&lt;stdin&gt;", line 1, in &lt;module&gt;
-  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/chainer/cuda.py", line 69, in init
-    check_cuda_available()
-  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/chainer/cuda.py", line 82, in check_cuda_available
-    raise RuntimeError(msg)
-RuntimeError: CUDA environment is not correctly set up
-(see https://github.com/pfnet/chainer#installation).dlopen(/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/cupy/core/core.so, 2): Library not loaded: @rpath/libcublas.7.5.dylib
-  Referenced from: /Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/cupy/core/core.so
-  Reason: image not found
+	Traceback (most recent call last):
+	File "&lt;stdin&gt;", line 1, in &lt;module&gt;
+	File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/chainer/cuda.py", line 69, in init
+	check_cuda_available()
+	File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/chainer/cuda.py", line 82, in check_cuda_available
+	raise RuntimeError(msg)
+	RuntimeError: CUDA environment is not correctly set up (see https://github.com/pfnet/chainer#installation).dlopen(/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/cupy/core/core.so, 2): Library not loaded: @rpath/libcublas.7.5.dylib
+	Referenced from: /Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/cupy/core/core.so
+	Reason: image not found
 </code></pre>
 </div>
 
@@ -270,39 +269,39 @@ export DYLD_LIBRARY_PATH=$DYLD_LIBRARY_PATH:/Developer/NVIDIA/CUDA-7.5/lib
 <p>这里以 cuDNN <strong>v3</strong> 示范。</p>
 
 <ol>
-  <li>
-    <p>如果没安装的话，安装 Mac Os Command Line Tools。</p>
-
-    <p><code class="highlighter-rouge">
- $ xcode-select --install
-</code></p>
-  </li>
-  <li>
-    <p>检查一下 CUDA 的版本和路径 (如果还没安装 CUDA，请参照上文安装)。</p>
-
-    <p><code class="highlighter-rouge">
- $ /usr/local/cuda/bin/nvcc --version
- # Cuda compilation tools, release 7.0, 	V7.0.27
- $ export DYLD_LIBRARY_PATH=/usr/local/cuda/lib
-</code></p>
-  </li>
-  <li>
-    <p>下载安装 cuDNN (如果安装了就忽略这一步)</p>
-
-    <p><code class="highlighter-rouge">
- $ wget http://developer.download.nvidia.com/assets/cuda/secure/cuDNN/v3/cudnn-7.0-osx-x64-v3.0-prod.tgz?autho=1461944459_fdf5f49c8d930ce22d43776c7ecc6aa1&amp;file=cudnn-7.0-osx-x64-v3.0-prod.tgz
- $ tar xvzf cudnn-3.0-osx-x64-v3.0-prod.tgz
- $ rm cudnn-3.0-osx-x64-v3.0-prod.tgz
- $ cd cuda
- $ sudo cp cudnn.h /Developer/NVIDIA/CUDA-7.5/include/
- $ sudo cp libcudnn* /usr/local/cuda/lib/
-</code></p>
-  </li>
+  <li>如果没安装的话，安装 Mac Os Command Line Tools。</li>
 </ol>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>$ xcode-select --install
+</code></pre>
+</div>
+
+<ol>
+  <li>检查一下 CUDA 的版本和路径 (如果还没安装 CUDA，请参照上文安装)。</li>
+</ol>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>$ /usr/local/cuda/bin/nvcc --version
+# Cuda compilation tools, release 7.0, 	V7.0.27
+$ export DYLD_LIBRARY_PATH=/usr/local/cuda/lib
+</code></pre>
+</div>
+
+<ol>
+  <li>下载安装 cuDNN (如果安装了就忽略这一步)</li>
+</ol>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>$ wget http://developer.download.nvidia.com/assets/cuda/secure/cuDNN/v3/cudnn-7.0-osx-x64-v3.0-prod.tgz?autho=1461944459_fdf5f49c8d930ce22d43776c7ecc6aa1&amp;file=cudnn-7.0-osx-x64-v3.0-prod.tgz
+$ tar xvzf cudnn-3.0-osx-x64-v3.0-prod.tgz
+$ rm cudnn-3.0-osx-x64-v3.0-prod.tgz
+$ cd cuda
+$ sudo cp cudnn.h /Developer/NVIDIA/CUDA-7.5/include/
+$ sudo cp libcudnn* /usr/local/cuda/lib/
+</code></pre>
+</div>
 
 <h2 id="chainer">重装 Chainer</h2>
 
-<p>如果你现在检车你的 Chainer with CUDA 可能会不可用，并且提醒你需要重新安装 Chainer。</p>
+<p>如果你现在检查你的 Chainer with CUDA 可能会不可用，并且提醒你需要重新安装 Chainer。</p>
 
 <p>以下是安装与卸载的所有需要用到的命令行</p>
 
@@ -362,9 +361,9 @@ $ pip install --user -upgrade chainer-cuda-deps
                 <!-- 多说评论框 start -->
                 <div class="comment">
                     <div class="ds-thread"
-                        data-thread-key="/2016/04/30/RuntimeError-CUDA-Environment-Is-Not-Correctly-Set-Up"
+                        data-thread-key="/2016/04/30/Chainer-with-CUDA"
                         data-title="RuntimeError: CUDA environment is not correctly set up"
-                        data-url="http://blog.zhouheng.asia/2016/04/30/RuntimeError-CUDA-Environment-Is-Not-Correctly-Set-Up/" >
+                        data-url="http://blog.zhouheng.asia/2016/04/30/Chainer-with-CUDA/" >
                     </div>
                 </div>
                 <!-- 多说评论框 end -->

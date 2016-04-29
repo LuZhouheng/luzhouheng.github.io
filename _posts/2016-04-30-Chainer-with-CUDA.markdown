@@ -19,16 +19,15 @@ OS X Yosemite + GPU 运行时报错如下。
 ```
 >>> from chainer import cuda
 >>> cuda.init()
-Traceback (most recent call last):
-  File "<stdin>", line 1, in <module>
-  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/chainer/cuda.py", line 69, in init
-    check_cuda_available()
-  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/chainer/cuda.py", line 82, in check_cuda_available
-    raise RuntimeError(msg)
-RuntimeError: CUDA environment is not correctly set up
-(see https://github.com/pfnet/chainer#installation).dlopen(/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/cupy/core/core.so, 2): Library not loaded: @rpath/libcublas.7.5.dylib
-  Referenced from: /Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/cupy/core/core.so
-  Reason: image not found
+	Traceback (most recent call last):
+	File "<stdin>", line 1, in <module>
+	File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/chainer/cuda.py", line 69, in init
+	check_cuda_available()
+	File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/chainer/cuda.py", line 82, in check_cuda_available
+	raise RuntimeError(msg)
+	RuntimeError: CUDA environment is not correctly set up (see https://github.com/pfnet/chainer#installation).dlopen(/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/cupy/core/core.so, 2): Library not loaded: @rpath/libcublas.7.5.dylib
+	Referenced from: /Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/cupy/core/core.so
+	Reason: image not found
 ```
 
 ## 环境
@@ -94,33 +93,33 @@ Chainer 现在还**不支持**最新的 cuDNN **v5** 版本。
 
 1. 如果没安装的话，安装 Mac Os Command Line Tools。
 
-	```
-	$ xcode-select --install
-	```
+```
+$ xcode-select --install
+```
 
 2. 检查一下 CUDA 的版本和路径 (如果还没安装 CUDA，请参照上文安装)。
 
-	```
-	$ /usr/local/cuda/bin/nvcc --version
-	# Cuda compilation tools, release 7.0, 	V7.0.27
-	$ export DYLD_LIBRARY_PATH=/usr/local/cuda/lib
-	```
+```
+$ /usr/local/cuda/bin/nvcc --version
+# Cuda compilation tools, release 7.0, 	V7.0.27
+$ export DYLD_LIBRARY_PATH=/usr/local/cuda/lib
+```
 
 3. 下载安装 cuDNN (如果安装了就忽略这一步)
 
-	```
-	$ wget http://developer.download.nvidia.com/assets/cuda/secure/cuDNN/v3/cudnn-7.0-osx-x64-v3.0-prod.tgz?autho=1461944459_fdf5f49c8d930ce22d43776c7ecc6aa1&file=cudnn-7.0-osx-x64-v3.0-prod.tgz
-	$ tar xvzf cudnn-3.0-osx-x64-v3.0-prod.tgz
-	$ rm cudnn-3.0-osx-x64-v3.0-prod.tgz
-	$ cd cuda
-	$ sudo cp cudnn.h /Developer/NVIDIA/CUDA-7.5/include/
-	$ sudo cp libcudnn* /usr/local/cuda/lib/
-	```
+```
+$ wget http://developer.download.nvidia.com/assets/cuda/secure/cuDNN/v3/cudnn-7.0-osx-x64-v3.0-prod.tgz?autho=1461944459_fdf5f49c8d930ce22d43776c7ecc6aa1&file=cudnn-7.0-osx-x64-v3.0-prod.tgz
+$ tar xvzf cudnn-3.0-osx-x64-v3.0-prod.tgz
+$ rm cudnn-3.0-osx-x64-v3.0-prod.tgz
+$ cd cuda
+$ sudo cp cudnn.h /Developer/NVIDIA/CUDA-7.5/include/
+$ sudo cp libcudnn* /usr/local/cuda/lib/
+```
 
 
 ## 重装 Chainer
 
-如果你现在检车你的 Chainer with CUDA 可能会不可用，并且提醒你需要重新安装 Chainer。
+如果你现在检查你的 Chainer with CUDA 可能会不可用，并且提醒你需要重新安装 Chainer。
 
 以下是安装与卸载的所有需要用到的命令行
 

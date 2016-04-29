@@ -10,9 +10,9 @@
     <meta name="keyword"  content="卢周亨, luzhouheng, zhouheng, 媒体艺术, 声音艺术, @卢 周亨, 卢周亨的博客, Zhouheng Blog, 博客, 个人网站, 互联网, 网络艺术, Web Art, 设计">
     <!-- <link rel="shortcut icon" href="img/favicon.ico"> -->
 
-    <title>周亨仓库</title>
+    <title>RuntimeError: CUDA environment is not correctly set up - 周亨仓库</title>
 
-    <link rel="canonical" href="http://blog.zhouheng.asia/">
+    <link rel="canonical" href="http://blog.zhouheng.asia/2016/04/30/RuntimeError-CUDA-environment-is-not-correctly-set-up/">
 
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="/css/bootstrap.min.css">
@@ -134,263 +134,275 @@
 </script>
 
 
-    <!-- Page Header -->
-<header class="intro-header" style="background-image: url('/img/home-bg.jpg')">
+    <!-- Image to hack wechat -->
+<!-- <img src="/img/icon_wechat.png" width="0" height="0"> -->
+<!-- <img src="/img/post-bg-media-version.jpg" width="0" height="0"> -->
+
+<!-- Post Header -->
+<style type="text/css">
+    header.intro-header{
+        background-image: url('/img/post-bg-media-version.jpg')
+    }
+</style>
+<header class="intro-header" >
     <div class="container">
         <div class="row">
-            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 ">
-                <div class="site-heading">
-                    <h1>周亨仓库</h1>
-                    <!--<hr class="small">-->
-                    <span class="subheading">Zhouheng Blog</span>
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <div class="tags">
+                        
+                        <a class="tag" href="/tags/#Deep Learning" title="Deep Learning">Deep Learning</a>
+                        
+                        <a class="tag" href="/tags/#CUDA" title="CUDA">CUDA</a>
+                        
+                    </div>
+                    <h1>RuntimeError: CUDA environment is not correctly set up</h1>
+                    
+                    
+                    <h2 class="subheading">Chainer with CUDA 指南</h2>
+                    
+                    <span class="meta">Posted by 卢周亨 on April 30, 2016</span>
                 </div>
             </div>
         </div>
     </div>
 </header>
 
-<!-- Main Content -->
-<div class="container">
-	<div class="row">
-        
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
 
-<!-- USE SIDEBAR -->
     <!-- Post Container -->
-    		<div class="
-                col-lg-8 col-lg-offset-1
-                col-md-8 col-md-offset-1
-                col-sm-12
-                col-xs-12
-                post-container
-            ">
-    			
-<div class="post-preview">
-    <a href="/2016/04/30/RuntimeError-CUDA-environment-is-not-correctly-set-up/">
-        <h2 class="post-title">
-            RuntimeError: CUDA environment is not correctly set up
-        </h2>
-        
-        <h3 class="post-subtitle">
-            Chainer with CUDA 指南
-        </h3>
-        
-        <div class="post-content-preview">
-            RuntimeError: CUDA environment is not correctly set up
+            <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                post-container">
 
-Mac 环境下使用 Chainer + GPU
+				<h1 id="runtimeerror-cuda-environment-is-not-correctly-set-up">RuntimeError: CUDA environment is not correctly set up</h1>
 
-OS X Yosemite + GPU 运行时报错如下。
+<h2 id="mac--chainer--gpu">Mac 环境下使用 Chainer + GPU</h2>
+
+<p>OS X Yosemite + GPU 运行时报错如下。</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>&gt;&gt;&gt; from chainer import cuda
+&gt;&gt;&gt; cuda.init()
+Traceback (most recent call last):
+  File "&lt;stdin&gt;", line 1, in &lt;module&gt;
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/chainer/cuda.py", line 69, in init
+    check_cuda_available()
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/chainer/cuda.py", line 82, in check_cuda_available
+    raise RuntimeError(msg)
+RuntimeError: CUDA environment is not correctly set up
+(see https://github.com/pfnet/chainer#installation).dlopen(/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/cupy/core/core.so, 2): Library not loaded: @rpath/libcublas.7.5.dylib
+  Referenced from: /Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/cupy/core/core.so
+  Reason: image not found
+</code></pre>
+</div>
+
+<h2 id="section">环境</h2>
+
+<ul>
+  <li>Os X 10.10.5 (Yosemite)</li>
+  <li>NVIDIA GeForce GT 750M</li>
+  <li>Python 2.7.11</li>
+  <li>Chainer 1.8.1</li>
+  <li>CUDA 7.5</li>
+  <li>cuDNN v3</li>
+</ul>
+
+<h2 id="section-1">准备</h2>
+
+<p>在 Mac OS X 上进行示范，操作系统是 Yosemite 10.10.5， Ubuntu 系统的操作过程也类似的。</p>
+
+<p>首先是 Chainer 的安装。</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>$ pip install chainer
+</code></pre>
+</div>
+
+<p>如果不使用 GPU 的话，这样就可以了。</p>
+
+<p>如果需要使用 GPU 进行运算的话，必须安装 CUDA。</p>
+
+<p>Mac 正式版安装在<strong><a href="https://developer.nvidia.com/cuda-downloads">这里</a></strong>可以下载。</p>
+
+<p>CUDA 的安装这里就不赘述了。</p>
+
+<h2 id="cuda-">CUDA 解决方案</h2>
+
+<ul>
+  <li>在 ~/.bash_profile 里写入</li>
+</ul>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>#for Cuda
+export CUDA_ROOT=/Developer/NVIDIA/CUDA-7.5/
+export PATH=$PATH:/Developer/NVIDIA/CUDA-7.5/bin
+export LD_LIBRARY_PATH=/Developer/NVIDIA/CUDA-7.5/lib:/usr/local/cuda/lib/:$LD_LIBRARY_PATH
+export CPATH=$CPATH:/Developer/NVIDIA/CUDA-7.5/include
+export CUDA_INC_DIR=/Developer/NVIDIA/CUDA-7.5/bin:$CUDA_INC_DIR
+export DYLD_LIBRARY_PATH=$DYLD_LIBRARY_PATH:/Developer/NVIDIA/CUDA-7.5/lib
+</code></pre>
+</div>
+
+<ul>
+  <li>其中这条路径</li>
+</ul>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>export LD_LIBRARY_PATH=/Developer/NVIDIA/CUDA-7.5/lib:/usr/local/cuda/lib/:$LD_LIBRARY_PATH
+</code></pre>
+</div>
+
+<p>在这条 Issue: <strong><a href="https://github.com/pfnet/chainer/issues/652"><em>Chainer Connection to GPU Issue on Mac #652</em></a></strong> 可以找到出处。</p>
+
+<ul>
+  <li>安装依赖环境</li>
+</ul>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>$ pip install chainer-cuda-deps
+</code></pre>
+</div>
+
+<h2 id="cudnn">安装及使用 cuDNN</h2>
+
+<p>Chainer 现在还<strong>不支持</strong>最新的 cuDNN <strong>v5</strong> 版本。</p>
+
+<p>这里以 cuDNN <strong>v3</strong> 示范。</p>
+
+<ol>
+  <li>
+    <p>如果没安装的话，安装 Mac Os Command Line Tools。</p>
+
+    <p><code class="highlighter-rouge">
+ $ xcode-select --install
+</code></p>
+  </li>
+  <li>
+    <p>检查一下 CUDA 的版本和路径 (如果还没安装 CUDA，请参照上文安装)。</p>
+
+    <p><code class="highlighter-rouge">
+ $ /usr/local/cuda/bin/nvcc --version
+ # Cuda compilation tools, release 7.0, 	V7.0.27
+ $ export DYLD_LIBRARY_PATH=/usr/local/cuda/lib
+</code></p>
+  </li>
+  <li>
+    <p>下载安装 cuDNN (如果安装了就忽略这一步)</p>
+
+    <p><code class="highlighter-rouge">
+ $ wget http://developer.download.nvidia.com/assets/cuda/secure/cuDNN/v3/cudnn-7.0-osx-x64-v3.0-prod.tgz?autho=1461944459_fdf5f49c8d930ce22d43776c7ecc6aa1&amp;file=cudnn-7.0-osx-x64-v3.0-prod.tgz
+ $ tar xvzf cudnn-3.0-osx-x64-v3.0-prod.tgz
+ $ rm cudnn-3.0-osx-x64-v3.0-prod.tgz
+ $ cd cuda
+ $ sudo cp cudnn.h /Developer/NVIDIA/CUDA-7.5/include/
+ $ sudo cp libcudnn* /usr/local/cuda/lib/
+</code></p>
+  </li>
+</ol>
+
+<h2 id="chainer">重装 Chainer</h2>
+
+<p>如果你现在检车你的 Chainer with CUDA 可能会不可用，并且提醒你需要重新安装 Chainer。</p>
+
+<p>以下是安装与卸载的所有需要用到的命令行</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>$ pip uninstall chainer
+$ pip uninstall chainer-cuda-deps
+$ pip install --user --upgrade chainer
+$ pip install --user --upgrade chainer-cuda-deps
+</code></pre>
+</div>
+
+<ul>
+  <li>首先我们需要卸载所有 Chainer 及其依赖的环境</li>
+</ul>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>$ pip uninstall chainer
+$ pip uninstall chainer-cuda-dpes
+</code></pre>
+</div>
+
+<ul>
+  <li>然后重新安装</li>
+</ul>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>$ pip install --user -upgrade chainer
+$ pip install --user -upgrade chainer-cuda-deps
+</code></pre>
+</div>
+
+<h2 id="section-2">完成～</h2>
+
+<p>现在你可以检查是否可用了</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>$ python
 
 &gt;&gt;&gt; from chainer import cuda
 &gt;&gt;&gt; cuda.init()
-Traceback (most recent ...
-        </div>
-    </a>
-    <p class="post-meta">
-        Posted by 卢周亨 on April 30, 2016
-    </p>
+</code></pre>
 </div>
-<hr>
-
-<div class="post-preview">
-    <a href="/2016/04/15/ZhouhengResume/">
-        <h2 class="post-title">
-            周亨个人简历及创作方案
-        </h2>
-        
-        <h3 class="post-subtitle">
-            Keynote: Zhouheng Resume for Presentation
-        </h3>
-        
-        <div class="post-content-preview">
-            
-  下滑这里查看更多内容
 
 
-Watch Slides →
+                <hr>
+
+                
 
 
-
-你也可以通过扫描二维码在手机上观看
-
-这个 Web Slides 开源在我的 Github 上，欢迎你帮助我完善这个展示文稿，你可以给我提 issue，可以 fork &amp; pull request。如果它能帮助到你了，希望你还能不吝啬 star 一下这个项目
-
-Thanks
-
-Reveal.js
-
-        </div>
-    </a>
-    <p class="post-meta">
-        Posted by 卢周亨 on April 15, 2016
-    </p>
-</div>
-<hr>
-
-<div class="post-preview">
-    <a href="/2016/03/21/Digital-Native-and-Virtual-Avatar/">
-        <h2 class="post-title">
-            Digital Native 与 Virtual Avatar
-        </h2>
-        
-        <h3 class="post-subtitle">
-            关于数字王国的原住民与虚拟肖像
-        </h3>
-        
-        <div class="post-content-preview">
-            在数字世界里创造 Avatar
-
-关于数字原住民｜Digital Native  的链接
-
-  Wikipedia 上的解释
-  台湾 Wiki 上的解释
-  Marc Prensky 关于「数字原住民」和「数字新移民」的文章（PDF）
-  IT公论关于数字原住民的一期：数字王国的原住民
+                <ul class="pager">
+                    
+                    <li class="previous">
+                        <a href="/2016/04/15/ZhouhengResume/" data-toggle="tooltip" data-placement="top" title="周亨个人简历及创作方案">&larr; Previous Post</a>
+                    </li>
+                    
+                    
+                </ul>
 
 
-一次事故
+                
+                <!-- 多说评论框 start -->
+                <div class="comment">
+                    <div class="ds-thread"
+                        data-thread-key="/2016/04/30/RuntimeError-CUDA environment-is-not-correctly-set-up"
+                        data-title="RuntimeError: CUDA environment is not correctly set up"
+                        data-url="http://blog.zhouheng.asia/2016/04/30/RuntimeError-CUDA-environment-is-not-correctly-set-up/" >
+                    </div>
+                </div>
+                <!-- 多说评论框 end -->
+                
 
-今天，二零一六年三月七号，说来不可思议，一位同学和老师发生了激烈的争吵，而争吵的理由，说...
-        </div>
-    </a>
-    <p class="post-meta">
-        Posted by 卢周亨 on March 21, 2016
-    </p>
-</div>
-<hr>
+                
 
-<div class="post-preview">
-    <a href="/2016/03/11/hello-2016/">
-        <h2 class="post-title">
-            周亨仓库开通 ｜Hello 2016
-        </h2>
-        
-        <h3 class="post-subtitle">
-             "Hello World, Hello Blog"
-        </h3>
-        
-        <div class="post-content-preview">
-            前言
+            </div>
 
-周亨的仓库开通了。
-
-跳过“祥林嫂”，直接看如何实现
-
-2016年，我终于开通了第一个个人博客，可以在生活之余有一个空间写写东西了。
-
-我是一个在校学生，读的是媒体艺术，然而学校管这叫跨媒体系，显然听起来很高大上吧。为什么打算开通个人博客和个人网站？一是觉得如果有个地方写写文章，即便于分享，而且还有利于提高书写能力。
-
-之前看过很多类似于新浪博客的站，这些第三方博客实在惨不忍睹，不好...
-        </div>
-    </a>
-    <p class="post-meta">
-        Posted by LuZhouheng on March 11, 2016
-    </p>
-</div>
-<hr>
-
-
-<!-- Pager -->
-
-
-    		</div>
     <!-- Sidebar Container -->
             <div class="
-                col-lg-3 col-lg-offset-0
-                col-md-3 col-md-offset-0
-                col-sm-12
-                col-xs-12
-                sidebar-container
-            ">
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                sidebar-container">
+
                 <!-- Featured Tags -->
                 
                 <section>
                     <hr class="hidden-sm hidden-xs">
-                    <h5><a href="">FEATURED TAGS</a></h5>
+                    <h5><a href="/tags/">FEATURED TAGS</a></h5>
                     <div class="tags">
-                        
+        				
                             
-                        
+        				
                             
-                        
+        				
                             
-                        
+        				
                             
-                        
+        				
                             
-                        
+        				
                             
-                        
-                    </div>
+        				
+        			</div>
                 </section>
                 
 
-                <!-- Short About -->
-                <section class="visible-md visible-lg">
-                    <hr><h5><a href="">ABOUT ME</a></h5>
-                    <div class="short-about">
-                        
-                            <img src="/img/avatar.jpg" />
-                        
-                        
-                            <p>中国美术学院开放媒体系学生｜媒体艺术｜声音艺术｜职业抄代码<br>Student of Open Media Lab | Media Art | Sound Art | Coder</p>
-                        
-                        <!-- SNS Link -->
-                        <ul class="list-inline">
-                            
-                            <li>
-                                <a href="/feed.xml">
-                                    <span class="fa-stack fa-lg">
-                                        <i class="fa fa-circle fa-stack-2x"></i>
-                                        <i class="fa fa-rss fa-stack-1x fa-inverse"></i>
-                                    </span>
-                                </a>
-                            </li>
-                            
-                            
-                            <li>
-                                <a href="https://twitter.com/luzhouheng">
-                                    <span class="fa-stack fa-lg">
-                                        <i class="fa fa-circle fa-stack-2x"></i>
-                                        <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
-                                    </span>
-                                </a>
-                            </li>
-                            
-                            
-                            <li>
-                                <a target="_blank" href="https://www.zhihu.com/people/luzhouheng">
-                                    <span class="fa-stack fa-lg">
-                                        <i class="fa fa-circle fa-stack-2x"></i>
-                                        <i class="fa  fa-stack-1x fa-inverse">知</i>
-                                    </span>
-                                </a>
-                            </li>
-                            
-                            
-                            
-                            <li>
-                                <a target="_blank" href="https://www.facebook.com/luzhouheng">
-                                    <span class="fa-stack fa-lg">
-                                        <i class="fa fa-circle fa-stack-2x"></i>
-                                        <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
-                                    </span>
-                                </a>
-                            </li>
-                            
-                            
-                            <li>
-                                <a target="_blank" href="https://github.com/luzhouheng">
-                                    <span class="fa-stack fa-lg">
-                                        <i class="fa fa-circle fa-stack-2x"></i>
-                                        <i class="fa fa-github fa-stack-1x fa-inverse"></i>
-                                    </span>
-                                </a>
-                            </li>
-                            
-                        </ul>
-                    </div>
-                </section>
                 <!-- Friends Blog -->
                 
                 <hr>
@@ -409,10 +421,46 @@ Reveal.js
                     
                 </ul>
                 
-    		</div>
-        
-	</div>
-</div>
+            </div>
+        </div>
+    </div>
+</article>
+
+
+<!-- async load function -->
+<script>
+    function async(u, c) {
+      var d = document, t = 'script',
+          o = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      o.src = u;
+      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+      s.parentNode.insertBefore(o, s);
+    }
+</script>
+<!-- anchor-js, Doc:http://bryanbraun.github.io/anchorjs/ -->
+<script>
+    async("http://cdn.bootcss.com/anchor-js/1.1.1/anchor.min.js",function(){
+        anchors.options = {
+          visible: 'always',
+          placement: 'right',
+          icon: '#'
+        };
+        anchors.add().remove('.intro-header h1').remove('.subheading').remove('.sidebar-container h5');
+    })
+</script>
+<style>
+    /* place left on bigger screen */
+    @media all and (min-width: 800px) {
+        .anchorjs-link{
+            position: absolute;
+            left: -0.75em;
+            font-size: 1.1em;
+            margin-top : -0.1em;
+        }
+    }
+</style>
+
 
 
     <!-- Footer -->

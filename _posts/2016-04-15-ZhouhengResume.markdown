@@ -6,8 +6,6 @@ iframe: "http://blog.zhouheng.asia/ZhouhengResume/"
 date:       2016-04-15
 author:     "卢周亨"
 tags:
-    - Resume
-    - Presentation 
     - Web PPT
 ---
 

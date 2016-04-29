@@ -5,9 +5,185 @@
     <description>个人博客，分享学习成果，记录个人生活</description>
     <link>http://blog.zhouheng.asia/</link>
     <atom:link href="http://blog.zhouheng.asia/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Fri, 15 Apr 2016 20:58:53 +0800</pubDate>
-    <lastBuildDate>Fri, 15 Apr 2016 20:58:53 +0800</lastBuildDate>
+    <pubDate>Sat, 30 Apr 2016 00:16:27 +0800</pubDate>
+    <lastBuildDate>Sat, 30 Apr 2016 00:16:27 +0800</lastBuildDate>
     <generator>Jekyll v3.1.2</generator>
+    
+      <item>
+        <title>RuntimeError: CUDA environment is not correctly set up</title>
+        <description>&lt;h1 id=&quot;runtimeerror-cuda-environment-is-not-correctly-set-up&quot;&gt;RuntimeError: CUDA environment is not correctly set up&lt;/h1&gt;
+
+&lt;h2 id=&quot;mac--chainer--gpu&quot;&gt;Mac 环境下使用 Chainer + GPU&lt;/h2&gt;
+
+&lt;p&gt;OS X Yosemite + GPU 运行时报错如下。&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;gt;&amp;gt;&amp;gt; from chainer import cuda
+&amp;gt;&amp;gt;&amp;gt; cuda.init()
+Traceback (most recent call last):
+  File &quot;&amp;lt;stdin&amp;gt;&quot;, line 1, in &amp;lt;module&amp;gt;
+  File &quot;/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/chainer/cuda.py&quot;, line 69, in init
+    check_cuda_available()
+  File &quot;/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/chainer/cuda.py&quot;, line 82, in check_cuda_available
+    raise RuntimeError(msg)
+RuntimeError: CUDA environment is not correctly set up
+(see https://github.com/pfnet/chainer#installation).dlopen(/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/cupy/core/core.so, 2): Library not loaded: @rpath/libcublas.7.5.dylib
+  Referenced from: /Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/cupy/core/core.so
+  Reason: image not found
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&quot;section&quot;&gt;环境&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Os X 10.10.5 (Yosemite)&lt;/li&gt;
+  &lt;li&gt;NVIDIA GeForce GT 750M&lt;/li&gt;
+  &lt;li&gt;Python 2.7.11&lt;/li&gt;
+  &lt;li&gt;Chainer 1.8.1&lt;/li&gt;
+  &lt;li&gt;CUDA 7.5&lt;/li&gt;
+  &lt;li&gt;cuDNN v3&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;section-1&quot;&gt;准备&lt;/h2&gt;
+
+&lt;p&gt;在 Mac OS X 上进行示范，操作系统是 Yosemite 10.10.5， Ubuntu 系统的操作过程也类似的。&lt;/p&gt;
+
+&lt;p&gt;首先是 Chainer 的安装。&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ pip install chainer
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;如果不使用 GPU 的话，这样就可以了。&lt;/p&gt;
+
+&lt;p&gt;如果需要使用 GPU 进行运算的话，必须安装 CUDA。&lt;/p&gt;
+
+&lt;p&gt;Mac 正式版安装在&lt;strong&gt;&lt;a href=&quot;https://developer.nvidia.com/cuda-downloads&quot;&gt;这里&lt;/a&gt;&lt;/strong&gt;可以下载。&lt;/p&gt;
+
+&lt;p&gt;CUDA 的安装这里就不赘述了。&lt;/p&gt;
+
+&lt;h2 id=&quot;cuda-&quot;&gt;CUDA 解决方案&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;在 ~/.bash_profile 里写入&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;#for Cuda
+export CUDA_ROOT=/Developer/NVIDIA/CUDA-7.5/
+export PATH=$PATH:/Developer/NVIDIA/CUDA-7.5/bin
+export LD_LIBRARY_PATH=/Developer/NVIDIA/CUDA-7.5/lib:/usr/local/cuda/lib/:$LD_LIBRARY_PATH
+export CPATH=$CPATH:/Developer/NVIDIA/CUDA-7.5/include
+export CUDA_INC_DIR=/Developer/NVIDIA/CUDA-7.5/bin:$CUDA_INC_DIR
+export DYLD_LIBRARY_PATH=$DYLD_LIBRARY_PATH:/Developer/NVIDIA/CUDA-7.5/lib
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;其中这条路径&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;export LD_LIBRARY_PATH=/Developer/NVIDIA/CUDA-7.5/lib:/usr/local/cuda/lib/:$LD_LIBRARY_PATH
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;在这条 Issue: &lt;strong&gt;&lt;a href=&quot;https://github.com/pfnet/chainer/issues/652&quot;&gt;&lt;em&gt;Chainer Connection to GPU Issue on Mac #652&lt;/em&gt;&lt;/a&gt;&lt;/strong&gt; 可以找到出处。&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;安装依赖环境&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ pip install chainer-cuda-deps
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&quot;cudnn&quot;&gt;安装及使用 cuDNN&lt;/h2&gt;
+
+&lt;p&gt;Chainer 现在还&lt;strong&gt;不支持&lt;/strong&gt;最新的 cuDNN &lt;strong&gt;v5&lt;/strong&gt; 版本。&lt;/p&gt;
+
+&lt;p&gt;这里以 cuDNN &lt;strong&gt;v3&lt;/strong&gt; 示范。&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;如果没安装的话，安装 Mac Os Command Line Tools。&lt;/p&gt;
+
+    &lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;
+ $ xcode-select --install
+&lt;/code&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;检查一下 CUDA 的版本和路径 (如果还没安装 CUDA，请参照上文安装)。&lt;/p&gt;
+
+    &lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;
+ $ /usr/local/cuda/bin/nvcc --version
+ # Cuda compilation tools, release 7.0, 	V7.0.27
+ $ export DYLD_LIBRARY_PATH=/usr/local/cuda/lib
+&lt;/code&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;下载安装 cuDNN (如果安装了就忽略这一步)&lt;/p&gt;
+
+    &lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;
+ $ wget http://developer.download.nvidia.com/assets/cuda/secure/cuDNN/v3/cudnn-7.0-osx-x64-v3.0-prod.tgz?autho=1461944459_fdf5f49c8d930ce22d43776c7ecc6aa1&amp;amp;file=cudnn-7.0-osx-x64-v3.0-prod.tgz
+ $ tar xvzf cudnn-3.0-osx-x64-v3.0-prod.tgz
+ $ rm cudnn-3.0-osx-x64-v3.0-prod.tgz
+ $ cd cuda
+ $ sudo cp cudnn.h /Developer/NVIDIA/CUDA-7.5/include/
+ $ sudo cp libcudnn* /usr/local/cuda/lib/
+&lt;/code&gt;&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;chainer&quot;&gt;重装 Chainer&lt;/h2&gt;
+
+&lt;p&gt;如果你现在检车你的 Chainer with CUDA 可能会不可用，并且提醒你需要重新安装 Chainer。&lt;/p&gt;
+
+&lt;p&gt;以下是安装与卸载的所有需要用到的命令行&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ pip uninstall chainer
+$ pip uninstall chainer-cuda-deps
+$ pip install --user --upgrade chainer
+$ pip install --user --upgrade chainer-cuda-deps
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;首先我们需要卸载所有 Chainer 及其依赖的环境&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ pip uninstall chainer
+$ pip uninstall chainer-cuda-dpes
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;然后重新安装&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ pip install --user -upgrade chainer
+$ pip install --user -upgrade chainer-cuda-deps
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&quot;section-2&quot;&gt;完成～&lt;/h2&gt;
+
+&lt;p&gt;现在你可以检查是否可用了&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ python
+
+&amp;gt;&amp;gt;&amp;gt; from chainer import cuda
+&amp;gt;&amp;gt;&amp;gt; cuda.init()
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+</description>
+        <pubDate>Sat, 30 Apr 2016 00:00:00 +0800</pubDate>
+        <link>http://blog.zhouheng.asia/2016/04/30/RuntimeError-CUDA-environment-is-not-correctly-set-up/</link>
+        <guid isPermaLink="true">http://blog.zhouheng.asia/2016/04/30/RuntimeError-CUDA-environment-is-not-correctly-set-up/</guid>
+        
+        <category>Deep Learning</category>
+        
+        <category>CUDA</category>
+        
+        
+      </item>
     
       <item>
         <title>周亨个人简历及创作方案</title>
@@ -30,10 +206,6 @@
         <pubDate>Fri, 15 Apr 2016 00:00:00 +0800</pubDate>
         <link>http://blog.zhouheng.asia/2016/04/15/ZhouhengResume/</link>
         <guid isPermaLink="true">http://blog.zhouheng.asia/2016/04/15/ZhouhengResume/</guid>
-        
-        <category>Resume</category>
-        
-        <category>Presentation</category>
         
         <category>Web PPT</category>
         
@@ -151,9 +323,7 @@
         
         <category>媒体艺术</category>
         
-        <category>Processing</category>
-        
-        <category>OpenFrameworks</category>
+        <category>Creative Programming</category>
         
         
       </item>

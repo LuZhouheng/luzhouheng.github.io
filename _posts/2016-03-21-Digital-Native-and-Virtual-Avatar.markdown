@@ -7,8 +7,7 @@ author:     "卢周亨"
 header-img: "img/post-bg-media-version.jpg"
 tags:
     - 媒体艺术
-    - Processing 
-    - OpenFrameworks
+    - Creative Programming
 ---
 
 

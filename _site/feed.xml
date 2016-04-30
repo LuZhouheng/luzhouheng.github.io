@@ -5,8 +5,8 @@
     <description>个人博客，分享学习成果，记录个人生活</description>
     <link>http://blog.zhouheng.asia/</link>
     <atom:link href="http://blog.zhouheng.asia/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Sat, 30 Apr 2016 08:03:08 +0800</pubDate>
-    <lastBuildDate>Sat, 30 Apr 2016 08:03:08 +0800</lastBuildDate>
+    <pubDate>Sat, 30 Apr 2016 21:03:26 +0800</pubDate>
+    <lastBuildDate>Sat, 30 Apr 2016 21:03:26 +0800</lastBuildDate>
     <generator>Jekyll v3.1.2</generator>
     
       <item>
@@ -172,6 +172,33 @@ $ pip install --user -upgrade chainer-cuda-deps
 &amp;gt;&amp;gt;&amp;gt; cuda.init()
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
+
+&lt;h2 id=&quot;section-3&quot;&gt;参考&lt;/h2&gt;
+
+&lt;h3 id=&quot;github&quot;&gt;GitHub&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/pfnet/chainer/issues/652&quot;&gt;https://github.com/pfnet/chainer/issues/652&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/pfnet/chainer/issues/780&quot;&gt;https://github.com/pfnet/chainer/issues/780&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/pfnet/chainer&quot;&gt;https://github.com/pfnet/chainer&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;qiita&quot;&gt;Qiita&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://qiita.com/sigmalogneko/items/2b6921c1068bb26582da&quot;&gt;RuntimeError: CUDA environment is not correctly set up&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://qiita.com/bohemian916/items/dfa573b85e8a1e7472b2&quot;&gt;chainerでcuda.initはもう使えない&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;others&quot;&gt;Others&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://docs.chainer.org/en/stable/install.html#install-chainer-with-cuda-and-cudnn&quot;&gt;Install Guide # install-chainer-with-cuda-and-cudnn&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://ameblo.jp/oyasai10/entry-12123178381.html&quot;&gt;Chainer 1.6 GPU 対応に関するメモ&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://kubotti.hatenablog.com/entry/2015/10/24/010834&quot;&gt;chainer でGPUを利用するメモ(Mac)
+&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://christopher5106.github.io/big/data/2015/07/16/deep-learning-install-caffe-cudnn-cuda-for-digits-python-on-mac-osx.html&quot;&gt;Deep learning with Cuda 7, CuDNN 2 and Caffe for Digits 2 and Python on iMac with NVIDIA GeForce GT 755M/640M GPU (Mac OS X)&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://wtkw.net/tech-blog/?p=34&quot;&gt;[Chainer] Deep Learning でアニメ (ゆるゆり) キャラクターを識別する(2015/11/4少し追記)&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
 </description>
         <pubDate>Sat, 30 Apr 2016 00:00:00 +0800</pubDate>
         <link>http://blog.zhouheng.asia/2016/04/30/Chainer-with-CUDA/</link>

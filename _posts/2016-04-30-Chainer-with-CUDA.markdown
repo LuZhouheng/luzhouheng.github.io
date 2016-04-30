@@ -154,3 +154,24 @@ $ python
 >>> from chainer import cuda
 >>> cuda.init()
 ```
+
+## 参考
+
+### GitHub
+* [https://github.com/pfnet/chainer/issues/652](https://github.com/pfnet/chainer/issues/652)
+* [https://github.com/pfnet/chainer/issues/780](https://github.com/pfnet/chainer/issues/780)
+* [https://github.com/pfnet/chainer](https://github.com/pfnet/chainer)
+
+### Qiita
+
+* [RuntimeError: CUDA environment is not correctly set up](http://qiita.com/sigmalogneko/items/2b6921c1068bb26582da)
+* [chainerでcuda.initはもう使えない](http://qiita.com/bohemian916/items/dfa573b85e8a1e7472b2)
+
+### Others
+* [Install Guide # install-chainer-with-cuda-and-cudnn](http://docs.chainer.org/en/stable/install.html#install-chainer-with-cuda-and-cudnn)
+* [Chainer 1.6 GPU 対応に関するメモ](http://ameblo.jp/oyasai10/entry-12123178381.html)
+* [chainer でGPUを利用するメモ(Mac)
+](http://kubotti.hatenablog.com/entry/2015/10/24/010834)
+* [Deep learning with Cuda 7, CuDNN 2 and Caffe for Digits 2 and Python on iMac with NVIDIA GeForce GT 755M/640M GPU (Mac OS X)](http://christopher5106.github.io/big/data/2015/07/16/deep-learning-install-caffe-cudnn-cuda-for-digits-python-on-mac-osx.html)
+* [[Chainer] Deep Learning でアニメ (ゆるゆり) キャラクターを識別する(2015/11/4少し追記)](http://wtkw.net/tech-blog/?p=34)
+

@@ -10,9 +10,9 @@
     <meta name="keyword"  content="卢周亨, luzhouheng, zhouheng, 媒体艺术, 声音艺术, @卢 周亨, 卢周亨的博客, Zhouheng Blog, 博客, 个人网站, 互联网, 网络艺术, Web Art, 设计">
     <!-- <link rel="shortcut icon" href="img/favicon.ico"> -->
 
-    <title>Digital Native 与 Virtual Avatar - 周亨仓库</title>
+    <title>「Head First Web Design」读书笔记 - 周亨仓库</title>
 
-    <link rel="canonical" href="http://blog.zhouheng.asia/2016/03/21/Digital-Native-and-Virtual-Avatar/">
+    <link rel="canonical" href="http://blog.zhouheng.asia/2016/05/07/Head-First-Web-Design_Note/">
 
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="/css/bootstrap.min.css">
@@ -136,12 +136,12 @@
 
     <!-- Image to hack wechat -->
 <!-- <img src="/img/icon_wechat.png" width="0" height="0"> -->
-<!-- <img src="/img/post-bg-media-version.jpg" width="0" height="0"> -->
+<!-- <img src="/img/post-bg-web-design.jpeg" width="0" height="0"> -->
 
 <!-- Post Header -->
 <style type="text/css">
     header.intro-header{
-        background-image: url('/img/post-bg-media-version.jpg')
+        background-image: url('/img/post-bg-web-design.jpeg')
     }
 </style>
 <header class="intro-header" >
@@ -151,17 +151,15 @@
                 <div class="post-heading">
                     <div class="tags">
                         
-                        <a class="tag" href="/tags/#媒体艺术" title="媒体艺术">媒体艺术</a>
-                        
-                        <a class="tag" href="/tags/#Creative Programming" title="Creative Programming">Creative Programming</a>
+                        <a class="tag" href="/tags/#Web Design" title="Web Design">Web Design</a>
                         
                     </div>
-                    <h1>Digital Native 与 Virtual Avatar</h1>
+                    <h1>「Head First Web Design」读书笔记</h1>
                     
                     
-                    <h2 class="subheading">关于数字王国的原住民与虚拟肖像</h2>
+                    <h2 class="subheading">Head First Web Design Note</h2>
                     
-                    <span class="meta">Posted by 卢周亨 on March 21, 2016</span>
+                    <span class="meta">Posted by 卢周亨 on May 7, 2016</span>
                 </div>
             </div>
         </div>
@@ -179,108 +177,240 @@
                 col-md-10 col-md-offset-1
                 post-container">
 
-				<h1 id="avatar">在数字世界里创造 Avatar</h1>
+				<h1 id="head-first-brsmallhead-first-web-design-notesmall">Head First 网页设计读书笔记<br /><small>Head First Web Design Note</small></h1>
 
-<h2 id="digital-native--">关于数字原住民｜Digital Native  的链接</h2>
+<h2 id="brsmallsmall">建立美观网页<br /><small>美丑都是用户的观感</small></h2>
+
 <ul>
-  <li><a href="https://en.wikipedia.org/wiki/Digital_native">Wikipedia 上的解释</a></li>
-  <li><a href="http://www.twwiki.com/wiki/%E6%95%B8%E5%AD%97%E5%8E%9F%E4%BD%8F%E6%B0%91">台湾 Wiki 上的解释</a></li>
-  <li><a href="http://www.marcprensky.com/writing/Prensky%20-%20Digital%20Natives,%20Digital%20Immigrants%20-%20Part1.pdf">Marc Prensky 关于「数字原住民」和「数字新移民」的文章（PDF）</a></li>
-  <li><a href="https://ipn.li/itgonglun/78/">IT公论关于数字原住民的一期：数字王国的原住民</a></li>
+  <li>设计过程很重要 (Design Process)
+    <ul>
+      <li>建立项目架构</li>
+      <li>专注于任务</li>
+      <li>减少压力</li>
+    </ul>
+  </li>
+  <li>过程 =&gt; 工作流程 (Workflow)</li>
 </ul>
 
-<h2 id="section">一次事故</h2>
+<h3 id="section">画蓝图是<strong>第一要务</strong></h3>
 
-<p>今天，二零一六年三月七号，说来不可思议，一位同学和老师发生了激烈的争吵，而争吵的理由，说来你会不相信，只有一个理由，<strong>到底要不要再微信上上课</strong>。</p>
-
-<p>同学很不情愿自己的话语留在微信的服务器上，即使是退到其底线，也是发一段语音，大概是因为语音比较不容易被获取信息？可是现在一段语音也能被获取关键词了。</p>
-
-<p>而老师坚持的是在线上交流，而媒介是我们看到极度垄断的微信，本着如果线上交流已经不充分，那么就没有必要进行线下交流，虽然我们处在同一个物理空间－教室。</p>
-
-<p>显然，我们面对面，但是我们在线上交流，这让我想起一个段子，大意就是<strong>我们两个人面对面，用语言可以进行的交流，而现在却需要通过一个 IM 软件，将数据上传到服务器，服务器再分解这段数据，分发到全国乃至全世界各地的服务器－以确保数据传输的速度，然后这段信息再发送到你的手机上。所谓的 CDN 就是 Content Delivery Network，即内容分发网络。</strong></p>
-
-<p>当时看到这个段子，并没有什么感觉，只是觉得这是在调侃人类的沟通方式的变革，但现在看到，是一个值得讨论的问题。</p>
-
-<p>基于这次事件，我也产生了一个想法。</p>
-
-<h2 id="section-1">「关于线上的意识与线下自我」</h2>
-
-<h3 id="section-2">简介</h3>
-
-<p>基于对 digital native 的思考，做了这个实验，名叫「关于线上的意识与线下自我」</p>
-
-<h3 id="section-3">具体实施步骤</h3>
-
-<ol>
-  <li>
-    <p>录制网上购物(淘宝等)视频</p>
-  </li>
-  <li>
-    <p>基于网上购物行为 截取网页图片</p>
-  </li>
-  <li>
-    <p>在桌面使用图标，图片浏览器拼贴与制作 avater</p>
-  </li>
-  <li>
-    <p>如果可行 基于 Neural－Transfer 制作仿制艺术风格的肖像，或者利用 Processing 或 OpenFrameworks 编写图像绘画化程序，进行肖像化创作</p>
-  </li>
-  <li>
-    <p>将自己写的或改进的程序发布在 Github 上，完善文档，便于更多感兴趣的人共同改进创作</p>
-  </li>
-  <li>
-    <p>可以尝试不同种类形态的虚拟对象 Avatar 化的实践，我将开源一套可执行的方案，已经程序供感兴趣的人一同创作。创作内容将同步到一个 Tumblr 账号上</p>
-  </li>
-</ol>
-
-<h3 id="section-4">关于各类非形象化的虚拟对象的实践</h3>
 <ul>
-  <li>
-    <p><strong>第一个</strong>实践对象就是淘宝，淘宝商城作为一个机器庞大的主体，我们可以在移动端也试试如果将其 Avatar 化，这次我选择使用 RMBP 的 Safari 浏览器进行试验。</p>
-
+  <li>网站需要使用信息架构 (Information Architecture, IA)
     <ul>
-      <li>首先我上到淘宝官网，在上面浏览。</li>
+      <li>将网站内容分解成多个块 (Chunk)</li>
     </ul>
 
-    <p><img src="http://7xrims.com1.z0.glb.clouddn.com/TaobaoShopingScreenShot.gif" alt="TaobaoShoppingScreenShot" /></p>
-
-    <ul>
-      <li>在浏览的过程中，不停的寻找兴趣点，截图，我得到了许多图像。</li>
-    </ul>
-
-    <p><img src="http://7xrims.com1.z0.glb.clouddn.com/TaoBaoScreenShotImages.gif" alt="TaobaoScreenShotImages" /></p>
-
-    <ul>
-      <li>在 Mac 桌面上摆弄图像，构造一个个 Avatar，寻找更多的可能性。</li>
-    </ul>
-
-    <p><img src="http://7xrims.com1.z0.glb.clouddn.com/TaobaoAvatar_006.jpg" alt="" />
-  <img src="http://7xrims.com1.z0.glb.clouddn.com/TaobaoAvatar_002.jpg" alt="" />
-  <img src="http://7xrims.com1.z0.glb.clouddn.com/TaobaoAvatar_001.jpg" alt="" />
-  <img src="http://7xrims.com1.z0.glb.clouddn.com/TaobaoAvatar_008.jpg" alt="" /></p>
-
-    <ul>
-      <li>利用 Processing 或 Openframeworks 进行绘画化处理。</li>
-    </ul>
-
-    <p><img src="http://7xrims.com1.z0.glb.clouddn.com/TaobaoAvatar_007.jpg" alt="" />
-  <img src="http://7xrims.com1.z0.glb.clouddn.com/TaobaoAvatar_009.jpg" alt="" />
-  <img src="http://7xrims.com1.z0.glb.clouddn.com/TaobaoAvatar_004.jpg" alt="" />
-  <img src="http://7xrims.com1.z0.glb.clouddn.com/TaobaoAvatar_010.jpg" alt="" />
-  <img src="http://7xrims.com1.z0.glb.clouddn.com/TaobaoAvatar_011.jpg" alt="" /></p>
-  </li>
-  <li>
-    <p><strong>第二个</strong>想到的便是最近特别红火的 Google 的 AlphaGo 围棋人工智能。这个人工智能被我们大量的讨论，甚至各类围棋选手开始幻想这样的一个“敌人”，在社交媒体上宣战，对谈，感慨。在线上大量的分析，讨论这样的一个存在。而这样现象让我想到了“网红”，“围棋直播”这样事件正是当下正红火的“直播”的延伸。所以我该反问自己，这个数位产物被我们形象化了，有性格有表情，有自己的语言，甚至粉丝与社交媒体。</p>
-  </li>
-  <li>
-    <p><strong>第三个</strong>是 <strong>G20</strong>，是的没错，我现在生活在杭州，这里切实的正在发生变革，小到房屋改造，大到杭州的巨大工程改造，道路被挖开重整，房屋被拆迁夷平，而就连墙面都格外的注意，重新刷涂。这是一个怎样的存在？ G20 是否具有形象？为什么某美术学院的一个系开设了所谓的 <strong>G20XXXXXXX</strong> ？为什么它在暗流中改变了我们的城市，甚至思维方式？我试试将它捕捉下来，给它一个定义与形象。</p>
+    <p><img src="http://7xrims.com1.z0.glb.clouddn.com/IA.png" alt="Information Architecture" /></p>
   </li>
 </ul>
 
-<h3 id="section-5">更多的可行方式，欢迎你的加入</h3>
+<h3 id="section-1">决定顶层导航系统</h3>
 
-<p>我在 GitHub 上开了一个 Repository ，在上面放了我自己写的或修改的几个小程序，你可以直接使用，也欢迎你来加入这个活动。贡献你的想法与程序。</p>
+<ul>
+  <li>
+    <p>顶层导航 (Top Level Bavigation)</p>
 
-<p>我们可以就线上生活的试验，进行大量的创作。因为一切的线上生活， 都会涉及到个人身份的具体化视觉化听觉化， 都可以是工作的母体。</p>
+    <p><img src="http://7xrims.com1.z0.glb.clouddn.com/TopLevelNavigation.png" alt="Top Level Navigation" /></p>
+  </li>
+</ul>
+
+<h3 id="section-2">考虑周围环境</h3>
+
+<h3 id="section-3">草图专注于<strong>功能性</strong></h3>
+
+<h3 id="iterative-">迭代 (Iterative) 是什么意思？</h3>
+
+<blockquote>
+  <p>迭代是种设计方法论，在工作过程中测试｀分析，然后进一步琢磨作品的原型。你在设计过程的每个阶段中都会重复每个步骤－它是循环的，直到你 (以及你的客户) 得到满意的结果。</p>
+</blockquote>
+
+<h3 id="scannability">注意可扫读性 (Scannability)</h3>
+
+<h3 id="user-centered-design">用户中心的设计 (User-Centered Design)</h3>
+
+<h3 id="section-4">要点</h3>
+
+<ul>
+  <li>创建聚焦于迎合用户需求的网站</li>
+  <li>设计过程协助你架构项目，以有效率的方式完成工作。</li>
+  <li>大多数网站设计项目由四个部分组成：前期制作｀布局｀导航系统以及写作。</li>
+  <li>信息架构 (IA) 的过程，把网站内容分解成块，然后根据块的关系重组为有层次的组织。</li>
+  <li>开发网站的 IA 有两个步骤：组织网站的信息以及建立 IA 图。</li>
+  <li>IA 图以视觉化的方式呈现网站信息分区和子分区的层次组织。</li>
+  <li>顶层导航链接的对象通常是信息架构中位于主页下一层的分区。</li>
+  <li>分镜表以视觉化的方式呈现你的设计，并在我们进入代码阶段前测试布局的基本概念。</li>
+  <li>网站写作与平面印刷媒体的写作需求不同。</li>
+  <li>网络用户扫读网页，而不是从头到尾仔细阅读。</li>
+  <li>网页内容需要写成适合人眼扫读的形式。</li>
+</ul>
+
+<h2 id="web-">Web 设计工具箱</h2>
+
+<h3 id="pre-production">前期制作 (Pre-Production)</h3>
+<p>### 从视觉隐喻开始</p>
+
+<ul>
+  <li>Theme</li>
+  <li>
+    <p>Visual Metaphor</p>
+
+    <p><img src="http://7xrims.com1.z0.glb.clouddn.com/VisualMetaphor.png" alt="Visual Metaphor" /></p>
+  </li>
+</ul>
+
+<h3 id="section-5">清晰的视觉隐喻有助于强调网站主题</h3>
+
+<h3 id="section-6">主题表现了网站的内容</h3>
+
+<h3 id="storyboard-concept-aet-">不用代码，使用分镜表 (Storyboard, concept aet) 开发构想并节省时间</h3>
+
+<h3 id="section-7">要点</h3>
+
+<ul>
+  <li>在网站的前期制作时，你可以在纸上写出设计构想，这样可以避免写代码的潜在错误，而过早投入代码可能会浪费时间和精力，或许还会浪费钱。</li>
+  <li>视觉隐喻调节视觉元素 （图片｀图标｀色彩｀字型），暗中强化网站的主题。</li>
+  <li>为网站运用视觉隐喻时，试着采用潜移默化的手法，而不要过度处理。</li>
+  <li>分镜表时手绘的概念图，用来把你的设计化为可见的完成作品。</li>
+</ul>
+
+<h2 id="section-8">组织网站</h2>
+
+<h3 id="section-9">组织网站的信息</h3>
+
+<p>网站就是要<strong>传播信息</strong>。如果网站无法与受众沟通，它绝对不会比一个言之有物的网站成功。</p>
+
+<h3 id="ia-">利用信息架构 (IA) 维护网站的组织性</h3>
+
+<ul>
+  <li>IA – 卡片分类法 (Card Sorting)
+    <ul>
+      <li>一碟 3 x 5 的卡片</li>
+      <li>一支笔和干净的桌子</li>
+      <li>关于网站内容的全部构想</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="section-10">完整的制作流程</h3>
+
+<ul>
+  <li>搜集所有内容</li>
+  <li>头脑风暴，相处主题与视觉隐喻</li>
+  <li>开发视觉隐喻并思考布局</li>
+  <li>建立分镜表（纸上作业）</li>
+  <li>进行卡片分类并建立 IA 图</li>
+  <li>为内容加上标记，并以 CSS 制作样式</li>
+</ul>
+
+<h3 id="section-11">要点</h3>
+
+<ul>
+  <li>网站的重点在于传播信息</li>
+  <li>网站的信息组织对网站导航与可用性具有直接影响</li>
+  <li>卡片分类是个便宜又简单｀可味网站内容套上信息架构的技巧</li>
+  <li>别依赖你自己对网站信息的分类结果</li>
+  <li>信息架构 (Information Architecture, IA) 图展示网站信息分区与子分区的层次关系</li>
+  <li>信息架构图并非设计于呈现网页间的链接</li>
+</ul>
+
+<h2 id="section-12">设计与布局</h2>
+
+<h3 id="section-13">遵循黄金法则</h3>
+
+<h3 id="section-14">要点</h3>
+
+<ul>
+  <li>黄金比例能简历更加赏心悦目的设计</li>
+  <li>三分法时根据黄金比例创建网格的快速版本</li>
+  <li>CSS 基于网格的框架是种特殊化的 CSS 文件，包含所有必要样式，可用于根据 CSS 中的网格编排你的网站</li>
+  <li>CSS 基于网格的框架的目标是让设计师聚焦于项目特有的任务上，而不是重复前人做好的工作</li>
+</ul>
+
+<h2 id="section-15">运用色彩设计</h2>
+
+<h3 id="br-color-create-emotion">色彩具有情绪影响力<br /> Color Create Emotion</h3>
+
+<ul>
+  <li>
+    <p>例如：红色会联想到兴奋，紫色感觉高贵而庄严，黄色让人欢欣鼓舞，蓝色则由中舒适和安全的感觉</p>
+
+    <p><img src="http://7xrims.com1.z0.glb.clouddn.com/ColorEmotion.png" alt="Color Emotion" /></p>
+  </li>
+</ul>
+
+<h3 id="section-16">要点</h3>
+
+<ul>
+  <li>色彩对网站的访问者具有强大的影响</li>
+  <li>使用色轮来选择网站设计的色彩</li>
+  <li>四色方案有四种色彩，形成两对互补色，也是最丰富的配色方案</li>
+</ul>
+
+<h2 id="section-17">网站写作</h2>
+
+<h3 id="br-inverted-pyramid">改善内容的倒金字塔<br /> Inverted Pyramid</h3>
+
+<ul>
+  <li>
+    <p>Inverted Pyramid</p>
+
+    <p><img src="http://7xrims.com1.z0.glb.clouddn.com/InvertedPyramid.png" alt="Inverted Pyramid" /></p>
+  </li>
+</ul>
+
+<h3 id="section-18">混合使用字体来强调标题与其他文字</h3>
+
+<ul>
+  <li>Serif (衬线字体)</li>
+  <li>Sans-serif (无衬线字体)</li>
+</ul>
+
+<p>Serif 字体如 Times New Roman, 是由一个小小的突出部分 (也称为 Serif) 来定义, Serif (衬线) 是指字符主要笔画外的延伸。</p>
+
+<p>Sans-serif 意为没有衬线，包括了 Helvetica 与 Arial 等字体。 Sans-serif 字体更容易在屏幕上阅读，因为相对分辨率低的电脑屏幕会让 Serif 字体显得模糊，字号较小时尤其明显。</p>
+
+<p>但不表示不可以再网站上使用 Serif 字体，只是需要正确的使用，并用足够大的字号编排，才能让用户轻松阅读。</p>
+
+<h3 id="section-19">标题的重要性以<strong>层次</strong>而非<strong>尺寸</strong>表示</h3>
+
+<h3 id="section-20">要点</h3>
+
+<ul>
+  <li>人类阅读屏幕的速度比阅读印刷品慢 15%</li>
+  <li>浏览网站 =&gt; 扫读</li>
+  <li>采用倒金字塔法</li>
+  <li>比起为印刷媒体而写作的文字，用于网站时请减少 15％</li>
+  <li>在网站上阅读 Sans-serif 字体比阅读 Serif 字体轻松，尤其是字号较小的时候</li>
+</ul>
+
+<h2 id="section-21">可访问性</h2>
+
+<h3 id="section-22">可访问性是思考残疾人在体验与享受你的网站时有何影响</h3>
+
+<h3 id="section-23">可访问性是指每个人都能使用你的网站</h3>
+
+<p>当残疾人不能使用某网站时，这个网站即为不可访问的 (Inaccessible)。当你的网站能被残疾人使用时，你的网站即为可访问的 (Accessible)。</p>
+
+<h2 id="section-24">倾听用户的心声</h2>
+
+<h3 id="section-25">网站解析工具</h3>
+
+<ul>
+  <li><a href="http://haveamint.com/">Mint</a></li>
+  <li><a href="http://www.google.com/analytics">Google Analytics</a></li>
+</ul>
+
+<h2 id="section-26">会演变的设计</h2>
+
+<h3 id="section-27">要点</h3>
+
+<ul>
+  <li>你的个人网站就是你的公关利器</li>
+  <li>让你的网站永远展示最好｀最新的作品，这非常重要</li>
+  <li>新鲜的内容会让用户传递正面信息，并让它们再次回来</li>
+  <li>网站应该演变（逐步改变），而不是经常大翻修</li>
+</ul>
+
 
 
                 <hr>
@@ -291,13 +421,9 @@
                 <ul class="pager">
                     
                     <li class="previous">
-                        <a href="/2016/03/11/Hello-2016/" data-toggle="tooltip" data-placement="top" title="周亨仓库开通 ｜Hello 2016">&larr; Previous Post</a>
+                        <a href="/2016/04/30/Chainer-with-CUDA/" data-toggle="tooltip" data-placement="top" title="RuntimeError: CUDA environment is not correctly set up">&larr; Previous Post</a>
                     </li>
                     
-                    
-                    <li class="next">
-                        <a href="/2016/04/15/Zhouheng-Resume/" data-toggle="tooltip" data-placement="top" title="周亨个人简历及创作方案">Next Post &rarr;</a>
-                    </li>
                     
                 </ul>
 
@@ -306,9 +432,9 @@
                 <!-- 多说评论框 start -->
                 <div class="comment">
                     <div class="ds-thread"
-                        data-thread-key="/2016/03/21/Digital-Native-and-Virtual-Avatar"
-                        data-title="Digital Native 与 Virtual Avatar"
-                        data-url="http://blog.zhouheng.asia/2016/03/21/Digital-Native-and-Virtual-Avatar/" >
+                        data-thread-key="/2016/05/07/Head-First-Web-Design_Note"
+                        data-title="「Head First Web Design」读书笔记"
+                        data-url="http://blog.zhouheng.asia/2016/05/07/Head-First-Web-Design_Note/" >
                     </div>
                 </div>
                 <!-- 多说评论框 end -->

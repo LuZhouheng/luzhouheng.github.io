@@ -32,7 +32,7 @@ tags:
 
 ![](http://7xrims.com1.z0.glb.clouddn.com/BeTech/RAM.gif)
 
-![](http://7xrims.com1.z0.glb.clouddn.com/BeTech/20160217_ofBox2D)
+![](http://7xrims.com1.z0.glb.clouddn.com/BeTech/20160217_ofBox2D.gif)
 
 ![](http://7xrims.com1.z0.glb.clouddn.com/BeTech/20160121_ofxCv_ofxGUI.gif)
 

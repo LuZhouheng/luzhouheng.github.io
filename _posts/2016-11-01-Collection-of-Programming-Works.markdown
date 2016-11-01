@@ -1,12 +1,13 @@
 ---
 layout:     post
-title:      "自画像"
-subtitle:   "Self Painting"
-date:       2016-06-16
+title:      "编程习作整理"
+subtitle:   "Collection of Programming Works"
+date:       2016-11-01
 author:     "卢周亨, LuZhouheng"
 header-img: "img/post-bg-self-painting.png"
 tags:
-    - Hand Draw
+    - OpenFrameworks
+    - Programmming
 ---
 
 ![](http://7xrims.com1.z0.glb.clouddn.com/hackthon.gif)

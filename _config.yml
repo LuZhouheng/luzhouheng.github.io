@@ -1,99 +1,37 @@
 # Site settings
-title: 周亨仓库
-SEOTitle: 周亨仓库 
-header-img: img/home-bg.jpg
+title: Zhouheng
+subtitle: . Asia
 email: peressio@gmail.com
-description: "个人博客，分享学习成果，记录个人生活"
-keyword: "卢周亨, luzhouheng, zhouheng, 媒体艺术, 声音艺术, @卢
-周亨, 卢周亨的博客, Zhouheng Blog, 博客, 个人网站, 互联网, 网络艺术, Web Art, 设计"
-url: "http://blog.zhouheng.asia"              # your host, for absolute URL
-baseurl: ""                             # for example, '/blog' if your blog hosted on 'host/blog'
+description: Creative Media Art Student <br /> Open Media Lab of China Academy of Art ( Hangzhou, China )
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "zhouheng.asia" # the base hostname & protocol for your site
+author: Lu Zhouheng
+street_address: 
+city: HangZhou
+state: ZheJiang
+zip_code: 310000
+country: The People's Republic of China
+phone: 
 
+# Homepage tiles
+tiles-source: posts # accepts "posts" or "pages"
+tiles-count: 10
 
-
-# SNS settings
-RSS: true
-# weibo_username:     
-zhihu_username:     luzhouheng
-github_username:    luzhouheng
-twitter_username:   luzhouheng
-facebook_username:  luzhouheng
-
-
+# Social settings
+500px_url:
+facebook_url: https://www.facebook.com/luzhouheng
+github_url: https://github.com/LuZhouheng
+gitlab_url: 
+googleplus_url: 
+instagram_url: https://www.instagram.com/luzhouheng
+linkedin_url: 
+pinterest_url:
+slack_url:
+twitter_url: https://twitter.com/luzhouheng
+vimeo_url: https://vimeo.com/luzhouheng
 
 # Build settings
-highlighter: rouge
-permalink: pretty
-paginate: 10
-exclude: ["less","node_modules","Gruntfile.js","package.json","README.md"]
-anchorjs: true                          # if you want to customize anchor. check out line:181 of `post.html`
-
-
-
-# Gems
-# from PR#40, to support local preview for Jekyll 3.0
-gems: [jekyll-paginate]
-
-
-# Markdown settings
-# replace redcarpet to kramdown,
-# although redcarpet can auto highlight code, the lack of header-id make the catalog impossible, so I switch to kramdown
-# document: http://jekyllrb.com/docs/configuration/#kramdown
 markdown: kramdown
-kramdown:
-  input: GFM                            # use Github Flavored Markdown !important
 
-
-
-# Disqus settings
-#disqus_username: _your_disqus_short_name_
-
-# Duoshuo settings
-duoshuo_username: _your_duoshuo_short_name_
-# Share component is depend on Comment so we can NOT use share only.
-duoshuo_share: false              # set to false if you want to use Comment without Sharing
-
-
-
-
-# Analytics settings
-# Baidu Analytics
-ba_track_id: LuZhouheng
-# Google Analytics
-ga_track_id: 'UA-74684160-1'            # Format: UA-xxxxxx-xx
-ga_domain: blog.zhouheng.asia
-
-
-
-# Sidebar settings
-sidebar: true                           # whether or not using Sidebar.
-sidebar-about-description: "中国美术学院开放媒体系学生｜媒体艺术｜声音艺术｜职业抄代码<br>Student of Open Media Lab | Media Art | Sound Art | Coder"
-sidebar-avatar: /img/avatar.jpg      # use absolute URL, seeing it's used in both `/` and `/about/`
-
-
-
-# Featured Tags
-featured-tags: true                     # whether or not using Feature-Tags
-featured-condition-size: 1              # A tag will be featured if the size of it is more than this condition value
-
-
-
-# Friends
-friends: [
-    {
-        title: "Example",
-        href: "#"
-    },{
-        title: "Foo",
-        href: "#"
-    },{
-        title: "Bar",
-        href: "#"
-    },{
-        title: "Example Friends",
-        href: "#"
-    },{
-        title: "It helps SEO",
-        href: "#"
-    }
-]
+sass:
+  style: compressed

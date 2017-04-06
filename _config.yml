@@ -15,7 +15,7 @@ phone:
 
 # Homepage tiles
 tiles-source: posts # accepts "posts" or "pages"
-tiles-count: 10
+tiles-count: 7
 
 # Social settings
 500px_url:
@@ -33,5 +33,5 @@ vimeo_url: https://vimeo.com/luzhouheng
 # Build settings
 markdown: kramdown
 
-sass:
+sass: 
   style: compressed

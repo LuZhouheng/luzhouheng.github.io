@@ -1412,10 +1412,10 @@ a.icon.alt:before {
   transition: background-color 0.2s ease-in-out; }
 
 a.icon.alt:hover:before {
-  background-color: #0B3C4C; }
+  background-color: #0D0620; }
 
 a.icon.alt:active:before {
-  background-color: #020709; }
+  background-color: black; }
 
 /* Image */
 .image {
@@ -1849,17 +1849,17 @@ button,
     .tiles article:nth-child(4n - 1), .tiles article:nth-child(4n - 2) {
       width: 60%; }
     .tiles article:nth-child(6n - 5):before {
-      background-color: #0B3C4C; }
+      background-color: #0D0620; }
     .tiles article:nth-child(6n - 4):before {
-      background-color: #0E5066; }
+      background-color: #0C082B; }
     .tiles article:nth-child(6n - 3):before {
-      background-color: #13647F; }
+      background-color: #0A0924; }
     .tiles article:nth-child(6n - 2):before {
-      background-color: #127899; }
+      background-color: #020006; }
     .tiles article:nth-child(6n - 1):before {
-      background-color: #1A8BB2; }
+      background-color: #050309; }
     .tiles article:nth-child(6n):before {
-      background-color: #1DA7C7; }
+      background-color: #0D0620; }
   @media screen and (max-width: 1280px) {
     .tiles article {
       padding: 4em 3em 2em 3em ;
@@ -2139,17 +2139,17 @@ button,
     box-shadow: none;
     position: absolute; }
     #header.alt.style1 .logo strong {
-      color: #0B3C4C; }
+      color: #0D0620; }
     #header.alt.style2 .logo strong {
-      color: #0E5066; }
+      color: #0C082B; }
     #header.alt.style3 .logo strong {
-      color: #13647F; }
+      color: #0A0924; }
     #header.alt.style4 .logo strong {
-      color: #127899; }
+      color: #020006; }
     #header.alt.style5 .logo strong {
-      color: #1A8BB2; }
+      color: #050309; }
     #header.alt.style6 .logo strong {
-      color: #1DA7C7; }
+      color: #0D0620; }
   body.is-loading #header.alt {
     opacity: 0; }
   @media screen and (max-width: 1680px) {
@@ -2288,17 +2288,17 @@ button,
     #banner.major.alt {
       opacity: 0.75; }
   #banner.style1:after {
-    background-color: #0B3C4C; }
+    background-color: #0D0620; }
   #banner.style2:after {
-    background-color: #0E5066; }
+    background-color: #0C082B; }
   #banner.style3:after {
-    background-color: #13647F; }
+    background-color: #0A0924; }
   #banner.style4:after {
-    background-color: #127899; }
+    background-color: #020006; }
   #banner.style5:after {
-    background-color: #1A8BB2; }
+    background-color: #050309; }
   #banner.style6:after {
-    background-color: #1DA7C7; }
+    background-color: #0D0620; }
   body.is-loading #banner:after {
     opacity: 1.0; }
   body.is-loading #banner > .inner {

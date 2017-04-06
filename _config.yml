@@ -4,7 +4,7 @@ subtitle: . Asia
 email: peressio@gmail.com
 description: Creative Media Art Student <br /> Open Media Lab of China Academy of Art ( Hangzhou, China )
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site
+url: "/index.html" # the base hostname & protocol for your site
 author: Lu Zhouheng
 street_address: 
 city: HangZhou

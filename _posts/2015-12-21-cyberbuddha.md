@@ -1,7 +1,7 @@
 ---
 layout: post
 title: www.Cyber-Buddha.com
-description: www.Cyber-Buddha.com, A Augmented Reality App Project.
+description: www.Cyber-Buddha.com, A Augmented Reality App Project. 2015
 image: assets/images/cyberbuddha.jpg
 ---
 

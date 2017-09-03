@@ -1,0 +1,37 @@
+# Site settings
+title: Zhouheng
+subtitle: . Asia
+email: peressio@gmail.com
+description: Creative Media Art Student <br /> Open Media Lab of China Academy of Art ( Hangzhou, China )
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "" # the base hostname & protocol for your site
+author: Lu Zhouheng
+street_address: 
+city: HangZhou
+state: ZheJiang
+zip_code: 310000
+country: The People's Republic of China
+phone: 
+
+# Homepage tiles
+tiles-source: posts # accepts "posts" or "pages"
+tiles-count: 7
+
+# Social settings
+500px_url:
+facebook_url: https://www.facebook.com/luzhouheng
+github_url: https://github.com/LuZhouheng
+gitlab_url: 
+googleplus_url: 
+instagram_url: https://www.instagram.com/luzhouheng
+linkedin_url: 
+pinterest_url:
+slack_url:
+twitter_url: https://twitter.com/luzhouheng
+vimeo_url: https://vimeo.com/luzhouheng
+
+# Build settings
+markdown: kramdown
+
+sass: 
+  style: compressed
